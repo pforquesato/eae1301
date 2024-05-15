@@ -1,0 +1,94 @@
+---
+title: 'EAE-0522: TEORIA DOS JOGOS'
+author: Pedro Forquesato<br/>Departamento de Economia<br/>Faculdade de Economia, Administração, Contabilidade e Atuária<br/>Universidade de São Paulo
+date: "2024/2"
+output:
+  prettydoc::html_pretty:
+    toc: yes
+    theme: architect
+    urlcolor: green
+  word_document: default
+  html_document:
+    toc: yes
+    df_print: paged
+  pdf_document: default
+institute: Departamento de Economia<br/>Universidade de São Paulo
+bibliography: ./eae0522_bib.bib
+---
+
+### Objetivo Geral
+
+Teoria dos jogos é um ramo do conhecimento focado em modelar matemáticamente inteirações estratégicas entre jogadores racionais. O objetivo do curso é que o aluno saia conhecendo bem os principais 
+
+### Objetivos de Aprendizagem
+
+1. Entender conceitualmente as consequências da intervenção governamental na economia, prevendo de forma substanciada e logicamente precisa a consequência provável de políticas públicas.
+2. Conhecer os principais modelos microeconômicos usados para explicar a ação governamental, resolvendo-os analiticamente e interpretando-os corretamente.  
+3. Argumentar de forma lógica e informada sobre o papel do governo e formulação de políticas públicas, desenvolvendo ensaios argumentativos defendendo adoção de políticas.
+4. Julgar a coerência lógica e condizência empírica de argumentos econômicos, avaliando criticamente os argumentos dos colegas de classe.
+
+### Avaliação de Aprendizagem
+
+1. Prova de meio-termo, cobrindo a primeira parte: 40-50% da média. (Objetivos de aprendizagem 1 e 2.)
+2. Prova final, cobrindo a segunda parte: 40-50% da média. (Objetivos de aprendizagem 1 e 2.)
+3. Duas listas de exercício: cada lista de exercício entregue *completamente* feita adiciona 0,5 ponto (**crédito extra**) na nota final (não há crédito parcial). (Objetivo de aprendizagem 2.) 
+4. Dois ensaios argumentativos (artigos de opinião) com correção por pares (6500 caracteres): até 10% da nota final cada um (**opcional**). Toda a nota virá da avaliação do ensaio do aluno, mas os ensaios apenas valerão crédito se *ambas* as atividades forem feitas adequadamente. (Objetivos de aprendizagem 3 e 4.)
+
+A não participação em uma atividade opcional (ensaio ou lista) **não** impede a participação do aluno em qualquer outra atividade. As provas envolvem perguntas conceituais sobre a matéria vista em aula e da bibliografia obrigatória, e uma questão escolhida dentre as questões da lista com algumas modificações. 
+
+A média final, portanto, é dada pela seguinte fórmula: $$\text{MF} = \sum_{j=1}^{2} \left( 0.4\text{NP}_j + 0.1\max\{ \text{NP}_j, \text{NE}_j \} + 0.05 𝟙\{\text{LE}_j = 1\} \right)$$
+
+Todas as médias serão arredondadas para cima (em relação à nota final no Moodle) a uma casa decimal (**e apenas isso**).
+
+### Qualidade de Vida
+
+Se você estiver passando por dificuldades: 1. se isso atrapalhar de alguma forma a sua capacidade de cursar a disciplina, fale comigo *antes do fim do curso* e acertaremos algo; 2. contate os serviços de apoio da USP:
+
+1. [Programa ECOS: Serviço de Escuta em Saúde Mental](https://prip.usp.br/programa-ecos/)
+2. [USP Contra o Assédio](https://prip.usp.br/usp-contra-assedio/)
+
+### Docente
+
+Meu nome é Pedro Forquesato, sou professor doutor do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2024, leciono Economia do Setor Público na graduação e pós, Estatística e Econometria I além de Teoria dos Jogos (este curso).
+
+### Contato
+
+Para questões específicas e individuais me mandem um [e-mail](mailto:pforquesato@usp.br). Se quiserem conversar pessoalmente, podem marcar um horário de atendimento no link disponível na plataforma. A minha sala é a 217 no FEA-2.
+
+Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados** e relativamente curtos. (Se o e-mail que vocês está escrevendo tem mais de 2 parágrafos, talvez valha a pena conversarmos pessoalmente.)
+
+### Monitoria
+
+?
+
+### Políticas e regulamentos
+
+**Aulas.** As aulas serão segundas-feiras das 07h30 às 09h10 e quartas-feiras das 09h20 às 11h00 (turma 2023-121) e segundas das 09h20 às 11h00 e quartas das 7h30 às 09h10 (turma 2023-122) na sala **G-02** do FEA 1.
+
+**Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
+
+**Faltas.** Pelo regulamento da USP, participação em 70% das aulas é obrigatória para aprovação na disciplina. Faltas serão desconsideradas apenas com atestado médico emitido pelo HU/USP ([Portaria GR 3740/2007](http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007)), com permissão especial para eventual Covid. 
+
+O aluno pode faltar **no máximo** uma das duas provas (independentemente de atestado) e substituir a nota pela reaval, *sem precisar de justificativa*. (Naturalmente, a reaval cobre toda a matéria do curso.)
+
+**Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas podem ser feitas em conjunto e/ou com auxílio do monitor, mas *devem ser escritas individualmente*.  Ensaios serão submetidos pelos alunos ao Turnitin, e devem ser *inteiramente* originais. (Citações não são permitidas.) Listas copiadas ou ensaios com similaridade implicarão renúncia de todas as atividades opcionais do curso.
+
+Note que essas punições ocorrerão sem prejuízo de eventual instauração de processo administrativo de acordo com o [Código de Ética da USP](http://leginf.usp.br/?resolucao=resolucao-no-4871-de-22-de-outubro-de-2001-3).
+
+**Revisões.** Junto com a correção das provas, enviarei gabaritos delas. Pedidos de revisão devem vir acompanhados de explicação precisa e especifica de onde a correção não seria coerente com o gabarito entregue e por que razão. Listas e ensaios não terão revisões de correção. Não há pedidos de revisão de média. [[Artigo 81, §§1-2 do RG/USP]](https://leginf.usp.br/?resolucao=consolidada-resolucao-no-3745-de-19-de-outubro-de-1990#t5)
+
+**Reavaliação.** Alunos que tiverem mais de 70% de presença e nota entre 3 e 5 ([Portaria CoG 3583/1989](https://leginf.usp.br/?resolucao=resolucao-cog-no-3583-de-29-de-setembro-de1989)) podem fazer uma segunda avaliação (prova reaval), tendo assim a sua média final na disciplina como a média aritmética simples da média do curso e da nota da reaval.
+
+**Outros.** Qualquer conflito com o docente que vocês não consigam (ou não queiram) resolver pessoalmente, recomendo que entrem em contato com a [Ouvidoria da FEA](https://www.fea.usp.br/fea/ouvidoria).
+
+### Conteúdo programático e cronograma
+
+O curso está dividido em duas partes. Na primeira parte do curso, estudaremos a parte do "gasto": quando e como o setor público deve intervir na economia. Na segunda parte do curso, estudaremos a "receita": como o governo deve desenhar os seu sistema de impostos de forma a minimizar distorções na economia e alcançar os seus objetivos (talvez principal entre eles redistribuir renda).
+
+
+
+### Bibliografia do curso
+
+a
+
+#### Referências

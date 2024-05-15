@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>EAE-0522: Teoria dos Jogos</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# EAE-0522: Teoria dos Jogos
+]
+.author[
+### Pedro Forquesato<br/><a href="http://www.pedroforquesato.com" class="uri">http://www.pedroforquesato.com</a><br/>Sala 217/FEA2 - <a href="mailto:pforquesato@usp.br" class="email">pforquesato@usp.br</a>
+]
+.institute[
+### Departamento de Economia<br/>Universidade de São Paulo
+]
+.date[
+### 2024/2 - Tópico 2: Jogos dinâmicos
+]
+
+---
+
+class: inverse, middle, center
+
+
+
+# Jogos em forma extensiva (Tadelis, caps. 7 e 8)
+
+---
+class: middle
+## Jogos estáticos
+
+Jogos estáticos ignoram qualquer aspecto temporal das interações estratégicas &amp;mdash; até agora isso não era um problema pois estávamos estudando interações entre agentes que ocorriam de forma *once and for all*
+
+A forma normal supõe que os jogadores "programam a sua estratégia em um computador" no começo do jogo e o algoritmo implementa ela não importa o que acontecer ao longo da interação
+
+Embora isso ainda seja útil para alguns propósitos, o jogo se desenrolar temporalmente traz considerações de **racionalidade sequencial** (e de infomação) que frequentemente gostaríamos de introduzir na análise
+
+---
+class: middle
+## Guerra dos sexos
+
+Voltemos (mais uma vez) ao jogo da guerra dos sexos abaixo: 
+
+&lt;img src="figs/week-1-fig-0.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+Mas considerem a seguinte variante: Ana sai mais cedo de casa, e com isso ela pode chegar primeiro na ópera ou no futebol e tirar uma foto para colocar no Instagram, que o Bernardo irá ver antes de decidir aonde vai
+
+---
+class: middle
+## Guerra dos sexos
+
+Nós representamos essa situação no **grafo** (mais especificamente, uma *árvore*) abaixo, que representa um **jogo na forma extensiva**:
+
+&lt;img src="figs/week2-fig1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+## O jogo na forma extensiva
+
+O jogo na forma extensiva expande no jogo estático que vimos antes tendo os seguintes componentes sendo **conhecimento comum**:
+
+1. Os jogadores
+2. Os *payoffs* de cada jogador para cada resultado do jogo (as *folhas* da árvore)
+3. A ordem dos movimentos dos jogadores
+4. O que cada jogador sabe quando é chamado a jogar (vamos começar com jogos que todos os jogadores sabem tudo o que aconteceu antes)
+5. As ações de cada jogador em cada ponto no qual é chamado a jogar
+
+---
+class: middle
+## Informação
+
+É importante perceber que o mais importante para definir as estratégias dos agentes não é a *ordem cronológica* do jogo em si, mas *o que os jogadores sabem ao tomar a sua decisão*
+
+Mesmo que a Ana esteja na ópera há horas quando Bernardo decide onde ir, se ele não viu as suas fotos no Instagram, então *estrategicamente* o jogo é o mesmo que se eles decidissem simultaneamente onde ir
+
+Jogos (extensivos) em que os jogadores em todo momento que são chamados a jogar sabem de todas as ações até aquele instante são chamados de **jogos de informação perfeita** (diferenciar de *informação completa*!)
+
+---
+class: middle
+## Conjuntos informacionais
+
+&lt;img src="figs/week2-fig2.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+Um jogo em forma normal pode ser sempre representado na forma extensiva com uma seleção apropriada de **conjuntos informacionais**: quando vários pontos de tomada de decisão (do mesmo jogador) estão no mesmo conjunto informacional, isso significa que o jogador não sabe em qual dos vértices dentro do conjunto ele se encontra (por motivos óbvios, em todos os vértices no mesmo conjunto as ações disponíveis precisam ser iguais)
+
+---
+class: middle
+## Jogos de informação imperfeita
+
+&lt;img src="figs/week2-fig3.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Outro exemplo: **jokenpô** representado na forma extensiva com informação imperfeita (ambas as formas representam exatamente o mesmo jogo!) &amp;mdash; um jogo tem **informação imperfeita** quando algum conjunto informacional de algum jogador tem mais de um elemento (vértices)
+
+---
+class: middle
+## Jogos com lances da natureza
+
+&lt;img src="figs/week2-fig4.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+Vários tipos de jogos envolvem chance (p. ex. tirar cartas de um baralho): em teoria dos jogos, geralmente chamamos essa aleatoriedade de **lances da natureza**: a "natureza" como um jogador especial que escolhe uma estratégia mista que é conhecimento comum de todos os outros jogadores
+
+---
+class: middle
+## Estratégias
+
+No começo do curso definimos uma estratégia (pura) elencando para cada situação discernível pelo agente em que ele é chamado a jogar uma *ação*
+
+Na época essa definição pareceu um pouco pedante, já que só havia uma situação em que cada jogador era chamado a jogar: uma estratégia era simplesmente a ação escolhida! (p. ex. ir à ópera ou futebol)
+
+Mas agora fica clara a importância da definição: uma **estratégia pura** é um plano de jogo que define para cada **conjunto informacional** uma ação que o jogador planeja jogar &amp;mdash; como antes, estratégias mistas ainda são aleatorizações sobre o conjunto de *estratégias* (não ações!!) puras
+
+---
+class: middle
+## Estratégias na guerra dos sexos
+
+&lt;img src="figs/week2-fig1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+Para Ana, as estratégias são apenas ações, como anteriormente: ir à ópera `\(O\)` ou ao futebol `\(F\)` &amp;mdash; mas para Bernardo, agora ele pode escolher `\(oo\)`, `\(of\)`, `\(fo\)`, `\(ff\)`, onde `\(of\)` representa a estratégia "eu vou à ópera se eu ver fotos de Ana na ópera, e vou ao futebol se ver fotos dela no futebol"
+
+---
+class: middle
+## Estratégias comportamentais
+
+Notem que o número de estratégias puras cresce exponencialmente no número de conjuntos informacionais de cada jogador: um jogador com 3 conjuntos, cada um com 3 ações já tem 27 estratégias puras do jogador 2!
+
+Como antes, uma **estratégia mista** é uma aleatorização sobre *estratégias puras*: ou seja, no exemplo acima, sobre as 27 estratégias puras (!)
+
+Uma alternativa mais simples são as **estratégias comportamentais**, que a cada conjunto informacional aleatoriza entre as ações disponíveis nos vértices daquele conjunto: o que reduz de 27 probabilidades para 9 nesse exemplo!
+
+---
+class: middle
+## Estratégias comportamentais
+
+Luce e Raiffa (1957) faz a seguinte analogia: uma estratégia pura é um manual, que diz a cada conjunto informacional o que jogar &amp;mdash; uma estratégia mista é escolher aleatoriamente um manual e segui-lo até o final
+
+Já uma *estratégia comportamental* é um manual que em algumas páginas propõe aleatorizar sobre as ações naquele conjunto informacional &amp;mdash; bem mais simples!
+
+Mas faz diferença? Pode ser provado que em **jogos de *perfect recall*** (jogos em que nenhum jogador esquece informação que antes tinha) estratégias mistas e comportamentais são equivalentes
+
+---
+class: middle
+## Jogos extensivos em forma normal
+
+A forma normal ainda tem utilidade mesmo em jogos na forma extensiva, pois *o conceito de equilíbrio de Nash não incorpora nenhum aspecto dinâmico*
+
+
+&lt;img src="figs/week2-fig5.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+O jeito mais fácil de achar os equilíbrios de Nash de um jogo dinâmico é escrevê-lo na forma normal e usar as técnicas da parte anterior do curso &amp;mdash; mas não esqueçam que temos que adicionar *todas* as estratégias, como acima
+
+---
+class: middle
+## Caminhos de jogo
+
+O jogo tem 3 ENs em estratégias puras (e em estratégias mistas?): dois deles dando *payoffs* iguais para os dois jogadores &amp;mdash; o que muda entre eles é o comportamento do jogador 2 *fora do caminho de equilíbrio*
+
+E isso é importante! Note que `\((F, ff)\)` é um EN, mas `\((F, of)\)` *não é*, por mais que ambos proponham a mesma ação como resposta ao que o jogador 1 *efetivamente joga* (e portanto deem o mesmo *payoff* a ambos os jogadores)
+
+&lt;img src="figs/week2-fig6.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+## Caminhos de equilíbrio
+
+Um conjunto informacional está no **caminho de equilíbrio** se ele é atingido com probabilidade positiva (não precisa ser 1) em equilíbrio; caso contrário está *fora do caminho de equilíbrio*
+
+Estratégias fora do caminho de equilíbrio são importantes: `\((F, ff)\)` é um equilíbrio de Nash porque Ana acredita (*sempre corretamente!*) que caso ela for à ópera, Bernardo mesmo sabendo disso ainda assim irá para o futebol
+
+Mas esse equilíbrio é peculiar: pois Ana não acredita na racionalidade de Bernardo *fora do caminho de equilíbrio*! Se ela de fato fosse na ópera, o melhor para ele seria ir à ópera também, mas ela acredita que ele vai no futebol
+
+---
+class: middle
+## Credibilidade
+
+Isso nos traz a ideia de **credibilidade**: pode se argumentar que o equilíbrio `\((F, ff)\)` (e `\((O, oo)\)`) é menos razoável que `\((O, of)\)` pois ele se baseia em uma "ameaça não crível" de que se Ana for à ópera, Bernardo irá ver futebol
+
+A ideia é que *se* os jogadores pudessem se comunicar antes do jogo, e Bernardo dissesse a Ana: "Ana, vá ao futebol, pois se você escolher a ópera eu vou ao futebol mesmo assim!", então *essa ameaça não seria crível*
+
+Agora a crença de Ana de que Bernardo *não é racional fora do caminho de equilíbrio* não é tão irrazoável quanto pode à 1ª vista parecer: pois vejam que eles só vão sair do caminho de equilíbrio se alguém já agiu irracionalmente!
+
+---
+class: middle
+## Racionalidade sequencial
+
+Esse é um ponto que vai ser repetidamente importante no nosso curso: *caso algum jogador faça algo "fora do script", o que isso diz ao outro jogador sobre ele?* E isso é importante, já que os equilíbrios dependem do contrafactual!
+
+Os jogadores podem pensar que o desvio foi apenas um erro ("mãos tremeram"), e que depois ambos vão voltar a jogar racionalmente: isso nos leva ao conceito de **racionalidade sequencial** e **indução para trás**
+
+Ou eles podem racionalizar a ação diferente por meio do seu comportamento futuro, o que nos leva à **indução para frente** &amp;mdash; como veremos nos workshops, ambos os conceitos podem gerar resultados contraintuitivos
+
+---
+class: middle
+## Racionalidade sequencial
+
+Dizemos que uma estratégia mista `\(\sigma_i\)`, dadas estratégias `\(\sigma_{-i}\)` dos outros jogadores, é **sequencialmente racional** se `\(\sigma_i\)` é melhor-resposta a `\(\sigma_{-i}\)` *em cada um dos seus conjuntos informacionais*
+
+Quando jogadores empregam estratégias seq. racionais eles escolhem racionalmente em *todos* os conjuntos informacionais, mesmo nos não ocorrem em equilíbrio (EN requer racionalidade apenas no caminho do jogo)
+
+Como o que é racional no começo depende dos *payoffs* que vêm depois, nós começamos do final, e resolvemos "de trás para frente" o jogo: é esse procedimento que chamamos de **indução para trás**, ou *backwards induction*
+
+
+---
+class: middle
+## Indução para trás na guerra dos sexos
+
+&lt;img src="figs/week2-fig1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+Apliquemos o que acabamos de aprender para resolver por *indução para trás* a guerra dos sexos sequencial acima
+
+---
+class: middle
+## Teorema de Zermelo
+
+**Teorema de Zermelo:** Todo jogo finito de informação perfeita possui um equilíbrio de Nash sequencialmente racional. Ademais, se caminhos diferentes de jogo dão sempre *payoffs* diferentes a todos os jogadores, então *só há um* EN sequencialmente racional
+
+**Corolário (Zermelo, 1913):** No xadrez, ou as brancas possuem (pelo menos) uma estratégia que garante sempre a vitória, ou as negras possuem uma estratégia que garante sempre a vitória, ou ambas as cores possuem alguma estratégia que garante pelo menos o empate
+
+---
+class: middle
+## Subjogos
+
+Em jogos finitos de informação perfeita, podemos aplicar a indução para trás: comece pelas folhas, escolha o *payoff* maior (se for igual qualquer um), e passe esse *payoff* para o tronco anterior, e assim até chegar ao começo
+
+Com informação imperfeita ou jogos não finitos já não é mais claro como proceder &amp;mdash; uma generalização do equilíbrio de Nash que segue a intuição da racionalidade sequencial e aborda também esses casos usa a ideia de *subjogos*
+
+Um **subjogo** consiste de *um* vértice do jogo e *todos* os seus seguidores, com a restrição de que se um elemento de um conjunto informacional pertence ao subjogo, então *todos os elementos daquele conjunto precisam pertencer*
+
+---
+class: middle
+## Exemplo
+
+&lt;img src="figs/week2-fig8.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+Todos os subjogos de um jogo de informação perfeita &amp;mdash; esse jogo possui 4 subjogos: o jogo inteiro é trivialmente um subjogo, assim como cada vértice do grafo do jogo junto com *todos* os seus descendentes
+
+---
+class: middle
+## A batalha dos sexos voluntária
+
+&lt;img src="figs/week2-fig7.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+Considere agora a batalha dos sexos voluntária: Ana pode decidir tentar encontrar Bernardo, ou desistir e ambos ficarem em casa vendo um filme &amp;mdash; quais são os subjogos do jogo?
+
+---
+class: middle
+## Equilíbrio perfeito em subjogos
+
+Richard Selten (Nobel '94) em 1974 utilizou a ideia de subjogos para criar um dos principais **refinamentos de equilíbrio**: o equilíbrio perfeito em subjogos, que complementa o equilíbrio de Nash com racionalidade sequencial
+
+Um perfil de estratégias comportamentais forma um **equilíbrio (de Nash) perfeito em subjogos** quando esse perfil restrito a cada subjogo do jogo forma um *equilíbrio de Nash* no subjogo
+
+Todo equilíbrio perfeito em subjogos é equilíbrio de Nash, mas aquele requer que os jogadores ajam racionalmente *mesmo em subjogos que não ocorrem no caminho de equilíbrio*, eliminando ENs (portanto, um "refinamento") 
+
+---
+class: middle
+## A batalha dos sexos voluntária
+
+&lt;img src="figs/week2-fig7.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+Podemos aplicar o equilíbrio perfeito em subjogos nos exemplos vistos até aqui &amp;mdash; na batalha dos sexos voluntária a indução para trás não funciona: quais são então os equilíbrios de Nash e perfeitos em subjogos?
+
+---
+class: middle, center, inverse
+
+# Jogos multi-estágios e repetidos (Tadelis, caps. 9 e 10)
+
+---
+class: middle
+## Jogos multi-estágios
+
+Até aqui vimos jogos em que um único jogo se desenrola no tempo &amp;mdash; uma situação ligeiramente diferente é na qual os mesmos jogadores jogam **jogos de estágio** repetidas vezes (recebendo o *payoff* deles a cada período)
+
+Nesse caso, a pergunta que surge é se os jogadores podem condicionar sua atuação em estágios futuros no comportamento em estágios iniciais, e assim expandir o conjunto de soluções para além dos equilíbrios do jogo de estágio
+
+Um jogo multiestágio é uma sequencia de jogos *em forma normal* em que *os mesmos* `\(N\)` jogadores jogam sequencialmente e de forma completa, um jogo em cada período, e a soma dos *payoffs* é avaliada no final da interação
+
+
+---
+class: middle
+## Dilema dos prisioneiros com vingança
+
+&lt;img src="figs/week2-fig9.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+Considere que dois prisioneiros jogam o dilema primeiro (esquerda), mas depois do jogo eles se encontram novamente um jogo de vingança, em que eles podem desistir da vida de crime `\(l\)` ou juntar-se a uma gangue `\(g\)` &amp;mdash; a essa altura do campeonato deve ser fácil achar os equilíbrios de Nash dos jogos de estágio, mas muda algo jogá-los um após o outro?
+
+
+---
+class: middle
+## Estratégias
+
+Como em (outros) jogos na forma extensiva, estratégias aqui são mais complicadas que em jogos estáticos: elas elencam para cada **história** de jogo um predição de ação para o jogo de estágio
+
+Nesse exemplo, uma estratégia para o jogador 1 é um quintupla: `$$(\sigma_1^1, \sigma_1^2(M, m), \sigma_1^2(M, f), \sigma_1^2(F, m), \sigma_1^2(F, f))$$`
+
+O fato da estratégia no período 2 ser função do que foi jogado no período 1 é o que abre novas avenidas de cooperação (e o que torna jogos multi-estágios interessantes de se analisar)
+
+---
+class: middle
+## Equilíbrios em jogos multi-estágios
+
+Qualquer combinação de *equilíbrios de Nash* dos jogos de estágio forma um equilíbrio (na verdade *perfeito em subjogos*!) do jogo multi-estágio
+
+Assim, `\(((F,f), (G,g))\)` e `\(((F,f), (L, l))\)` (e mais um) são "trivialmente" equilíbrios perfeitos em subjogos do jogo repetido &amp;mdash; mas gostaríamos de mais!
+
+Será que é possível construir um equilíbrio perfeito em subjogos em que `\((M,m)\)` é jogado no primeiro período?
+
+---
+class: middle
+## O princípio do desvio único
+
+No exemplo anterior foi simples pensar em quais desvios deveríamos analisar &amp;mdash; mas se tivermos, por exemplo, `\(T=30\)` períodos, a princípio teríamos que considerar desvios da forma "Em `\(t=2\)` eu jogo `\(F\)` ao inves de `\(M\)`, daí em `\(t=10\)` eu jogo `\(L\)` ao invés de `\(G\)` e `\(t=30\)` troco `\(M\)` por `\(F\)`": uma tarefa hercúlea quando `\(T\)` cresce!
+
+Mas por sorte isso é desnecessário (ufa!), pois o **princípio do desvio único (Blackwell, 1965)** diz que uma estratégia é ótima se e somente se não existe nenhum história tal que um desvio *apenas no jogo de estágio que segue a essa história* (mantendo a *estratégia* constante) gere um ganho de *payoff*
+
+---
+class: middle
+## Jogos repetidos
+
+Um tipo particular de jogos multi-estágio é bastante famoso em teoria dos jogos: os **jogos repetidos**, que nada mais são que jogos multi-estágio em que o jogo de estágio `\(G\)` é sempre o mesmo
+
+Há dois tipos de jogos repetidos: jogos *finitamente* repetidos `\(G^T\)` e jogos *infinitamente* repetidos `\(G^{\infty}\)` &amp;mdash; como veremos, surpreendentemente a diferença dos dois pode ser significativa mesmo quando `\(T\)` finito é grande
+
+A diferença é que em `\(G^T\)` sempre há a "ameaça do último período" (em `\(T\)`), quando já não há mais incentivos futuros para cooperar, enquanto em `\(G^{\infty}\)` sempre há uma probabilidade positiva do jogo durar mais um período
+
+---
+class: middle
+## Taxa de desconto
+
+Em economia, é comum "descontar" fluxos futuros de utilidade a uma taxa `\(\delta &lt; 1\)`, para modelar a intuição de que ganhos hoje seriam mais valiosos que os mesmo ganhos no futuro: e a mesma ideia pode ser aplicada a jogos
+
+Para simplificar, em jogos finitos suporemos que eles são jogados "em pouco tempo", e não usaremos taxas de desconto &amp;mdash; mas para jogos infinitos isso nos traria dificuldades pois a soma das utilidades seria infinita!
+
+Nesse caso normalizamos a utilidade multiplicando tudo por `\((1-\delta)\)`, de forma que a utilidade de um caminho que dê *payoff* `\(3\)` agora e `\(-1\)` no futuro é: `$$(1-\delta)3 + (1-\delta)\delta(-1) + (1-\delta)\delta^2(-1)+(1-\delta)\delta^3(-1)+...$$`
+`$$= (1-\delta)3 + (1-\delta)\delta\frac{(-1)}{1-\delta} = (1-\delta)3 + \delta(-1)$$`
+
+---
+class: middle
+## Taxa de desconto e o fim do jogo
+
+Jogos evidentemente nunca duram para sempre (infelizmente, os jogadores morrem): a ideia do jogo infinitamente repetido é que por mais que ele acabe em algum momento, *os jogadores não sabem quando*
+
+Considere que o jogo acaba com uma probabilidade `\(\lambda\)` a cada período (o que é conhecimento comum), e os jogadores descontam a uma taxa `\(\delta\)` o tempo: então fazendo `\(\Delta = (1 - \lambda)\delta\)` ainda temos um jogo "infinitamente" repetido (ainda que ele dure para sempre com probabilidade zero) 
+
+Essa promessa que sempre existe de que o jogo possa durar pelo menos mais alguns períodos é o que sustenta os incentivos intertemporais
+
+
+---
+class: middle
+## Autômatos
+
+O *princípio do desvio único* ajuda (e muito!) em reduzir o número de estratégias alternativas que temos que considerar: mas ainda assim em princípio há infinitas histórias em que cada jogador pode querer desviar!
+
+Podemos ainda simplificar muito essas estratégias colocando-as em "classes de equivalência", onde em cada classe o comportamento dos jogadores é igual
+
+Fazemos isso construindo **autômatos**, como algoritmos que implementam as estratégias de jogo dos jogadores &amp;mdash; podemos representar cada jogador por um autômato, mas frequentemente é mais simples usar um para o *perfil* de estratégias
+
+---
+class: middle
+## Autômatos
+
+Um **autômato** é composto de: (i) um conjunto de estados `\(\mathcal{W}\)`, (ii) um estado inicial `\(w_0\)`, (iii) uma função `\(f\)` que especifica em cada estado o que jogar, e (iv) uma função de transição `\(\tau\)` que muda de estado dependendo da realização do jogo
+
+Utilizando autômatos checar se um perfil de estratégias é perfeito em subjogos somente requer checar para cada um dos estados do autômato se existe algum desvio (único!) que é vantajoso 
+
+Para vários autômatos importantes, como o **grim trigger** ou o **tit-for-tat**, há apenas 2-4 estados, então simplifica muito!
+
+---
+class: middle
+## Grim trigger
+
+&lt;img src="figs/week2-fig10.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+O exemplo mais clássico de estratégia, que também é o mais simples de se representar por autômatos, é o **grim trigger**: no dilema dos prisioneiros, todos os jogadores começam cooperando (i.e., em `\(w_{EE}\)`, onde jogam `\(EE\)`), mas assim que alguém desvia de `\(EE\)` eles mudam para sempre para `\(w_{SS}\)`, onde sempre confessam (por isso que é "grim")
+
+---
+class: middle
+## Tit-for-tat
+
+Outra estratégia famosa no dilema dos prisioneiros é a **tit-for-tat**, que venceu o torneio de Axelrod de jogo repetido do dilema dos prisioneiros
+
+A ideia é simples: o jogador começa cooperando, e sempre faz a última coisa que o outro jogador fez ("tit for tat" é uma expressão em inglês que significa uma retaliação equivalente)
+
+É uma punição bem menos "grim" que o grim trigger, já que se o outro jogador "se arrepender" e voltar a cooperar, o *tit-for-tat* também volta a cooperar &amp;mdash; qual será o autômato que representa esse perfil de estratégias?
+
+---
+class: middle
+## Teorema Folk
+
+*Teoremas folk* (há dezenas deles) estabelecem condições para que (quase) *qualquer* resultado do jogo seja um equilíbrio do jogo repetido &amp;mdash; o nome "teorema folk" vem do fato do 1º deles circular bastante na década de 50 entre os teoristas dos jogos, sendo difícil nomear quem primeiro o inventou
+
+**Teorema de Folk para estratégias puras:** Se o jogo de estágio é finito e entre 2 jogadores, então se `\(\delta\)` for suficientemente próximo de `\(1\)`, temos que para cada perfil de ações puras `\(\widetilde{a}\)` *estritamente racionais* (isto é, que dá *payoff* acima da estratégia minimax), existe um equilíbrio perfeito em subjogos em que `\(\widetilde{a}\)` é jogado em todo período
+
+
+---
+class:middle
+# Bibliography
+
+&lt;small&gt;
+
+```
+## You haven't cited any references in this bibliography yet.
+```
+
+NULL
+&lt;/small&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

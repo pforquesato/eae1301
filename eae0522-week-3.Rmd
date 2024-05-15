@@ -1,0 +1,66 @@
+---
+title: "EAE-0522: Teoria dos Jogos"
+author: "Pedro Forquesato<br/>http://www.pedroforquesato.com<br/>Sala 217/FEA2 - pforquesato@usp.br"
+institute: "Departamento de Economia<br/>Universidade de São Paulo"
+date: "2024/2 - Tópico 3: Jogos de informação incompleta"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+---
+class: inverse, middle, center
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "alphabetic",
+           cite.style = "alphabetic",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+myBib <- ReadBib("./eae0522_bib.bib", check = FALSE)
+```
+
+# Jogos estáticos de informação incompleta (Tadelis, cap. 12)
+
+---
+class: middle
+## Jogos estáticos
+
+Jogos estáticos ignoram qualquer aspecto temporal das interações estratégicas &mdash; até agora isso não era um problema pois estávamos estudando interações entre agentes que ocorriam de forma *once and for all*
+
+
+---
+class: middle
+## Guerra dos sexos
+
+Voltemos (mais uma vez) ao jogo da guerra dos sexos abaixo: 
+
+```{r, echo=FALSE, out.width = '25%', fig.align='center'}
+knitr::include_graphics("figs/week-1-fig-0.png")
+```
+
+Mas considerem a seguinte variante: Ana sai mais cedo de casa, e com isso ela pode chegar primeiro na ópera ou no futebol e tirar uma foto para colocar no Instagram, que o Bernardo irá ver antes de decidir aonde vai
+
+---
+class: middle, center, inverse
+
+# Jogos estáticos de informação incompleta (Tadelis, cap. 15)
+
+---
+class: middle
+## Jogos multi-estágios
+
+---
+class:middle
+# Bibliography
+
+<small>
+```{r refs, echo=FALSE, results="asis"}
+PrintBibliography(myBib)
+```
+</small>
