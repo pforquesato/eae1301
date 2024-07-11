@@ -89,7 +89,7 @@ Todas as datas abaixos são **estimativas** e **sujeitas a alteração** depende
 
 #### Parte 1: Jogos estáticos de informação completa
 
-2 semanas de aulas [06 e 08/08, 13 e 15/08]
+2 semanas de aulas [06 e 08/08, 13 e 15/08] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html)
 
 1. **Workshop 1:** Soluções baseadas (apenas) na racionalidade [20 e 22/08]  <br> *Bibliografia:* Tadelis, caps. 3 e 4.
 2. **Workshop 2:** Equilíbrio de Nash (em estratégias puras e mistas)  [27 e 29/08] <br> *Bibliografia:* Tadelis, caps. 5 e 6.
@@ -100,7 +100,7 @@ Todas as datas abaixos são **estimativas** e **sujeitas a alteração** depende
 
 #### Parte 2: Jogos dinâmicos de informação completa
 
-2 semanas de aulas [17 e 19/09, 24 e 26/09]
+2 semanas de aulas [17 e 19/09, 24 e 26/09] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html)
 
 4. **Workshop 4:** Jogos dinâmicos de informação perfeita [01 e 03/10] <br> *Bibliografia:* Tadelis, caps. 7, 8 e 11.
 
@@ -111,7 +111,7 @@ Todas as datas abaixos são **estimativas** e **sujeitas a alteração** depende
 
 #### Parte 3: Jogos de informação incompleta
 
-2 semanas de aulas [29 e 31/10, 05 e 07/11]
+2 semanas de aulas [29 e 31/10, 05 e 07/11] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html)
 
 7. **Workshop 7:** Jogos de informação incompleta [12 e 14/11] <br> *Bibliografia:* Tadelis, cap. 12.
 8. **Workshop 8:** Refinamentos de equilíbrio [19 e 21/11] <br> *Bibliografia:* Tadelis, caps. 15 e 16.
