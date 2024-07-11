@@ -1,6 +1,6 @@
-# EAE-0522 Game Theory
+# EAE-1301 Game Theory
 
-Class material for EAE-0522 - Game Theory
+Class material for EAE-1301 - Game Theory
 
 Class syllabus 
 
