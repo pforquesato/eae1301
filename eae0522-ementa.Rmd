@@ -1,5 +1,5 @@
 ---
-title: 'EAE-0522: TEORIA DOS JOGOS'
+title: 'EAE-1301: TEORIA DOS JOGOS'
 author: Pedro Forquesato<br/>Departamento de Economia<br/>Faculdade de Economia, Administração, Contabilidade e Atuária<br/>Universidade de São Paulo
 date: "2024/2"
 output:
@@ -18,27 +18,27 @@ bibliography: ./eae0522_bib.bib
 
 ### Objetivo Geral
 
-Teoria dos jogos é um ramo do conhecimento focado em modelar matemáticamente inteirações estratégicas entre jogadores racionais. O objetivo do curso é que o aluno saia conhecendo bem os principais 
+Teoria dos jogos é um ramo do conhecimento focado em modelar matematicamente interações estratégicas entre jogadores racionais. O objetivo do curso é que o aluno saia conhecendo os principais jogos debatidos na teoria, além de ter um bom entendimento dos conceitos de solução existentes e como computá-los.
 
 ### Objetivos de Aprendizagem
 
-1. Entender conceitualmente as consequências da intervenção governamental na economia, prevendo de forma substanciada e logicamente precisa a consequência provável de políticas públicas.
-2. Conhecer os principais modelos microeconômicos usados para explicar a ação governamental, resolvendo-os analiticamente e interpretando-os corretamente.  
-3. Argumentar de forma lógica e informada sobre o papel do governo e formulação de políticas públicas, desenvolvendo ensaios argumentativos defendendo adoção de políticas.
-4. Julgar a coerência lógica e condizência empírica de argumentos econômicos, avaliando criticamente os argumentos dos colegas de classe.
+
+1. Reconhecer os principais jogos da teoria dos jogos, conhecendo os seus resultados e a razão de sua importância.
+2. Compreender os tipos de jogos não-cooperativos, as suas diferenças e aplicações, identificando em que situações do mundo real cada conceito se aplica melhor e quais são os seus potenciais problemas.
+3. Modelar situações de interações estratégicas entre agentes na forma de um jogo, escrevendo modelos formalizados que nos informem sobre a situação de interesse.
+2. Aplicar os resultados e algoritmos de solução na teoria dos jogos, resolvendo jogos de todos os principais tipos.
+2. Avaliar a aplicabilidade de diferentes modelos da teoria dos jogos, julgando a sua condizência (positiva ou normativa) com o comportamento humano no mundo real.
 
 ### Avaliação de Aprendizagem
 
-1. Prova de meio-termo, cobrindo a primeira parte: 40-50% da média. (Objetivos de aprendizagem 1 e 2.)
-2. Prova final, cobrindo a segunda parte: 40-50% da média. (Objetivos de aprendizagem 1 e 2.)
-3. Duas listas de exercício: cada lista de exercício entregue *completamente* feita adiciona 0,5 ponto (**crédito extra**) na nota final (não há crédito parcial). (Objetivo de aprendizagem 2.) 
-4. Dois ensaios argumentativos (artigos de opinião) com correção por pares (6500 caracteres): até 10% da nota final cada um (**opcional**). Toda a nota virá da avaliação do ensaio do aluno, mas os ensaios apenas valerão crédito se *ambas* as atividades forem feitas adequadamente. (Objetivos de aprendizagem 3 e 4.)
+1. **Duas provas:**, a primeira cobrindo as partes 1 e 2 do curso; a segunda cobrindo o curso inteiro (40% e 60% da nota, respectivamente).
+2. **Oito workshops** de resolução **em sala** de exercícios. Para cada workshop *com participação satisfatória*, é adicionado (**crédito extra**) 0,25 na média (2 pontos no total).
 
-A não participação em uma atividade opcional (ensaio ou lista) **não** impede a participação do aluno em qualquer outra atividade. As provas envolvem perguntas conceituais sobre a matéria vista em aula e da bibliografia obrigatória, e uma questão escolhida dentre as questões da lista com algumas modificações. 
+Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*, por meio de uma autoavaliação. 
 
-A média final, portanto, é dada pela seguinte fórmula: $$\text{MF} = \sum_{j=1}^{2} \left( 0.4\text{NP}_j + 0.1\max\{ \text{NP}_j, \text{NE}_j \} + 0.05 𝟙\{\text{LE}_j = 1\} \right)$$
+3. **Autoavaliação:** caso o aluno escolha (e possa escolher) esse método de avaliação, deve entregar um "portfolio" no fim do semestre de 1-3 páginas descrevendo o seu progresso, realizações e fazendo uma autoavaliação culminando na sua nota para o curso. Essa nota de autoavaliação será baseada em: (i) quantidade e dificuldade dos exercícios resolvidos nos workshops; (ii) participação em aula e nos workshops (por exemplo, ajudando os colegas); (iii) autoavaliação de seu progresso, conhecimento e dedicação na disciplina e em teoria dos jogos em geral. 
 
-Todas as médias serão arredondadas para cima (em relação à nota final no Moodle) a uma casa decimal (**e apenas isso**).
+Todas as médias serão arredondadas para cima (em relação à nota final no Moodle) a uma casa decimal (**e apenas isso**). Caso seja necessário para algum aluno, haverá uma prova de reavaliação, sendo a média final a média da primeira e segunda avaliações.
 
 ### Qualidade de Vida
 
@@ -59,19 +59,19 @@ Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados
 
 ### Monitoria
 
-?
+Torçamos.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas serão segundas-feiras das 07h30 às 09h10 e quartas-feiras das 09h20 às 11h00 (turma 2023-121) e segundas das 09h20 às 11h00 e quartas das 7h30 às 09h10 (turma 2023-122) na sala **G-02** do FEA 1.
+**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **XX** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
-**Faltas.** Pelo regulamento da USP, participação em 70% das aulas é obrigatória para aprovação na disciplina. Faltas serão desconsideradas apenas com atestado médico emitido pelo HU/USP ([Portaria GR 3740/2007](http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007)), com permissão especial para eventual Covid. 
+**Faltas.** Pelo regulamento da USP, **participação em 70% das aulas é obrigatória** para aprovação na disciplina. Faltas serão desconsideradas apenas com atestado médico emitido pelo HU/USP ([Portaria GR 3740/2007](http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007)), com permissão especial para eventual Covid. 
 
 O aluno pode faltar **no máximo** uma das duas provas (independentemente de atestado) e substituir a nota pela reaval, *sem precisar de justificativa*. (Naturalmente, a reaval cobre toda a matéria do curso.)
 
-**Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas podem ser feitas em conjunto e/ou com auxílio do monitor, mas *devem ser escritas individualmente*.  Ensaios serão submetidos pelos alunos ao Turnitin, e devem ser *inteiramente* originais. (Citações não são permitidas.) Listas copiadas ou ensaios com similaridade implicarão renúncia de todas as atividades opcionais do curso.
+**Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas podem ser feitas em conjunto e/ou com auxílio do monitor, mas *devem ser escritas individualmente*.  Listas copiadas implicarão renúncia de todas as atividades opcionais do curso.
 
 Note que essas punições ocorrerão sem prejuízo de eventual instauração de processo administrativo de acordo com o [Código de Ética da USP](http://leginf.usp.br/?resolucao=resolucao-no-4871-de-22-de-outubro-de-2001-3).
 
@@ -81,14 +81,62 @@ Note que essas punições ocorrerão sem prejuízo de eventual instauração de 
 
 **Outros.** Qualquer conflito com o docente que vocês não consigam (ou não queiram) resolver pessoalmente, recomendo que entrem em contato com a [Ouvidoria da FEA](https://www.fea.usp.br/fea/ouvidoria).
 
-### Conteúdo programático e cronograma
+### Conteúdo programático, cronograma e bibliografia do curso
 
-O curso está dividido em duas partes. Na primeira parte do curso, estudaremos a parte do "gasto": quando e como o setor público deve intervir na economia. Na segunda parte do curso, estudaremos a "receita": como o governo deve desenhar os seu sistema de impostos de forma a minimizar distorções na economia e alcançar os seus objetivos (talvez principal entre eles redistribuir renda).
+O curso está dividido em três partes. Cada parte consiste em uma série de aulas teóricas (por volta de 2 semanas) explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por semanas de workshops (de 1 semana cada) onde os conceitos são aplicados na resolução de uma lista de jogos.
+
+Todas as datas abaixos são **estimativas** e **sujeitas a alteração** dependendo do andamento do semestre.
+
+#### Parte 1: Jogos estáticos de informação completa
+
+2 semanas de aulas [06 e 08/08, 13 e 15/08]
+
+1. **Workshop 1:** Soluções baseadas (apenas) na racionalidade [20 e 22/08]  <br> *Bibliografia:* Tadelis, caps. 3 e 4.
+2. **Workshop 2:** Equilíbrio de Nash (em estratégias puras e mistas)  [27 e 29/08] <br> *Bibliografia:* Tadelis, caps. 5 e 6.
+
+[Semana da pátria]
+
+3. **Workshop 3:** Jogos estritamente competitivos (aka jogos de soma-zero) [10 e 12/09] <br> *Bibliografia:* Osborne, capítulo 11.
+
+#### Parte 2: Jogos dinâmicos de informação completa
+
+2 semanas de aulas [17 e 19/09, 24 e 26/09]
+
+4. **Workshop 4:** Jogos dinâmicos de informação perfeita [01 e 03/10] <br> *Bibliografia:* Tadelis, caps. 7, 8 e 11.
+
+[Prova de meio-termo: 10/10] 
+
+5. **Workshop 5:** Jogos dinâmicos de informação imperfeita [15 e 17/10] <br> *Bibliografia:* Osborne, cap. 7.
+6. **Workshop 6:** Jogos multi-estágios e repetidos [22 e 24/10] <br> *Bibliografia:* Tadelis, caps. 9 e 10.
+
+#### Parte 3: Jogos de informação incompleta
+
+2 semanas de aulas [29 e 31/10, 05 e 07/11]
+
+7. **Workshop 7:** Jogos de informação incompleta [12 e 14/11] <br> *Bibliografia:* Tadelis, cap. 12.
+8. **Workshop 8:** Refinamentos de equilíbrio [19 e 21/11] <br> *Bibliografia:* Tadelis, caps. 15 e 16.
+
+[Prova final: 28/11]
+
+### Referências
+
+Os livros que vamos seguir de perto no curso são:
+
+Tadelis, S. (2013). Game theory: an introduction. Princeton university press. <br>
+Osborne, M. J. (2004). An introduction to game theory. New York: Oxford university press.
+
+Mas teoria dos jogos é teoria dos jogos. Qualquer outro livro vai cobrir o mesmo material (mas às vezes com ênfase ou grau de formalização diferente). Alguns outros livros recomendados (em ordem de mais fácil para mais difícil) são:
+
+Gibbons, R. (1992). Game theory for applied economists. Princeton University Press. <br>
+Binmore, K. (2007). Playing for real: a text on game theory. Oxford university press.<br>
+Perea, A. (2012). Epistemic game theory: reasoning and choice. Cambridge University Press.<br>
+Osborne, M. J., & Rubinstein, A. (1994). A course in game theory. MIT press. (\*) <br>
+Maschler, M., Zamir, S., & Solan, E. (2020). Game theory. Cambridge University Press. (\*) <br>
+Krishna, V. (2009). Auction theory. Academic press. (\*) <br>
+Fudenberg, D., & Tirole, J. (1991). Game theory. MIT press. (\*)
+
+Livros com (\*) são livros de pós-graduação. (Mas não precisamos ter medo de livros de pós-graduação!)
+
+Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***opcionais***, recomendo o curso do Matthew Jackson e outros professores em https://www.game-theory-class.org/ (os vídeos podem ser acessados diretamente por https://www.youtube.com/@gametheoryonline).
 
 
-
-### Bibliografia do curso
-
-a
-
-#### Referências

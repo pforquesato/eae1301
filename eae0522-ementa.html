@@ -13,7 +13,7 @@
 <meta name="author" content="Pedro Forquesato Departamento de Economia Faculdade de Economia, Administração, Contabilidade e Atuária Universidade de São Paulo" />
 
 
-<title>EAE-0522: TEORIA DOS JOGOS</title>
+<title>EAE-1301: TEORIA DOS JOGOS</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 <header>
 <div class="inner">
-<h1 class="title toc-ignore">EAE-0522: TEORIA DOS JOGOS</h1>
+<h1 class="title toc-ignore">EAE-1301: TEORIA DOS JOGOS</h1>
 <h3 class="author">Pedro Forquesato<br />Departamento de
 Economia<br />Faculdade de Economia, Administração, Contabilidade e
 Atuária<br />Universidade de São Paulo</h3>
@@ -70,9 +70,9 @@ Vida</a></li>
 <li><a href="#contato" id="toc-contato">Contato</a></li>
 <li><a href="#monitoria" id="toc-monitoria">Monitoria</a></li>
 <li><a href="#políticas-e-regulamentos" id="toc-políticas-e-regulamentos">Políticas e regulamentos</a></li>
-<li><a href="#conteúdo-programático-e-cronograma" id="toc-conteúdo-programático-e-cronograma">Conteúdo programático e
-cronograma</a></li>
-<li><a href="#bibliografia-do-curso" id="toc-bibliografia-do-curso">Bibliografia do curso</a></li>
+<li><a href="#conteúdo-programático-cronograma-e-bibliografia-do-curso" id="toc-conteúdo-programático-cronograma-e-bibliografia-do-curso">Conteúdo
+programático, cronograma e bibliografia do curso</a></li>
+<li><a href="#referências" id="toc-referências">Referências</a></li>
 </ul>
 </div>
 </div>
@@ -83,55 +83,60 @@ cronograma</a></li>
 <div id="objetivo-geral" class="section level3">
 <h3>Objetivo Geral</h3>
 <p>Teoria dos jogos é um ramo do conhecimento focado em modelar
-matemáticamente inteirações estratégicas entre jogadores racionais. O
-objetivo do curso é que o aluno saia conhecendo bem os principais</p>
+matematicamente interações estratégicas entre jogadores racionais. O
+objetivo do curso é que o aluno saia conhecendo os principais jogos
+debatidos na teoria, além de ter um bom entendimento dos conceitos de
+solução existentes e como computá-los.</p>
 </div>
 <div id="objetivos-de-aprendizagem" class="section level3">
 <h3>Objetivos de Aprendizagem</h3>
 <ol style="list-style-type: decimal">
-<li>Entender conceitualmente as consequências da intervenção
-governamental na economia, prevendo de forma substanciada e logicamente
-precisa a consequência provável de políticas públicas.</li>
-<li>Conhecer os principais modelos microeconômicos usados para explicar
-a ação governamental, resolvendo-os analiticamente e interpretando-os
-corretamente.<br />
-</li>
-<li>Argumentar de forma lógica e informada sobre o papel do governo e
-formulação de políticas públicas, desenvolvendo ensaios argumentativos
-defendendo adoção de políticas.</li>
-<li>Julgar a coerência lógica e condizência empírica de argumentos
-econômicos, avaliando criticamente os argumentos dos colegas de
-classe.</li>
+<li>Reconhecer os principais jogos da teoria dos jogos, conhecendo os
+seus resultados e a razão de sua importância.</li>
+<li>Compreender os tipos de jogos não-cooperativos, as suas diferenças e
+aplicações, identificando em que situações do mundo real cada conceito
+se aplica melhor e quais são os seus potenciais problemas.</li>
+<li>Modelar situações de interações estratégicas entre agentes na forma
+de um jogo, escrevendo modelos formalizados que nos informem sobre a
+situação de interesse.</li>
+<li>Aplicar os resultados e algoritmos de solução na teoria dos jogos,
+resolvendo jogos de todos os principais tipos.</li>
+<li>Avaliar a aplicabilidade de diferentes modelos da teoria dos jogos,
+julgando a sua condizência (positiva ou normativa) com o comportamento
+humano no mundo real.</li>
 </ol>
 </div>
 <div id="avaliação-de-aprendizagem" class="section level3">
 <h3>Avaliação de Aprendizagem</h3>
 <ol style="list-style-type: decimal">
-<li>Prova de meio-termo, cobrindo a primeira parte: 40-50% da média.
-(Objetivos de aprendizagem 1 e 2.)</li>
-<li>Prova final, cobrindo a segunda parte: 40-50% da média. (Objetivos
-de aprendizagem 1 e 2.)</li>
-<li>Duas listas de exercício: cada lista de exercício entregue
-<em>completamente</em> feita adiciona 0,5 ponto (<strong>crédito
-extra</strong>) na nota final (não há crédito parcial). (Objetivo de
-aprendizagem 2.)</li>
-<li>Dois ensaios argumentativos (artigos de opinião) com correção por
-pares (6500 caracteres): até 10% da nota final cada um
-(<strong>opcional</strong>). Toda a nota virá da avaliação do ensaio do
-aluno, mas os ensaios apenas valerão crédito se <em>ambas</em> as
-atividades forem feitas adequadamente. (Objetivos de aprendizagem 3 e
-4.)</li>
+<li><strong>Duas provas:</strong>, a primeira cobrindo as partes 1 e 2
+do curso; a segunda cobrindo o curso inteiro (40% e 60% da nota,
+respectivamente).</li>
+<li><strong>Oito workshops</strong> de resolução <strong>em
+sala</strong> de exercícios. Para cada workshop <em>com participação
+satisfatória</em>, é adicionado (<strong>crédito extra</strong>) 0,25 na
+média (2 pontos no total).</li>
 </ol>
-<p>A não participação em uma atividade opcional (ensaio ou lista)
-<strong>não</strong> impede a participação do aluno em qualquer outra
-atividade. As provas envolvem perguntas conceituais sobre a matéria
-vista em aula e da bibliografia obrigatória, e uma questão escolhida
-dentre as questões da lista com algumas modificações.</p>
-<p>A média final, portanto, é dada pela seguinte fórmula: <span class="math display">\[\text{MF} = \sum_{j=1}^{2} \left( 0.4\text{NP}_j
-+ 0.1\max\{ \text{NP}_j, \text{NE}_j \} + 0.05 𝟙\{\text{LE}_j = 1\}
-\right)\]</span></p>
+<p>Caso o aluno participe satisfatoriamente de <strong>todos</strong> os
+workshops, a sua média pode ser escolhida por ele mesmo (dado,
+evidentemente, a concordância do docente), <em>não sendo então
+necessária a realização das provas</em>, por meio de uma
+autoavaliação.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Autoavaliação:</strong> caso o aluno escolha (e possa
+escolher) esse método de avaliação, deve entregar um “portfolio” no fim
+do semestre de 1-3 páginas descrevendo o seu progresso, realizações e
+fazendo uma autoavaliação culminando na sua nota para o curso. Essa nota
+de autoavaliação será baseada em: (i) quantidade e dificuldade dos
+exercícios resolvidos nos workshops; (ii) participação em aula e nos
+workshops (por exemplo, ajudando os colegas); (iii) autoavaliação de seu
+progresso, conhecimento e dedicação na disciplina e em teoria dos jogos
+em geral.</li>
+</ol>
 <p>Todas as médias serão arredondadas para cima (em relação à nota final
-no Moodle) a uma casa decimal (<strong>e apenas isso</strong>).</p>
+no Moodle) a uma casa decimal (<strong>e apenas isso</strong>). Caso
+seja necessário para algum aluno, haverá uma prova de reavaliação, sendo
+a média final a média da primeira e segunda avaliações.</p>
 </div>
 <div id="qualidade-de-vida" class="section level3">
 <h3>Qualidade de Vida</h3>
@@ -168,22 +173,22 @@ conversarmos pessoalmente.)</p>
 </div>
 <div id="monitoria" class="section level3">
 <h3>Monitoria</h3>
-<p>?</p>
+<p>Torçamos.</p>
 </div>
 <div id="políticas-e-regulamentos" class="section level3">
 <h3>Políticas e regulamentos</h3>
-<p><strong>Aulas.</strong> As aulas serão segundas-feiras das 07h30 às
-09h10 e quartas-feiras das 09h20 às 11h00 (turma 2023-121) e segundas
-das 09h20 às 11h00 e quartas das 7h30 às 09h10 (turma 2023-122) na sala
-<strong>G-02</strong> do FEA 1.</p>
+<p><strong>Aulas.</strong> As aulas são terças-feiras das 19h30 às 21h10
+e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala
+<strong>XX</strong> do FEA 1.</p>
 <p><strong>Comunicação.</strong> Toda a comunicação oficial por minha
 parte do curso será feita pelo <a href="https://edisciplinas.usp.br">Moodle</a>, incluindo listas, notas,
 presenças, trabalhos e avisos. O curso assume que o aluno acessa
 frequentemente a plataforma e checa diariamente os e-mails
 recebidos.</p>
-<p><strong>Faltas.</strong> Pelo regulamento da USP, participação em 70%
-das aulas é obrigatória para aprovação na disciplina. Faltas serão
-desconsideradas apenas com atestado médico emitido pelo HU/USP (<a href="http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007">Portaria
+<p><strong>Faltas.</strong> Pelo regulamento da USP,
+<strong>participação em 70% das aulas é obrigatória</strong> para
+aprovação na disciplina. Faltas serão desconsideradas apenas com
+atestado médico emitido pelo HU/USP (<a href="http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007">Portaria
 GR 3740/2007</a>), com permissão especial para eventual Covid.</p>
 <p>O aluno pode faltar <strong>no máximo</strong> uma das duas provas
 (independentemente de atestado) e substituir a nota pela reaval, <em>sem
@@ -192,11 +197,9 @@ matéria do curso.)</p>
 <p><strong>Ética.</strong> Todas as provas são <strong>individuais e sem
 consulta</strong>. “Cola” em alguma das provas resultará em reprovação
 sumária no curso. Listas podem ser feitas em conjunto e/ou com auxílio
-do monitor, mas <em>devem ser escritas individualmente</em>. Ensaios
-serão submetidos pelos alunos ao Turnitin, e devem ser
-<em>inteiramente</em> originais. (Citações não são permitidas.) Listas
-copiadas ou ensaios com similaridade implicarão renúncia de todas as
-atividades opcionais do curso.</p>
+do monitor, mas <em>devem ser escritas individualmente</em>. Listas
+copiadas implicarão renúncia de todas as atividades opcionais do
+curso.</p>
 <p>Note que essas punições ocorrerão sem prejuízo de eventual
 instauração de processo administrativo de acordo com o <a href="http://leginf.usp.br/?resolucao=resolucao-no-4871-de-22-de-outubro-de-2001-3">Código
 de Ética da USP</a>.</p>
@@ -215,21 +218,87 @@ simples da média do curso e da nota da reaval.</p>
 não consigam (ou não queiram) resolver pessoalmente, recomendo que
 entrem em contato com a <a href="https://www.fea.usp.br/fea/ouvidoria">Ouvidoria da FEA</a>.</p>
 </div>
-<div id="conteúdo-programático-e-cronograma" class="section level3">
-<h3>Conteúdo programático e cronograma</h3>
-<p>O curso está dividido em duas partes. Na primeira parte do curso,
-estudaremos a parte do “gasto”: quando e como o setor público deve
-intervir na economia. Na segunda parte do curso, estudaremos a
-“receita”: como o governo deve desenhar os seu sistema de impostos de
-forma a minimizar distorções na economia e alcançar os seus objetivos
-(talvez principal entre eles redistribuir renda).</p>
+<div id="conteúdo-programático-cronograma-e-bibliografia-do-curso" class="section level3">
+<h3>Conteúdo programático, cronograma e bibliografia do curso</h3>
+<p>O curso está dividido em três partes. Cada parte consiste em uma
+série de aulas teóricas (por volta de 2 semanas) explicando a matéria e
+como se dá a solução dessa classe de jogos, seguidas por semanas de
+workshops (de 1 semana cada) onde os conceitos são aplicados na
+resolução de uma lista de jogos.</p>
+<p>Todas as datas abaixos são <strong>estimativas</strong> e
+<strong>sujeitas a alteração</strong> dependendo do andamento do
+semestre.</p>
+<div id="parte-1-jogos-estáticos-de-informação-completa" class="section level4">
+<h4>Parte 1: Jogos estáticos de informação completa</h4>
+<p>2 semanas de aulas [06 e 08/08, 13 e 15/08]</p>
+<ol style="list-style-type: decimal">
+<li><strong>Workshop 1:</strong> Soluções baseadas (apenas) na
+racionalidade [20 e 22/08] <br> <em>Bibliografia:</em> Tadelis, caps. 3
+e 4.</li>
+<li><strong>Workshop 2:</strong> Equilíbrio de Nash (em estratégias
+puras e mistas) [27 e 29/08] <br> <em>Bibliografia:</em> Tadelis, caps.
+5 e 6.</li>
+</ol>
+<p>[Semana da pátria]</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Workshop 3:</strong> Jogos estritamente competitivos (aka
+jogos de soma-zero) [10 e 12/09] <br> <em>Bibliografia:</em> Osborne,
+capítulo 11.</li>
+</ol>
 </div>
-<div id="bibliografia-do-curso" class="section level3">
-<h3>Bibliografia do curso</h3>
-<p>a</p>
-<div id="referências" class="section level4">
-<h4>Referências</h4>
+<div id="parte-2-jogos-dinâmicos-de-informação-completa" class="section level4">
+<h4>Parte 2: Jogos dinâmicos de informação completa</h4>
+<p>2 semanas de aulas [17 e 19/09, 24 e 26/09]</p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Workshop 4:</strong> Jogos dinâmicos de informação perfeita
+[01 e 03/10] <br> <em>Bibliografia:</em> Tadelis, caps. 7, 8 e 11.</li>
+</ol>
+<p>[Prova de meio-termo: 10/10]</p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Workshop 5:</strong> Jogos dinâmicos de informação
+imperfeita [15 e 17/10] <br> <em>Bibliografia:</em> Osborne, cap.
+7.</li>
+<li><strong>Workshop 6:</strong> Jogos multi-estágios e repetidos [22 e
+24/10] <br> <em>Bibliografia:</em> Tadelis, caps. 9 e 10.</li>
+</ol>
 </div>
+<div id="parte-3-jogos-de-informação-incompleta" class="section level4">
+<h4>Parte 3: Jogos de informação incompleta</h4>
+<p>2 semanas de aulas [29 e 31/10, 05 e 07/11]</p>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Workshop 7:</strong> Jogos de informação incompleta [12 e
+14/11] <br> <em>Bibliografia:</em> Tadelis, cap. 12.</li>
+<li><strong>Workshop 8:</strong> Refinamentos de equilíbrio [19 e 21/11]
+<br> <em>Bibliografia:</em> Tadelis, caps. 15 e 16.</li>
+</ol>
+<p>[Prova final: 28/11]</p>
+</div>
+</div>
+<div id="referências" class="section level3">
+<h3>Referências</h3>
+<p>Os livros que vamos seguir de perto no curso são:</p>
+<p>Tadelis, S. (2013). Game theory: an introduction. Princeton
+university press. <br> Osborne, M. J. (2004). An introduction to game
+theory. New York: Oxford university press.</p>
+<p>Mas teoria dos jogos é teoria dos jogos. Qualquer outro livro vai
+cobrir o mesmo material (mas às vezes com ênfase ou grau de formalização
+diferente). Alguns outros livros recomendados (em ordem de mais fácil
+para mais difícil) são:</p>
+<p>Gibbons, R. (1992). Game theory for applied economists. Princeton
+University Press. <br> Binmore, K. (2007). Playing for real: a text on
+game theory. Oxford university press.<br> Perea, A. (2012). Epistemic
+game theory: reasoning and choice. Cambridge University Press.<br>
+Osborne, M. J., &amp; Rubinstein, A. (1994). A course in game theory.
+MIT press. (*) <br> Maschler, M., Zamir, S., &amp; Solan, E. (2020).
+Game theory. Cambridge University Press. (*) <br> Krishna, V. (2009).
+Auction theory. Academic press. (*) <br> Fudenberg, D., &amp; Tirole, J.
+(1991). Game theory. MIT press. (*)</p>
+<p>Livros com (*) são livros de pós-graduação. (Mas não precisamos ter
+medo de livros de pós-graduação!)</p>
+<p>Caso o aluno queira complementar a leitura dos capítulos e a aula com
+vídeos <strong><em>opcionais</em></strong>, recomendo o curso do Matthew
+Jackson e outros professores em <a href="https://www.game-theory-class.org/" class="uri">https://www.game-theory-class.org/</a> (os vídeos podem ser
+acessados diretamente por <a href="https://www.youtube.com/@gametheoryonline" class="uri">https://www.youtube.com/@gametheoryonline</a>).</p>
 </div>
     </section>
   </div>

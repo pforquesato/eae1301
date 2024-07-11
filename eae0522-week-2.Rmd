@@ -1,5 +1,5 @@
 ---
-title: "EAE-0522: Teoria dos Jogos"
+title: "EAE-1301: Teoria dos Jogos"
 author: "Pedro Forquesato<br/>http://www.pedroforquesato.com<br/>Sala 217/FEA2 - pforquesato@usp.br"
 institute: "Departamento de Economia<br/>Universidade de São Paulo"
 date: "2024/2 - Tópico 2: Jogos dinâmicos"
@@ -283,7 +283,100 @@ class: middle
 knitr::include_graphics("figs/week2-fig7.png")
 ```
 
-Podemos aplicar o equilíbrio perfeito em subjogos nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona: quais são então os equilíbrios de Nash e perfeitos em subjogos?
+Podemos aplicar o equilíbrio perfeito em subjogos nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona: quais são então os equilíbrios de Nash e perfeitos em subjogos
+
+
+---
+class: middle
+## "Um divide, o outro escolhe"
+
+Uma forma bastante comum entre crianças de dividir, por exemplo, uma caixa de bombons, em que alguns doces são mais gostosos que os outros, é o "um divide, o outro escolhe"
+
+Essa forma de divisão gera naturalmente um jogo em forma extensiva, e que tem um único equilíbrio perfeito em subjogos que dá a ambos utilidade igual
+
+E as crianças são sábeis: esse é um bom método de **implementar** uma alocação igualitária quando *valores são comuns* mas desconhecidos (pelo adulto)
+
+---
+class: middle
+## Barganha
+
+Das várias formas de interação estratégica entre pessoas, algumas das mais importantes são situações de **barganha**: é natural então que modelos desse tipo estão entre os mais importantes e estudados na teoria dos jogos
+
+O modelo principal de barganha é devido a Ståhl (1972, 1977) e Rubinstein (1982), e é um modelo de informação completa em forma extensiva em que os jogadores se revezam para fazer (e aceitar ou recusar) ofertas de divisão do bolo
+
+Mas *tempo é dinheiro*: a cada período de barganha sem os jogadores chegarem a um acordo o bolo perde $\delta$ vezes o seu valor
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '30%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig12.png")
+```
+
+Forma extensiva do modelo de barganha &mdash; no 1º período, o jogador 1 oferece $(x, 1-x)$ e o jogador 2 ou aceita ou recusa &mdash; se aceitar, o jogo acaba com esses *payoffs*, se recusar ele continua com o jogador 2 oferecendo, mas agora o tamanho do bolo é $\delta$, e assim em diante até $T$ (acima $T=2$), quando o jogo acaba e ambos recebem *payoff* $0$
+
+---
+class: middle
+## Barganha finita
+
+O primeiro resultado é que o conceito de equilíbrio de Nash é pouco informativo &mdash; *todas* as divisões podem ser divisões de equilíbrio com acordo no primeiro período  
+
+Já equilíbrio perfeito em subjogos nos dá uma resposta *bem* mais refinada: pelo argumento de indução para trás, há um *único* equilíbrio perfeito em subjogos
+
+Se o jogo tem 1 período (**ultimato**), então o único equilíbrio de Nash que obedece racionalidade sequencial é o primeiro jogador propor $(1,0)$ e o segundo jogagor aceitar &mdash; se tem 2 períodos, daí o equilíbrio é $(1-\delta, \delta)$
+
+---
+class: middle
+## Barganha finita
+
+Em barganha finita, há três tipos de "poderes de barganha":
+
+1. Há um **first-mover advantage**, pois em equilíbrio os jogadores chegam a um acordo no 1º período, e quem propõe pode se aproveitar do fato do bolo diminuir até o próximo período 
+2. Há um **last-mover advantage**, porque no último período o jogo é de *ultimato*, e quem fizer a proposta pode deixar $0$ para o outro jogador
+3. Aqui analisamos o caso em que os fatores de desconto são iguais, mas no caso mais geral *o jogador mais paciente tem maior poder de barganha*
+
+Assim o resultado vai depender se $T$ é par (e cada jogador tem umas das vantagens)
+ou ímpar (e o jogador 1 tem ambas) &mdash; nesse último caso, a solução é $x_1^* = (1 + \delta^T)/(1 + \delta)$ e $x_2^* = (\delta - \delta^T)/(1+\delta)$
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig11.png")
+```
+
+A vantagem de se jogar por último pode parecer "forçada", porque depende inteiramente do exato momento em que a barganha acaba &mdash; uma alternativa então é a barganha não ter limite, seguindo indefinidamente caso não haja concordância entre as partes
+
+---
+class: middle
+## Barganha infinita
+
+Jogos (potencialmente) infinitos são mais difíceis de se resolver, pois não podemos aplicar a *indução para trás* como fizemos antes &mdash; aqui utilizaremos o fato do jogo ser **estacionário**: cada período o jogo é exatamente igual, mas com identidades trocadas
+
+Assim, qualquer estratégia de equilíbrio possível para o jogador 1 no 1º período é possível para o jogador 2 no 2º período: então deve ser verdade que $v = 1 - \delta v$
+
+Com isso chegamos que o único equilíbrio perfeito em subjogos tem o jogador 1 oferecendo $(1/(1+\delta), \delta/(1+\delta))$ e o jogador 2 aceitando no 1º período
+
+
+---
+class: middle
+## Jogos extensivos de informação imperfeita
+
+Podemos aplicar os mesmos conceitos vistos antes a jogos de **informação imperfeita**, em que algumas ações anteriores não são observáveis
+
+Se a imperfeição informacional vir no fim do jogo, então frequentemente a análise até aqui é inteiramente satisfatória: veremos vários exemplos desse tipo na lista 5 &mdash; mas se é no começo, então teremos poucos (ou apenas 1!) subjogo, e a perfeição em subjogos perde o seu poder
+
+Nesse caso precisaremos de **refinamentos de equilíbrio** que levem mais a sério as *crenças* dos jogadores, que é o tópico do fim do curso
+
+---
+class: middle
+## Jogos extensivos de informação imperfeita
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/lista8-ex2a.png")
+```
+
+Exemplo de um jogo de informação imperfeita com equilíbrio perfeito em subjogos que não obedece racionalidade sequencial
 
 ---
 class: middle, center, inverse
@@ -414,7 +507,7 @@ A ideia é simples: o jogador começa cooperando, e sempre faz a última coisa q
 
 ---
 class: middle
-## Teorema Folk
+## Teoremas Folk
 
 *Teoremas folk* (há dezenas deles) estabelecem condições para que (quase) *qualquer* resultado do jogo seja um equilíbrio do jogo repetido &mdash; o nome "teorema folk" vem do fato do 1º deles circular bastante na década de 50 entre os teoristas dos jogos, sendo difícil nomear quem primeiro o inventou
 
