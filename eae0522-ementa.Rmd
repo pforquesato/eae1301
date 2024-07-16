@@ -23,8 +23,7 @@ Teoria dos jogos é um ramo do conhecimento focado em modelar matematicamente in
 ### Objetivos de Aprendizagem
 
 
-1. Reconhecer os principais jogos da teoria dos jogos, conhecendo os seus resultados e a razão de sua importância.
-2. Compreender os tipos de jogos não-cooperativos, as suas diferenças e aplicações, identificando em que situações do mundo real cada conceito se aplica melhor e quais são os seus potenciais problemas.
+1. Reconhecer os principais jogos e teoremas da teoria dos jogos, sabendo os seus resultados e a razão de sua importância.
 3. Modelar situações de interações estratégicas entre agentes na forma de um jogo, escrevendo modelos formalizados que nos informem sobre a situação de interesse.
 2. Aplicar os resultados e algoritmos de solução na teoria dos jogos, resolvendo jogos de todos os principais tipos.
 2. Avaliar a aplicabilidade de diferentes modelos da teoria dos jogos, julgando a sua condizência (positiva ou normativa) com o comportamento humano no mundo real.
@@ -49,11 +48,11 @@ Se você estiver passando por dificuldades: 1. se isso atrapalhar de alguma form
 
 ### Docente
 
-Meu nome é Pedro Forquesato, sou professor doutor do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2024, leciono Economia do Setor Público na graduação e pós, Estatística e Econometria I além de Teoria dos Jogos (este curso).
+Meu nome é Pedro Forquesato, sou professor doutor do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2024, leciono Economia do Setor Público na graduação, Estatística e Econometria I na pós-graduação, além de Teoria dos Jogos (este curso).
 
 ### Contato
 
-Para questões específicas e individuais me mandem um [e-mail](mailto:pforquesato@usp.br). Se quiserem conversar pessoalmente, podem marcar um horário de atendimento no link disponível na plataforma. A minha sala é a 217 no FEA-2.
+Para questões específicas e individuais me mandem um [e-mail](mailto:pforquesato@usp.br). Se quiserem conversar pessoalmente, podem marcar um horário de atendimento no link disponível no Moodle. A minha sala é a 217 no FEA-2.
 
 Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados** e relativamente curtos. (Se o e-mail que vocês está escrevendo tem mais de 2 parágrafos, talvez valha a pena conversarmos pessoalmente.)
 
@@ -63,7 +62,7 @@ Torçamos.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **XX** do FEA 1.
+**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **??** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
@@ -83,40 +82,42 @@ Note que essas punições ocorrerão sem prejuízo de eventual instauração de 
 
 ### Conteúdo programático, cronograma e bibliografia do curso
 
-O curso está dividido em três partes. Cada parte consiste em uma série de aulas teóricas (por volta de 2 semanas) explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por semanas de workshops (de 1 semana cada) onde os conceitos são aplicados na resolução de uma lista de jogos.
+O curso está dividido em três partes. Cada parte consiste em uma série de aulas teóricas explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por semanas de workshops onde os conceitos são aplicados na resolução de uma lista de jogos.
 
 Todas as datas abaixos são **estimativas** e **sujeitas a alteração** dependendo do andamento do semestre.
 
 #### Parte 1: Jogos estáticos de informação completa
 
-2 semanas de aulas [06 e 08/08, 13 e 15/08] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html)
+3 semanas de aulas [06/08 a 22/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html)
 
-1. **Workshop 1:** Soluções baseadas (apenas) na racionalidade [20 e 22/08]  <br> *Bibliografia:* Tadelis, caps. 3 e 4.
-2. **Workshop 2:** Equilíbrio de Nash (em estratégias puras e mistas)  [27 e 29/08] <br> *Bibliografia:* Tadelis, caps. 5 e 6.
+1. **Workshop 1:** Soluções baseadas (apenas) na racionalidade [Semana do dia 27/08]. <br> *Bibliografia:* Tadelis, caps. 3 e 4.
 
 [Semana da pátria]
 
-3. **Workshop 3:** Jogos estritamente competitivos (aka jogos de soma-zero) [10 e 12/09] <br> *Bibliografia:* Osborne, capítulo 11.
+2. **Workshop 2:** Equilíbrio de Nash (em estratégias puras e mistas)  [Semana do dia 10/09]. <br> *Bibliografia:* Tadelis, caps. 5 e 6.
+3. **Workshop 3:** Jogos estritamente competitivos (aka jogos de soma-zero) [Semana do dia 17/08]. <br> *Bibliografia:* Osborne, capítulo 11.
 
 #### Parte 2: Jogos dinâmicos de informação completa
 
-2 semanas de aulas [17 e 19/09, 24 e 26/09] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html)
+2 semanas de aulas [24/09 a 03/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html)
 
-4. **Workshop 4:** Jogos dinâmicos de informação perfeita [01 e 03/10] <br> *Bibliografia:* Tadelis, caps. 7, 8 e 11.
+4. **Workshop 4:** Jogos dinâmicos de informação perfeita [Semana do dia 08/10]. <br> *Bibliografia:* Tadelis, caps. 7, 8 e 11.
 
-[Prova de meio-termo: 10/10] 
+Prova de meio-termo: **15/10** (workshops 1 a 4).
 
-5. **Workshop 5:** Jogos dinâmicos de informação imperfeita [15 e 17/10] <br> *Bibliografia:* Osborne, cap. 7.
-6. **Workshop 6:** Jogos multi-estágios e repetidos [22 e 24/10] <br> *Bibliografia:* Tadelis, caps. 9 e 10.
+5. **Workshop 5:** Jogos dinâmicos de informação imperfeita [Semana do dia 22/10]. <br> *Bibliografia:* Osborne, cap. 7.
+6. **Workshop 6:** Jogos multi-estágios e repetidos [Semana do dia 29/10]. <br> *Bibliografia:* Tadelis, caps. 9 e 10.
 
 #### Parte 3: Jogos de informação incompleta
 
-2 semanas de aulas [29 e 31/10, 05 e 07/11] [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html)
+2 semanas de aulas [05/11 a 14/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html)
 
-7. **Workshop 7:** Jogos de informação incompleta [12 e 14/11] <br> *Bibliografia:* Tadelis, cap. 12.
-8. **Workshop 8:** Refinamentos de equilíbrio [19 e 21/11] <br> *Bibliografia:* Tadelis, caps. 15 e 16.
+7. **Workshop 7:** Jogos de informação incompleta [Semana do dia 19/11]. <br> *Bibliografia:* Tadelis, cap. 12.
+8. **Workshop 8:** Refinamentos de equilíbrio [Semana do dia 26/11]. <br> *Bibliografia:* Tadelis, caps. 15 e 16.
 
-[Prova final: 28/11]
+Prova final: **03/12** (toda a matéria).
+
+Reavaliação: **12/12**.
 
 ### Referências
 
@@ -125,7 +126,7 @@ Os livros que vamos seguir de perto no curso são:
 Tadelis, S. (2013). Game theory: an introduction. Princeton university press. <br>
 Osborne, M. J. (2004). An introduction to game theory. New York: Oxford university press.
 
-Mas teoria dos jogos é teoria dos jogos. Qualquer outro livro vai cobrir o mesmo material (mas às vezes com ênfase ou grau de formalização diferente). Alguns outros livros recomendados (em ordem de mais fácil para mais difícil) são:
+Mas teoria dos jogos é teoria dos jogos. Qualquer outro livro vai cobrir mais ou menos o mesmo material (mas às vezes com ênfase ou grau de formalização diferente). Alguns outros livros recomendados (em ordem de mais "fácil" para mais "difícil") são:
 
 Gibbons, R. (1992). Game theory for applied economists. Princeton University Press. <br>
 Binmore, K. (2007). Playing for real: a text on game theory. Oxford university press.<br>
@@ -137,6 +138,6 @@ Fudenberg, D., & Tirole, J. (1991). Game theory. MIT press. (\*)
 
 Livros com (\*) são livros de pós-graduação. (Mas não precisamos ter medo de livros de pós-graduação!)
 
-Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***opcionais***, recomendo o curso do Matthew Jackson e outros professores em https://www.game-theory-class.org/ (os vídeos podem ser acessados diretamente por https://www.youtube.com/@gametheoryonline).
+Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***completamente opcionais***, recomendo o curso do Matthew Jackson e outros professores em https://www.game-theory-class.org/ (os vídeos podem ser acessados diretamente por https://www.youtube.com/@gametheoryonline).
 
 
