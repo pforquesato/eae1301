@@ -33,7 +33,7 @@ Teoria dos jogos é um ramo do conhecimento focado em modelar matematicamente in
 1. **Duas provas:**, a primeira cobrindo as partes 1 e 2 do curso; a segunda cobrindo o curso inteiro (40% e 60% da nota, respectivamente).
 2. **Oito workshops** de resolução **em sala** de exercícios. Para cada workshop *com participação satisfatória*, é adicionado (**crédito extra**) 0,25 na média (2 pontos no total).
 
-Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*, por meio de uma autoavaliação. 
+Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo  por meio de uma autoavaliação (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*. 
 
 3. **Autoavaliação:** caso o aluno escolha (e possa escolher) esse método de avaliação, deve entregar um "portfolio" no fim do semestre de 1-3 páginas descrevendo o seu progresso, realizações e fazendo uma autoavaliação culminando na sua nota para o curso. Essa nota de autoavaliação será baseada em: (i) quantidade e dificuldade dos exercícios resolvidos nos workshops; (ii) participação em aula e nos workshops (por exemplo, ajudando os colegas); (iii) autoavaliação de seu progresso, conhecimento e dedicação na disciplina e em teoria dos jogos em geral. 
 
@@ -58,11 +58,11 @@ Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados
 
 ### Monitoria
 
-Torçamos.
+O monitor da matéria será o [Dimitri Maturano](mailto:dimitricecanm@usp.br). O funcionamento das monitorias será explicado em aula.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **??** do FEA 1.
+**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **G-02** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
