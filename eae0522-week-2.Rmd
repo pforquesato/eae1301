@@ -31,32 +31,50 @@ myBib <- ReadBib("./eae0522_bib.bib", check = FALSE)
 class: middle
 ## Jogos estáticos
 
-Jogos estáticos ignoram qualquer aspecto temporal das interações estratégicas &mdash; até agora isso não era um problema pois estávamos estudando interações entre agentes que ocorriam de forma *once and for all*
+Jogos estáticos ignoram qualquer aspecto temporal das interações estratégicas &mdash; até agora isso não era um problema pois estávamos estudando interações entre agentes que ocorriam da forma *"once and for all"*
 
-A forma normal supõe que os jogadores "programam a sua estratégia em um computador" no começo do jogo e o algoritmo implementa ela não importa o que acontecer ao longo da interação
+Em termos gerais, a forma normal supõe que os jogadores "programam a sua estratégia em um computador" no começo do jogo e o algoritmo implementa ela não importa o que acontecer ao longo da interação
 
-Embora isso ainda seja útil para alguns propósitos, o jogo se desenrolar temporalmente traz considerações de **racionalidade sequencial** (e de infomação) que frequentemente gostaríamos de introduzir na análise
+Embora isso ainda seja útil para alguns propósitos, o jogo se desenrolar temporalmente traz considerações de **racionalidade sequencial** (e de informação) que frequentemente gostaríamos de levar em conta
 
 ---
 class: middle
-## Guerra dos sexos
+## Guerra dos sexos (de novo)
 
-Voltemos (mais uma vez) ao jogo da guerra dos sexos abaixo: 
+Voltemos mais uma vez ao jogo da guerra dos sexos abaixo: 
 
 ```{r, echo=FALSE, out.width = '25%', fig.align='center'}
 knitr::include_graphics("figs/week-1-fig-0.png")
 ```
 
-Mas considerem a seguinte variante: Ana sai mais cedo de casa, e com isso ela pode chegar primeiro na ópera ou no futebol e tirar uma foto para colocar no Instagram, que o Bernardo irá ver antes de decidir aonde vai
+Mas considerem a seguinte variante: Ana sai mais cedo de casa, e com isso ela pode chegar primeiro na ópera ou no futebol e tirar uma foto para colocar no Instagram, que o Bernardo irá ver antes de decidir para onde vai
 
 ---
 class: middle
-## Guerra dos sexos
 
-Nós representamos essa situação no **grafo** (mais especificamente, uma *árvore*) abaixo, que representa um **jogo na forma extensiva**:
-
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig1.png")
+```
+
+Nós representamos tal situação no **grafo** (mais especificamente, uma *árvore*) acima, que representa um **jogo na forma extensiva**
+
+
+---
+class: middle
+## Grafos de forma extensiva
+
+Um **grafo** é um conjunto de vértices $V$ (momentos que cada jogador é chamado a escolher) e arestas $(V_1, V_2)$ *direcionadas* (ações), que mostram "as consequências" de cada ação 
+
+Um jogo na forma extensiva pode sempre ser representado por um tipo específico de grafo, uma **árvore**, tal que há um vértice original $x_0$ (o início do jogo), e todo vértice $x$ possui *um único* caminho vindo de $x_0$
+
+Para terminar, precisamos estabelecer: (i) em cada vértice qual jogador é chamado a jogar lá, (ii) em cada vértice terminal (*folha* da árvore) os *payoffs* de cada jogador se aquele for o resultado final do jogo, e (iii) os conjuntos informacionais de cada jogador (que definiremos a seguir)
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig15.png")
+knitr::include_graphics("figs/week2-fig15b.png")
 ```
 
 ---
@@ -65,17 +83,17 @@ class: middle
 
 O jogo na forma extensiva expande no jogo estático que vimos antes tendo os seguintes componentes sendo **conhecimento comum**:
 
-1. Os jogadores
-2. Os *payoffs* de cada jogador para cada resultado do jogo (as *folhas* da árvore)
-3. A ordem dos movimentos dos jogadores
-4. O que cada jogador sabe quando é chamado a jogar (vamos começar com jogos que todos os jogadores sabem tudo o que aconteceu antes)
+1. Quem são os jogadores
+2. Os *payoffs* de cada jogador para cada resultado final (*folha*) do jogo (jogos na forma extensiva só "distribuem" *payoffs* quando o jogo termina)
+3. A ordem dos movimentos dos jogadores (ou equivalentemente, o *grafo* que representa o jogo)
+4. O que cada jogador sabe quando é chamado a jogar
 5. As ações de cada jogador em cada ponto no qual é chamado a jogar
 
 ---
 class: middle
 ## Informação
 
-É importante perceber que o mais importante para definir as estratégias dos agentes não é a *ordem cronológica* do jogo em si, mas *o que os jogadores sabem ao tomar a sua decisão*
+Vale relembrar que o mais importante para definir as estratégias dos agentes não é a *ordem cronológica* do jogo em si, mas *o que os jogadores sabem ao tomar as suas decisões*
 
 Mesmo que a Ana esteja na ópera há horas quando Bernardo decide onde ir, se ele não viu as suas fotos no Instagram, então *estrategicamente* o jogo é o mesmo que se eles decidissem simultaneamente onde ir
 
@@ -83,33 +101,30 @@ Jogos (extensivos) em que os jogadores em todo momento que são chamados a jogar
 
 ---
 class: middle
-## Conjuntos informacionais
 
 ```{r, echo=FALSE, out.width = '65%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig2.png")
 ```
 
-Um jogo em forma normal pode ser sempre representado na forma extensiva com uma seleção apropriada de **conjuntos informacionais**: quando vários pontos de tomada de decisão (do mesmo jogador) estão no mesmo conjunto informacional, isso significa que o jogador não sabe em qual dos vértices dentro do conjunto ele se encontra (por motivos óbvios, em todos os vértices no mesmo conjunto as ações disponíveis precisam ser iguais)
+Assim, um jogo em forma normal pode ser sempre representado na forma extensiva com uma seleção apropriada de **conjuntos informacionais**: quando vários pontos de tomada de decisão (do mesmo jogador) estão no mesmo conjunto informacional, isso significa que o jogador não sabe em qual dos vértices dentro do conjunto ele se encontra (em todos os vértices no mesmo conjunto as ações disponíveis precisam ser iguais)
 
 ---
 class: middle
-## Jogos de informação imperfeita
 
 ```{r, echo=FALSE, out.width = '55%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig3.png")
 ```
 
-Outro exemplo: **jokenpô** representado na forma extensiva com informação imperfeita (ambas as formas representam exatamente o mesmo jogo!) &mdash; um jogo tem **informação imperfeita** quando algum conjunto informacional de algum jogador tem mais de um elemento (vértices)
+Um outro exemplo é o *jokenpô*, que já vimos, representado na forma extensiva com informação imperfeita (ambas as formas representam exatamente o mesmo jogo!) &mdash; temos um **jogo de informação imperfeita** quando algum conjunto informacional de algum jogador tem mais de um elemento (vértices)
 
 ---
 class: middle
-## Jogos com lances da natureza
 
-```{r, echo=FALSE, out.width = '65%', fig.align='center'}
+```{r, echo=FALSE, out.width = '70%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig4.png")
 ```
 
-Vários tipos de jogos envolvem chance (p. ex. tirar cartas de um baralho): em teoria dos jogos, geralmente chamamos essa aleatoriedade de **lances da natureza**: a "natureza" como um jogador especial que escolhe uma estratégia mista que é conhecimento comum de todos os outros jogadores
+Vários tipos de jogos envolvem chance (por exemplo, tirar cartas de um baralho): em teoria dos jogos, geralmente modelamos essa aleatoriedade como **lances da natureza**: a "natureza" como um jogador especial que escolhe uma estratégia mista que é conhecimento comum de todos os outros jogadores &mdash; chamamos esses jogos de **jogos com lances da natureza** ou *jogos de risco*
 
 ---
 class: middle
@@ -123,17 +138,16 @@ Mas agora fica clara a importância da definição: uma **estratégia pura** é 
 
 ---
 class: middle
-## Estratégias na guerra dos sexos
 
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig1.png")
 ```
 
-Para Ana, as estratégias são apenas ações, como anteriormente: ir à ópera $O$ ou ao futebol $F$ &mdash; mas para Bernardo, agora ele pode escolher $oo$, $of$, $fo$, $ff$, onde $of$ representa a estratégia "eu vou à ópera se eu ver fotos de Ana na ópera, e vou ao futebol se ver fotos dela no futebol"
+Na *guerra dos sextos*, para Ana, as estratégias são apenas ações, como antes: ir à ópera $O$ ou ao futebol $F$ &mdash; mas para Bernardo, agora ele pode escolher $oo$, $of$, $fo$, ou $ff$, onde $of$ (por exemplo) representa a estratégia "eu vou à ópera se eu ver fotos de Ana na ópera, e vou ao futebol se ver fotos dela no futebol"
 
 ---
 class: middle
-## Estratégias comportamentais
+## Estratégias mistas e comportamentais
 
 Notem que o número de estratégias puras cresce exponencialmente no número de conjuntos informacionais de cada jogador: um jogador com 3 conjuntos, cada um com 3 ações já tem 27 estratégias puras do jogador 2!
 
@@ -143,62 +157,79 @@ Uma alternativa mais simples são as **estratégias comportamentais**, que a cad
 
 ---
 class: middle
-## Estratégias comportamentais
+## Estratégias mistas e comportamentais
 
-Luce e Raiffa (1957) faz a seguinte analogia: uma estratégia pura é um manual, que diz a cada conjunto informacional o que jogar &mdash; uma estratégia mista é escolher aleatoriamente um manual e segui-lo até o final
+Luce e Raiffa (1957) faz a seguinte analogia: se uma estratégia pura é um manual, no qual cada página representa um conjunto informacional e nela está escrita uma ação a se tomar, então uma estratégia mista é escolher aleatoriamente um manual e segui-lo até o fim
 
-Já uma *estratégia comportamental* é um manual que em algumas páginas propõe aleatorizar sobre as ações naquele conjunto informacional &mdash; bem mais simples!
+Já uma *estratégia comportamental* é um manual apenas, mas que em algumas páginas propõe jogar um dado para escolher o que fazer &mdash; bem mais simples!
 
-Mas faz diferença? Pode ser provado que em **jogos de *perfect recall*** (jogos em que nenhum jogador esquece informação que antes tinha) estratégias mistas e comportamentais são equivalentes
+Em **jogos de *perfect recall***, jogos em que nenhum jogador esquece qualquer informação que ele já soube (basicamente todos do curso, mas ver questão 14 do workshop 5), estratégias mistas e comportamentais são equivalentes
 
 ---
 class: middle
-## Jogos extensivos em forma normal
+## Jogos dinâmicos na forma normal
 
-A forma normal ainda tem utilidade mesmo em jogos na forma extensiva, pois *o conceito de equilíbrio de Nash não incorpora nenhum aspecto dinâmico*
+A forma normal ainda tem utilidade mesmo em jogos dinâmicos, pois é o método (talvez) mais fácil de encontrar equilíbrios de Nash, já que  o conceito de EN *não incorpora nenhum aspecto dinâmico* 
 
 
 ```{r, echo=FALSE, out.width = '45%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig5.png")
 ```
 
-O jeito mais fácil de achar os equilíbrios de Nash de um jogo dinâmico é escrevê-lo na forma normal e usar as técnicas da parte anterior do curso &mdash; mas não esqueçam que temos que adicionar *todas* as estratégias, como acima
+Note que vários jogos em forma extensiva podem ter a mesma forma normal, já que todos os elementos dinâmicos e informacionais são ignorados
 
 ---
 class: middle
-## Caminhos de jogo
+## Jogos dinâmicos na forma normal
 
-O jogo tem 3 ENs em estratégias puras (e em estratégias mistas?): dois deles dando *payoffs* iguais para os dois jogadores &mdash; o que muda entre eles é o comportamento do jogador 2 *fora do caminho de equilíbrio*
+Um jogo na forma normal intuitivamente tem os jogadores programando as suas estratégias (puras ou mistas) em um computador antes do começo do jogo, e o computador as segue não importa o que acontecer
 
-E isso é importante! Note que $(F, ff)$ é um EN, mas $(F, of)$ *não é*, por mais que ambos proponham a mesma ação como resposta ao que o jogador 1 *efetivamente joga* (e portanto deem o mesmo *payoff* a ambos os jogadores)
+As estratégias que compõem um equilíbrio de Nash têm sempre capacidade completa de **comprometimento**, já que a estipulação delas é "once and for all" (estática), e os jogadores não podem alterá-las durante o jogo 
 
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+O jogo do slide anterior tem 3 ENs em estratégias puras (e em estratégias mistas?) &mdash; 2 deles dão *payoffs* iguais para os 2 jogadores, o que muda entre eles é o comportamento do jogador 2 **fora do caminho de equilíbrio**
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig6.png")
 ```
+
+Podemos representar estratégias em um jogo em forma extensiva como setas &mdash; note que $(F, ff)$ é um EN, mas $(F, of)$ *não é*, por mais que ambos os perfis proponham a mesma ação como resposta ao que o jogador 1 *efetivamente joga*, isto é, no **caminho de equilíbrio**, dando o mesmo *payoff* a ambos
 
 ---
 class: middle
 ## Caminhos de equilíbrio
 
-Um conjunto informacional está no **caminho de equilíbrio** se ele é atingido com probabilidade positiva (não precisa ser 1) em equilíbrio; caso contrário está *fora do caminho de equilíbrio*
+Um conjunto informacional está no *caminho de equilíbrio* se ele é atingido com probabilidade positiva (não precisa ser 1) no equilíbrio (sendo analisado); caso contrário está *fora do caminho de equilíbrio*
 
 Estratégias fora do caminho de equilíbrio são importantes: $(F, ff)$ é um equilíbrio de Nash porque Ana acredita (*sempre corretamente!*) que caso ela for à ópera, Bernardo mesmo sabendo disso ainda assim irá para o futebol
 
-Mas esse equilíbrio é peculiar: pois Ana não acredita na racionalidade de Bernardo *fora do caminho de equilíbrio*! Se ela de fato fosse na ópera, o melhor para ele seria ir à ópera também, mas ela acredita que ele vai no futebol
+Mas esse equilíbrio é peculiar: pois *Ana não acredita na racionalidade de Bernardo fora do caminho de equilíbrio*! Se ela de fato fosse na ópera, o melhor para ele seria ir à ópera também, mas ela acredita que ele vai no futebol
 
 ---
 class: middle
-## Credibilidade
+## Crenças na racionalidade
 
-Isso nos traz a ideia de **credibilidade**: pode se argumentar que o equilíbrio $(F, ff)$ (e $(O, oo)$) é menos razoável que $(O, of)$ pois ele se baseia em uma "ameaça não crível" de que se Ana for à ópera, Bernardo irá ver futebol
+Lembrando, o equilíbrio de Nash é quando: (i) os jogadores são racionais e têm crença comum de que são racionais e (ii) as crenças dos jogadores sobre o que outros jogadores farão estão certas
 
-A ideia é que *se* os jogadores pudessem se comunicar antes do jogo, e Bernardo dissesse a Ana: "Ana, vá ao futebol, pois se você escolher a ópera eu vou ao futebol mesmo assim!", então *essa ameaça não seria crível*
+Em jogos dinâmicos, percebemos que a suposição de conhecimento comum de racionalidade do EN *só vale para o caminho de equilíbrio* &mdash; fora dele não é necessário que os jogadores creiam na racionalidade dos pares
 
 Agora a crença de Ana de que Bernardo *não é racional fora do caminho de equilíbrio* não é tão irrazoável quanto pode à 1ª vista parecer: pois vejam que eles só vão sair do caminho de equilíbrio se alguém já agiu irracionalmente!
 
 ---
 class: middle
-## Racionalidade sequencial
+## Credibilidade
+
+Outra forma que se olhou isso é a de **credibilidade**: pode se argumentar que o equilíbrio $(F, ff)$ (e $(O, oo)$) é menos razoável que $(O, of)$ pois ele se baseia em uma *ameaça não crível* de que se Ana for à ópera, Bernardo irá ver futebol
+
+A ideia é que *se* os jogadores pudessem se comunicar antes do jogo, e Bernardo dissesse a Ana: "Ana, vá ao futebol, pois se você escolher a ópera eu vou ao futebol mesmo assim!", ela não deveria acreditar
+
+Esses tipos de questionamentos em jogos dinâmicos fizeram a teoria dos jogos abordar preocupações de comportamento fora do equilíbrio, que fazem parte dos conceitos de solução que veremos daqui em diante no curso
+
+---
+class: middle
+## Indução para frente e para trás
 
 Esse é um ponto que vai ser repetidamente importante no nosso curso: *caso algum jogador faça algo "fora do script", o que isso diz ao outro jogador sobre ele?* E isso é importante, já que os equilíbrios dependem do contrafactual!
 
@@ -210,28 +241,36 @@ Ou eles podem racionalizar a ação diferente por meio do seu comportamento futu
 class: middle
 ## Racionalidade sequencial
 
-Dizemos que uma estratégia mista $\sigma_i$, dadas estratégias $\sigma_{-i}$ dos outros jogadores, é **sequencialmente racional** se $\sigma_i$ é melhor-resposta a $\sigma_{-i}$ *em cada um dos seus conjuntos informacionais*
+Dizemos que um perfil de estratégias mistas $\sigma$ é **sequencialmente racional** se para todo jogador $i$, $\sigma_i$ é melhor-resposta a $\sigma_{-i}$ *em cada um dos seus conjuntos informacionais*
 
-Quando jogadores empregam estratégias seq. racionais eles escolhem racionalmente em *todos* os conjuntos informacionais, mesmo nos não ocorrem em equilíbrio (EN requer racionalidade apenas no caminho do jogo)
+Quando jogadores empregam estratégias sequencialmente racionais eles escolhem racionalmente em *todos* os conjuntos informacionais, mesmo nos que não ocorrem em equilíbrio (EN requer apenas no caminho do jogo)
 
 Como o que é racional no começo depende dos *payoffs* que vêm depois, nós começamos do final, e resolvemos "de trás para frente" o jogo: é esse procedimento que chamamos de **indução para trás**, ou *backwards induction*
 
 
 ---
 class: middle
-## Indução para trás na guerra dos sexos
 
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig1.png")
 ```
 
-Apliquemos o que acabamos de aprender para resolver por *indução para trás* a guerra dos sexos sequencial acima
+Apliquemos o que acabamos de aprender para resolver por **indução para trás** (*backwards induction*) o jogo, achando todos os equilíbrios de Nash que são *sequencialmente racionais*
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig13.png")
+```
+
+Quantos equilíbrios de Nash o **jogo de coordenação** em forma extensiva acima tem? Quais deles são racionalmente sequencionais?
 
 ---
 class: middle
 ## Teorema de Zermelo
 
-**Teorema de Zermelo:** Todo jogo finito de informação perfeita possui um equilíbrio de Nash sequencialmente racional. Ademais, se caminhos diferentes de jogo dão sempre *payoffs* diferentes a todos os jogadores, então *só há um* EN sequencialmente racional
+**"Teorema de Zermelo":** Todo jogo finito de informação perfeita possui equilíbrio de Nash sequencialmente racional. Ademais, se caminhos diferentes de jogo dão sempre *payoffs* diferentes a todos os jogadores, então há um *único* EN sequencialmente racional
 
 **Corolário (Zermelo, 1913):** No xadrez, ou as brancas possuem (pelo menos) uma estratégia que garante sempre a vitória, ou as negras possuem uma estratégia que garante sempre a vitória, ou ambas as cores possuem alguma estratégia que garante pelo menos o empate
 
@@ -239,17 +278,16 @@ class: middle
 class: middle
 ## Subjogos
 
-Em jogos finitos de informação perfeita, podemos aplicar a indução para trás: comece pelas folhas, escolha o *payoff* maior (se for igual qualquer um), e passe esse *payoff* para o tronco anterior, e assim até chegar ao começo
+Em jogos finitos de *informação perfeita*, podemos sempre aplicar a indução para trás: comece pelas folhas, escolha o *payoff* maior (se for igual qualquer um), e passe esse *payoff* para o tronco anterior, e assim até chegar ao começo
 
-Com informação imperfeita ou jogos não finitos já não é mais claro como proceder &mdash; uma generalização do equilíbrio de Nash que segue a intuição da racionalidade sequencial e aborda também esses casos usa a ideia de *subjogos*
+Mas com informação imperfeita ou jogos não finitos já não é mais claro como proceder &mdash; uma generalização do equilíbrio de Nash que segue a intuição da racionalidade sequencial e aborda também esses casos usa a ideia de *subjogos*
 
-Um **subjogo** consiste de *um* vértice do jogo e *todos* os seus seguidores, com a restrição de que se um elemento de um conjunto informacional pertence ao subjogo, então *todos os elementos daquele conjunto precisam pertencer*
+Um **subjogo** consiste de: (i) *um* vértice do jogo; e (ii) *todos* os seus seguidores, com a restrição de que se um elemento de um conjunto informacional pertence ao subjogo, então *todos os elementos daquele conjunto* pertençam
 
 ---
 class: middle
-## Exemplo
 
-```{r, echo=FALSE, out.width = '45%', fig.align='center'}
+```{r, echo=FALSE, out.width = '50%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig8.png")
 ```
 
@@ -257,54 +295,60 @@ Todos os subjogos de um jogo de informação perfeita &mdash; esse jogo possui 4
 
 ---
 class: middle
-## A batalha dos sexos voluntária
 
-```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+```{r, echo=FALSE, out.width = '45%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig7.png")
 ```
 
-Considere agora a batalha dos sexos voluntária: Ana pode decidir tentar encontrar Bernardo, ou desistir e ambos ficarem em casa vendo um filme &mdash; quais são os subjogos do jogo?
+Considere agora a **batalha dos sexos voluntária**: Ana pode decidir tentar encontrar Bernardo, ou desistir e ambos ficarem em casa vendo um filme &mdash; quais são os subjogos do jogo?
 
 ---
 class: middle
 ## Equilíbrio perfeito em subjogos
 
-Richard Selten (Nobel '94) em 1974 utilizou a ideia de subjogos para criar um dos principais **refinamentos de equilíbrio**: o equilíbrio perfeito em subjogos, que complementa o equilíbrio de Nash com racionalidade sequencial
+Richard Selten (Nobel '94) em 1974 utilizou a ideia de subjogos para criar um importante **refinamento de equilíbrio**: o equilíbrio perfeito em subjogos, que complementa o equilíbrio de Nash com racionalidade sequencial
 
-Um perfil de estratégias comportamentais forma um **equilíbrio (de Nash) perfeito em subjogos** quando esse perfil restrito a cada subjogo do jogo forma um *equilíbrio de Nash* no subjogo
+Um perfil de estratégias comportamentais forma um **equilíbrio de Nash perfeito em subjogos** (ENPS) quando esse perfil restrito a cada subjogo do jogo forma um equilíbrio de Nash daquele subjogo
 
-Todo equilíbrio perfeito em subjogos é equilíbrio de Nash, mas aquele requer que os jogadores ajam racionalmente *mesmo em subjogos que não ocorrem no caminho de equilíbrio*, eliminando ENs (portanto, um "refinamento") 
+Todo ENPS é equilíbrio de Nash, mas o ENPS requer que os jogadores ajam racionalmente *mesmo em subjogos que não ocorrem no caminho de equilíbrio* (racionalidade sequencial), eliminando ENs (portanto, um "refinamento") 
 
 ---
 class: middle
-## A batalha dos sexos voluntária
 
-```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+```{r, echo=FALSE, out.width = '45%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig7.png")
 ```
 
-Podemos aplicar o equilíbrio perfeito em subjogos nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona: quais são então os equilíbrios de Nash e perfeitos em subjogos
+Podemos aplicar o **equilíbrio perfeito em subjogos** nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona (pois é de *informação imperfeita*): quais são então os equilíbrios de Nash e perfeitos em subjogos?
 
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '55%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig14.png")
+```
+
+Achemos os EN e ENPS de um jogo de **destruição mutualmente assegurada** que modela a crise de mísseis cubanos de 1962 &mdash; com os mísseis em Cuba, os EUA (jogador 1) podem escalar a crise (E) ou ignorar (I), e a URSS (jogador 2) pode recuar (B) ou partir para um conflito nuclear (N): nesse caso, os jogadores simultaneamente decidem entre recuar (R) ou *doomsday* (D)
 
 ---
 class: middle
 ## "Um divide, o outro escolhe"
 
-Uma forma bastante comum entre crianças de dividir, por exemplo, uma caixa de bombons, em que alguns doces são mais gostosos que os outros, é o "um divide, o outro escolhe"
+Um *mecanismo* bastante comum entre crianças para dividir um bem, por exemplo, uma caixa de bombons em que alguns doces são mais gostosos que os outros, é o "eu divido, você escolhe"
 
-Essa forma de divisão gera naturalmente um jogo em forma extensiva, e que tem um único equilíbrio perfeito em subjogos que dá a ambos utilidade igual
+Isso gera um jogo em forma extensiva, e que tem um único ENPS (pelo Teorema de Zermello), que dá a ambos utilidade aproximadamente igual
 
-E as crianças são sábeis: esse é um bom método de **implementar** uma alocação igualitária quando *valores são comuns* mas desconhecidos (pelo adulto)
+Esse é um bom método de **implementar** uma alocação igualitária quando *valores são comuns* mas desconhecidos (pelo adulto) &mdash; implementação é o ramo da teoria dos jogos que busca desenhar jogos cujos equilíbrios satisfaçam algum desejo social
 
 ---
 class: middle
 ## Barganha
 
-Das várias formas de interação estratégica entre pessoas, algumas das mais importantes são situações de **barganha**: é natural então que modelos desse tipo estão entre os mais importantes e estudados na teoria dos jogos
+Das várias formas de interação estratégica entre pessoas, algumas das mais importantes são situações de **barganha**: é natural então que modelos desse tipo estejam entre os mais importantes e estudados na teoria dos jogos
 
-O modelo principal de barganha é devido a Ståhl (1972, 1977) e Rubinstein (1982), e é um modelo de informação completa em forma extensiva em que os jogadores se revezam para fazer (e aceitar ou recusar) ofertas de divisão do bolo
+O modelo canônico de barganha é de Ståhl (1977) e Rubinstein (1982), e é um modelo de informação completa em forma extensiva em que os jogadores se revezam para fazer (e aceitar ou recusar) ofertas de divisão do bolo
 
-Mas *tempo é dinheiro*: a cada período de barganha sem os jogadores chegarem a um acordo o bolo perde $\delta$ vezes o seu valor
+Mas *tempo é dinheiro*: a cada período de barganha sem os jogadores chegarem a um acordo o bolo perde $\delta$ vezes o seu valor (também podemos modelar como um valor fixo $c$, como veremos no workshop)
 
 ---
 class: middle
@@ -313,15 +357,15 @@ class: middle
 knitr::include_graphics("figs/week2-fig12.png")
 ```
 
-Forma extensiva do modelo de barganha &mdash; no 1º período, o jogador 1 oferece $(x, 1-x)$ e o jogador 2 ou aceita ou recusa &mdash; se aceitar, o jogo acaba com esses *payoffs*, se recusar ele continua com o jogador 2 oferecendo, mas agora o tamanho do bolo é $\delta$, e assim em diante até $T$ (acima $T=2$), quando o jogo acaba e ambos recebem *payoff* $0$
+Forma extensiva de um modelo de barganha (aqui em dois períodos): no 1º período, o jogador 1 oferece a divisão $(x, 1-x)$ e o jogador 2 ou aceita ou recusa &mdash; se aceitar, o jogo acaba com esses *payoffs*, se recusar ele continua com o jogador 2 oferecendo, mas agora o tamanho do bolo é $\delta$, e assim em diante até $T$ (acima $T=2$), quando o jogo acaba e ambos recebem *payoff* $0$
 
 ---
 class: middle
 ## Barganha finita
 
-O primeiro resultado é que o conceito de equilíbrio de Nash é pouco informativo &mdash; *todas* as divisões podem ser divisões de equilíbrio com acordo no primeiro período  
+O primeiro resultado é que em modelos de barganha o conceito de EN, e portanto também racionabilidade, são pouco informativos &mdash; *todas* as divisões podem ser divisões de equilíbrio *desde que* com acordo no primeiro período  
 
-Já equilíbrio perfeito em subjogos nos dá uma resposta *bem* mais refinada: pelo argumento de indução para trás, há um *único* equilíbrio perfeito em subjogos
+Já equilíbrio perfeito em subjogos nos dá uma resposta *bem* mais refinada: pelo *Teorema de Zermello*, usando o argumento de *indução para trás*, sabemos que todo modelo de barganha (de informação perfeita) possui um *único* ENPS
 
 Se o jogo tem 1 período (**ultimato**), então o único equilíbrio de Nash que obedece racionalidade sequencial é o primeiro jogador propor $(1,0)$ e o segundo jogagor aceitar &mdash; se tem 2 períodos, daí o equilíbrio é $(1-\delta, \delta)$
 
@@ -329,7 +373,7 @@ Se o jogo tem 1 período (**ultimato**), então o único equilíbrio de Nash que
 class: middle
 ## Barganha finita
 
-Em barganha finita, há três tipos de "poderes de barganha":
+Em barganha finita, há três fontes de poder de barganha:
 
 1. Há um **first-mover advantage**, pois em equilíbrio os jogadores chegam a um acordo no 1º período, e quem propõe pode se aproveitar do fato do bolo diminuir até o próximo período 
 2. Há um **last-mover advantage**, porque no último período o jogo é de *ultimato*, e quem fizer a proposta pode deixar $0$ para o outro jogador
@@ -345,38 +389,37 @@ class: middle
 knitr::include_graphics("figs/week2-fig11.png")
 ```
 
-A vantagem de se jogar por último pode parecer "forçada", porque depende inteiramente do exato momento em que a barganha acaba &mdash; uma alternativa então é a barganha não ter limite, seguindo indefinidamente caso não haja concordância entre as partes
+A vantagem de se jogar por último pode parecer "forçada", porque depende inteiramente do exato momento em que a barganha acaba &mdash; uma alternativa então é a barganha não ter limite (*jogo infinito*), seguindo indefinidamente caso não haja concordância entre as partes
 
 ---
 class: middle
 ## Barganha infinita
 
-Jogos (potencialmente) infinitos são mais difíceis de se resolver, pois não podemos aplicar a *indução para trás* como fizemos antes &mdash; aqui utilizaremos o fato do jogo ser **estacionário**: cada período o jogo é exatamente igual, mas com identidades trocadas
+Jogos potencialmente infinitos são mais difíceis de se resolver, pois não podemos aplicar a *indução para trás* como fizemos antes &mdash; na barganha infinita podemos utilizar o fato do jogo ser **estacionário**: cada período o jogo é exatamente igual, mas com identidades trocadas e o bolo $\delta$ menor
 
-Assim, qualquer estratégia de equilíbrio possível para o jogador 1 no 1º período é possível para o jogador 2 no 2º período: então deve ser verdade que $v = 1 - \delta v$
+Assim, qualquer estratégia de equilíbrio possível para o jogador 1 no 1º período é possível para o jogador 2 no 2º período: então deve ser verdade que em um ENPS o valor do jogador 1 é $v = 1 - \delta v$, com $\delta v$ o valor do jogador 2, que é o que ele ganharia com a mesma estratégia no "jogo começando em 2"
 
 Com isso chegamos que o único equilíbrio perfeito em subjogos tem o jogador 1 oferecendo $(1/(1+\delta), \delta/(1+\delta))$ e o jogador 2 aceitando no 1º período
 
 
 ---
 class: middle
-## Jogos extensivos de informação imperfeita
+## Refinamentos (mais refinados) de equilíbrio
 
-Podemos aplicar os mesmos conceitos vistos antes a jogos de **informação imperfeita**, em que algumas ações anteriores não são observáveis
+A teoria de ENPS se aplica certamente a jogos dinâmicos de informação imperfeita, como vimos até aqui &mdash; e se a "imperfeição informacional" vier no fim do jogo, então frequentemente a análise até aqui é 100% satisfatória
 
-Se a imperfeição informacional vir no fim do jogo, então frequentemente a análise até aqui é inteiramente satisfatória: veremos vários exemplos desse tipo na lista 5 &mdash; mas se é no começo, então teremos poucos (ou apenas 1!) subjogo, e a perfeição em subjogos perde o seu poder
+Mas se a imperfeição informacional surge no começo do jogo (por exemplo um lance da natureza não observável), então teremos apenas um subjogo! Ou seja, o conjunto de equilíbrios de EN e ENPS é exatamente o mesmo!
 
-Nesse caso precisaremos de **refinamentos de equilíbrio** que levem mais a sério as *crenças* dos jogadores, que é o tópico do fim do curso
+Nesse caso, para adicionar *racionalidade sequencial* precisaremos de refinamentos de equilíbrio que levem mais a sério as *crenças* dos jogadores sobre o que aconteceu até então, que é o último tópico do curso
 
 ---
 class: middle
-## Jogos extensivos de informação imperfeita
 
 ```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/lista8-ex2a.png")
 ```
 
-Exemplo de um jogo de informação imperfeita com equilíbrio perfeito em subjogos que não obedece racionalidade sequencial
+Exemplo de um jogo de informação imperfeita com equilíbrio perfeito em subjogos que não obedece racionalidade sequencial &mdash; quais são os equilíbrios de Nash e ENPS do jogo acima?
 
 ---
 class: middle, center, inverse
@@ -391,27 +434,25 @@ Até aqui vimos jogos em que um único jogo se desenrola no tempo &mdash; uma si
 
 Nesse caso, a pergunta que surge é se os jogadores podem condicionar sua atuação em estágios futuros no comportamento em estágios iniciais, e assim expandir o conjunto de soluções para além dos equilíbrios do jogo de estágio
 
-Um jogo multiestágio é uma sequencia de jogos *em forma normal* em que *os mesmos* $N$ jogadores jogam sequencialmente e de forma completa, um jogo em cada período, e a soma dos *payoffs* é avaliada no final da interação
-
+Um jogo multiestágio é uma sequencia de jogos (geralmente em forma normal) em que *os mesmos* $N$ jogadores jogam de forma completa, um jogo em cada período, e *a soma dos payoffs* é avaliada ao final da interação
 
 ---
 class: middle
-## Dilema dos prisioneiros com vingança
 
 ```{r, echo=FALSE, out.width = '90%', fig.align='center'}
 knitr::include_graphics("figs/week2-fig9.png")
 ```
 
-Considere que dois prisioneiros jogam o dilema primeiro (esquerda), mas depois do jogo eles se encontram novamente um jogo de vingança, em que eles podem desistir da vida de crime $l$ ou juntar-se a uma gangue $g$ &mdash; a essa altura do campeonato deve ser fácil achar os equilíbrios de Nash dos jogos de estágio, mas muda algo jogá-los um após o outro?
+Considere que dois prisioneiros jogam primeiro o *dilema dos prisioneiros* (esquerda), mas depois do jogo eles se encontram novamente em um jogo de vingança, em que eles podem desistir da vida de crime $L$ ou juntar-se a uma gangue $G$
 
 
 ---
 class: middle
 ## Estratégias
 
-Como em (outros) jogos na forma extensiva, estratégias aqui são mais complicadas que em jogos estáticos: elas elencam para cada **história** de jogo um predição de ação para o jogo de estágio
+Como em jogos na forma extensiva, **estratégias** aqui são mais complicadas que em jogos estáticos: elas elencam para cada estágio do jogo, para cada *história* de jogo até então uma predição de ação
 
-Nesse exemplo, uma estratégia para o jogador 1 é um quintupla: $$(\sigma_1^1, \sigma_1^2(M, m), \sigma_1^2(M, f), \sigma_1^2(F, m), \sigma_1^2(F, f))$$
+Uma **história** de um jogo multiestágio é uma lista de tudo que ocorreu até aquele momento (i.e., perfis de ações) &mdash; assim, no exemplo do slide anterior, uma estratégia para o jogador 1 é um quintupla: $$(\sigma_1^1 (\emptyset), \sigma_1^2(M, m), \sigma_1^2(M, f), \sigma_1^2(F, m), \sigma_1^2(F, f))$$
 
 O fato da estratégia no período 2 ser função do que foi jogado no período 1 é o que abre novas avenidas de cooperação (e o que torna jogos multi-estágios interessantes de se analisar)
 
@@ -419,11 +460,21 @@ O fato da estratégia no período 2 ser função do que foi jogado no período 1
 class: middle
 ## Equilíbrios em jogos multi-estágios
 
-Qualquer combinação de *equilíbrios de Nash* dos jogos de estágio forma um equilíbrio (na verdade *perfeito em subjogos*!) do jogo multi-estágio
+Os primeiros equilíbrios são fáceis de encontrar: qualquer combinação de *equilíbrios de Nash* dos jogos de estágio forma um equilíbrio (na verdade *perfeito em subjogos*!) do jogo multi-estágio
 
-Assim, $((F,f), (G,g))$ e $((F,f), (L, l))$ (e mais um) são "trivialmente" equilíbrios perfeitos em subjogos do jogo repetido &mdash; mas gostaríamos de mais!
+$((F,f), (G,g))$ e $((F,f), (L, l))$ (e mais um) são "trivialmente" equilíbrios perfeitos em subjogos do jogo repetido &mdash; mas gostaríamos de mais!
 
-Será que é possível construir um equilíbrio perfeito em subjogos em que $(M,m)$ é jogado no primeiro período?
+No último jogo de estágio, os EN desse subjogo são os mesmos que no jogo estático, assim em qualquer ENPS no último estágio sempre será jogado só EN &mdash; mesmo em EN, um perfil que não contenha EN no último estágio sempre permite desvio favorável, já que não há períodos subsequentes para punição
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig9.png")
+```
+
+Será que é possível construir um equilíbrio perfeito em subjogos em que $(M,m)$ é jogado no primeiro período? Essa possibilidade surge ao podermos construir um perfil de estratégias que condicione o bom EN no 2º período em cooperação no 1º período, escolhendo o EN ruim no 2º período caso não cooperem!
 
 ---
 class: middle
@@ -431,13 +482,13 @@ class: middle
 
 No exemplo anterior foi simples pensar em quais desvios deveríamos analisar &mdash; mas se tivermos, por exemplo, $T=30$ períodos, a princípio teríamos que considerar desvios da forma "Em $t=2$ eu jogo $F$ ao inves de $M$, daí em $t=10$ eu jogo $L$ ao invés de $G$ e $t=30$ troco $M$ por $F$": uma tarefa hercúlea quando $T$ cresce!
 
-Mas por sorte isso é desnecessário (ufa!), pois o **princípio do desvio único (Blackwell, 1965)** diz que uma estratégia é ótima se e somente se não existe nenhum história tal que um desvio *apenas no jogo de estágio que segue a essa história* (mantendo a *estratégia* constante) gere um ganho de *payoff*
+Mas por sorte isso é desnecessário (ufa!), pois o **princípio do desvio único (Blackwell, 1965)** diz que uma estratégia é ótima se e somente se não existe nenhum história tal que um desvio *apenas no jogo de estágio que segue a essa história* (mantendo o resto da *estratégia* constante) gere um ganho de *payoff*
 
 ---
 class: middle
 ## Jogos repetidos
 
-Um tipo particular de jogos multi-estágio é bastante famoso em teoria dos jogos: os **jogos repetidos**, que nada mais são que jogos multi-estágio em que o jogo de estágio $G$ é sempre o mesmo
+Um tipo particular de jogos multi-estágio é especialmente importante em teoria dos jogos: os **jogos repetidos**, que nada mais são que jogos multi-estágio em que o jogo de estágio $G$ é sempre o mesmo
 
 Há dois tipos de jogos repetidos: jogos *finitamente* repetidos $G^T$ e jogos *infinitamente* repetidos $G^{\infty}$ &mdash; como veremos, surpreendentemente a diferença dos dois pode ser significativa mesmo quando $T$ finito é grande
 
@@ -447,22 +498,20 @@ A diferença é que em $G^T$ sempre há a "ameaça do último período" (em $T$)
 class: middle
 ## Taxa de desconto
 
-Em economia, é comum "descontar" fluxos futuros de utilidade a uma taxa $\delta < 1$, para modelar a intuição de que ganhos hoje seriam mais valiosos que os mesmo ganhos no futuro: e a mesma ideia pode ser aplicada a jogos
-
-Para simplificar, em jogos finitos suporemos que eles são jogados "em pouco tempo", e não usaremos taxas de desconto &mdash; mas para jogos infinitos isso nos traria dificuldades pois a soma das utilidades seria infinita!
+Para simplificar, em jogos finitos supomos que eles são jogados "em pouco tempo", e não usamos taxas de desconto intertemporal (mas poderíamos usar, é claro) &mdash; mas para jogos infinitos isso nos traria dificuldades pois a soma das utilidades seria infinita!
 
 Nesse caso normalizamos a utilidade multiplicando tudo por $(1-\delta)$, de forma que a utilidade de um caminho que dê *payoff* $3$ agora e $-1$ no futuro é: $$(1-\delta)3 + (1-\delta)\delta(-1) + (1-\delta)\delta^2(-1)+(1-\delta)\delta^3(-1)+...$$
 $$= (1-\delta)3 + (1-\delta)\delta\frac{(-1)}{1-\delta} = (1-\delta)3 + \delta(-1)$$
 
 ---
 class: middle
-## Taxa de desconto e o fim do jogo
+## Jogos infinitos e o fim do jogo
 
-Jogos evidentemente nunca duram para sempre (infelizmente, os jogadores morrem): a ideia do jogo infinitamente repetido é que por mais que ele acabe em algum momento, *os jogadores não sabem quando*
+Jogos evidentemente nunca duram para sempre (os jogadores morrem): podemos interpretar um jogo infinitamente repetido como um jogo que acaba em algum momento, mas *os jogadores não sabem quando*
 
-Considere que o jogo acaba com uma probabilidade $\lambda$ a cada período (o que é conhecimento comum), e os jogadores descontam a uma taxa $\delta$ o tempo: então fazendo $\Delta = (1 - \lambda)\delta$ ainda temos um jogo "infinitamente" repetido (ainda que ele dure para sempre com probabilidade zero) 
+Considere que o jogo acaba com uma probabilidade $\lambda$ a cada período (o que é conhecimento comum), e os jogadores descontam a uma taxa $\beta$ o tempo: então fazendo $\delta = (1 - \lambda)\beta$ ainda temos um jogo "infinitamente" repetido (ainda que ele dure para sempre com probabilidade zero!) 
 
-Essa promessa que sempre existe de que o jogo possa durar pelo menos mais alguns períodos é o que sustenta os incentivos intertemporais
+Essa promessa que sempre existe de que o jogo possa durar pelo menos mais alguns períodos é o que sustenta os incentivos intertemporais até o fim ("surpresa") do jogo no caso infinito, enquanto no caso finito isso é impossível
 
 
 ---
@@ -473,7 +522,7 @@ O *princípio do desvio único* ajuda (e muito!) em reduzir o número de estrat�
 
 Podemos ainda simplificar muito essas estratégias colocando-as em "classes de equivalência", onde em cada classe o comportamento dos jogadores é igual
 
-Fazemos isso construindo **autômatos**, como algoritmos que implementam as estratégias de jogo dos jogadores &mdash; podemos representar cada jogador por um autômato, mas frequentemente é mais simples usar um para o *perfil* de estratégias
+Fazemos isso construindo **autômatos**: algoritmos que implementam as estratégias de jogo dos jogadores &mdash; podemos representar cada jogador por um autômato, mas frequentemente é mais simples usar apenas um autômato para todo o *perfil* de estratégias
 
 ---
 class: middle
@@ -481,29 +530,29 @@ class: middle
 
 Um **autômato** é composto de: (i) um conjunto de estados $\mathcal{W}$, (ii) um estado inicial $w_0$, (iii) uma função $f$ que especifica em cada estado o que jogar, e (iv) uma função de transição $\tau$ que muda de estado dependendo da realização do jogo
 
-Utilizando autômatos checar se um perfil de estratégias é perfeito em subjogos somente requer checar para cada um dos estados do autômato se existe algum desvio (único!) que é vantajoso 
+Checar se um perfil de estratégias é ENPS requer somente ver para cada um dos estados do autômato se existe algum desvio (*único!*) que é vantajoso para algum jogador (mantendo o resto do autômato fixo)
 
-Para vários autômatos importantes, como o **grim trigger** ou o **tit-for-tat**, há apenas 2-4 estados, então simplifica muito!
+Para vários autômatos importantes, como o **grim trigger** ou o **tit-for-tat** (que veremos aqui), há apenas 2-4 estados, então isso simplifica muito!
 
 ---
 class: middle
-## Grim trigger
 
-```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+```{r, echo=FALSE, out.width = '50%', fig.show='hold'}
+knitr::include_graphics("figs/week2-fig16.png")
 knitr::include_graphics("figs/week2-fig10.png")
 ```
 
-O exemplo mais clássico de estratégia, que também é o mais simples de se representar por autômatos, é o **grim trigger**: no dilema dos prisioneiros, todos os jogadores começam cooperando (i.e., em $w_{EE}$, onde jogam $EE$), mas assim que alguém desvia de $EE$ eles mudam para sempre para $w_{SS}$, onde sempre confessam (por isso que é "grim")
+O exemplo mais clássico de estratégia no *dilema dos prisioneiros infinitamente repetido*, que também é o mais simples de se representar por autômatos, é o **grim trigger**:, os jogadores começam cooperando (i.e., em $w_{EE}$, onde jogam $EE$), mas assim que alguém desvia de $EE$ eles mudam para para $w_{SS}$, onde confessam para sempre, não importa o que aconteça (por isso que é "grim")
 
 ---
 class: middle
 ## Tit-for-tat
 
-Outra estratégia famosa no dilema dos prisioneiros é a **tit-for-tat**, que venceu o torneio de Axelrod de jogo repetido do dilema dos prisioneiros
+Outra estratégia famosa no dilema dos prisioneiros é a **tit-for-tat**, que venceu o torneio de Axelrod em 1980 de qual estratégia tinha melhor performance no jogo infinitamente repetido do dilema dos prisioneiros
 
-A ideia é simples: o jogador começa cooperando, e sempre faz a última coisa que o outro jogador fez ("tit for tat" é uma expressão em inglês que significa uma retaliação equivalente)
+A ideia é simples: o jogador começa cooperando, e sempre faz a última coisa que o outro jogador fez ("tit for tat" é uma expressão em inglês que significa uma retaliação equivalente): se o outro jogador confessou, confesse, se ele cooperou, coopere
 
-É uma punição bem menos "grim" que o grim trigger, já que se o outro jogador "se arrepender" e voltar a cooperar, o *tit-for-tat* também volta a cooperar &mdash; qual será o autômato que representa esse perfil de estratégias?
+É uma punição bem menos "grim" que o grim trigger, já que se o outro jogador "se arrepender" e voltar a cooperar, o *tit-for-tat* também volta a cooperar
 
 ---
 class: middle
@@ -512,14 +561,3 @@ class: middle
 *Teoremas folk* (há dezenas deles) estabelecem condições para que (quase) *qualquer* resultado do jogo seja um equilíbrio do jogo repetido &mdash; o nome "teorema folk" vem do fato do 1º deles circular bastante na década de 50 entre os teoristas dos jogos, sendo difícil nomear quem primeiro o inventou
 
 **Teorema de Folk para estratégias puras:** Se o jogo de estágio é finito e entre 2 jogadores, então se $\delta$ for suficientemente próximo de $1$, temos que para cada perfil de ações puras $\widetilde{a}$ *estritamente racionais* (isto é, que dá *payoff* acima da estratégia minimax), existe um equilíbrio perfeito em subjogos em que $\widetilde{a}$ é jogado em todo período
-
-
----
-class:middle
-# Bibliography
-
-<small>
-```{r refs, echo=FALSE, results="asis"}
-PrintBibliography(myBib)
-```
-</small>
