@@ -30,6 +30,14 @@ myBib <- ReadBib("./eae0522_bib.bib", check = FALSE)
 
 ---
 class: middle
+## Jogos
+
+O que é um jogo? Podemos voltar ao primeiro artigo acadêmico de teoria dos jogos, Von Neumann (1928). "On the theory of games of strategy":
+
+> Hence we must first endeavor to find a clear formulation of the question. What, exactly, is a game of strategy? A great many different things come under this heading, anything from roulette to chess,  from baccarat to bridge.  And after all, any event - given the external conditions and the participants in the situation (provided the latter are acting of their own free will) - may be regarded as a game of strategy if one looks at the effect it has on the participants. (Footnote: This is the principal problem of classical economics: how is the absolutely selfish 'homo economicus" going to act under given external circumstances?)  `r Citep(myBib, "von1928theory")`
+
+---
+class: middle
 ## Teoria dos Jogos
 
 A teoria dos jogos estuda modelos lógico-matemáticos de como **agentes racionais** interagem de forma estratégica entre si
@@ -37,7 +45,6 @@ A teoria dos jogos estuda modelos lógico-matemáticos de como **agentes raciona
 A teoria dos jogos **não** estuda o comportamento de humanos reais em tais interações, mas entendendo o que um agente puramente lógico faria, isso nos dá claridade sobre conceitos importantes como *barganha*, *reputação*, *credibilidade*, *comunicação*, *cooperação*, *incentivos*, etc
 
 Por isso, a teoria dos jogos tem aplicações em economia, ciência política, relações internacionais, estratégia, além de mais recentemente se tornar importante em computação 
-
 
 ---
 class: middle

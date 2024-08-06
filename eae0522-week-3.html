@@ -41,7 +41,7 @@ Nos jogos vistos até aqui, mesmo quando havia atos passados não observados pel
 
 Em várias situações que vimos nos exercícios, a análise desses jogos levou a soluções contraintuitivas, e nos perguntamos se isso não seria porque os jogadores têm "certeza demais" do que vai acontecer
 
-Ademais, remover tais suposições nos aproxima das situações do mundo real, em que quase sempre jogadores possuem mais informação sobre seus *payoffs* e ações disponíveis que os outros jogadores, i.e., **informação incompleta**
+Ademais, remover tais suposições nos aproxima das situações do mundo real, em que quase sempre jogadores possuem mais informação sobre seus *payoffs* e ações disponíveis que os outros jogadores, i.e., **informação assimétrica**
 
 ---
 class: middle
@@ -51,7 +51,17 @@ Mas alguma informação é necessária para os jogadores poderem analisar racion
 
 Harsanyi ganhou o Nobel de 1994 propondo uma ideia que *a posteriori* pode parecer um pouco óbvia (assim como de certa forma um *cop out*): transformar o jogo de informação **incompleta** em um jogo de informação **imperfeita**
 
-A ideia é simples: cada possível forma do jogo é um jogo diferente (de informação completa!), a natureza escolhe no começo do jogo como é o jogo realmente, e os jogadores (ou parte deles) não observa essa escolha
+A ideia é simples: cada possível estado do mundo é um jogo diferente (de informação completa!), a natureza escolhe no começo do jogo qual é o estado real, e os jogadores (ou parte deles) não observam essa escolha
+
+---
+class: middle
+## Tipos
+
+Harsanyi desenvolveu o conceito de **tipos**: o tipo de um jogador inclui características dele e a informação que ele tem das outras característas do jogo &amp;mdash; o perfil de tipos escolhido pela natureza é o **estado da natureza**
+
+Também é necessário que cada jogador tenha uma distribuição de probabilidade (um **prior**) sobre os diferentes *estados da natureza* (e tudo isso é *conhecimento comum*) &amp;mdash; e na verdade esses *priors* tem que ser iguais!
+
+Aumann (Nobel '05) provou que *priors* iguais e agentes que atualizam seu *prior* pela **regra de Bayes** implicam que em equilíbrio os jogadores concordam em seus *posteriors* &amp;mdash; é impossível "concordar em discordar"
 
 ---
 class: middle
@@ -63,62 +73,68 @@ Um jogo de informação incompleta tem 3 estágios:
 2. O estágio ***interim*** é quando os jogadores descobrem o seu tipo, mas ainda não sabem o tipo dos outros jogadores: é o "mais importante", quando eles formulam um plano de jogo
 3. Finalmente, quando o jogo termina é o estágio ***ex-post***, quando os *payoffs* são distribuídos e os jogadores descobrem os tipos dos outros jogadores
 
-Uma pergunta razoável é se deveríamos resolver o jogo no estágio *ex-ante* ou *interim* &amp;mdash; por sorte, tal reflexão é desnecessária, pois "dá na mesma" 
-
----
-class: middle
-## Tipos
-
-Harsanyi desenvolveu o conceito de **tipos**: um tipo de jogador inclui características dele, a informação que ele tem das outras característas do jogo &amp;mdash; a combinação de tipos escolhida pela natureza é o **estado da natureza**
-
-Também é necessário que cada jogador tenha uma distribuição de probabilidade (um **prior**) sobre os diferentes *estados da natureza* (e tudo isso é *conhecimento comum*) &amp;mdash; e na verdade esses *priors* tem que ser iguais!
-
-Aumann (Nobel '05) provou que *priors* iguais e agentes que atualizam seu *prior* pela **regra de Bayes** implicam que no fim do jogo os jogadores concordam em seus *posteriors* &amp;mdash; é impossível "concordar em discordar"
+Uma pergunta razoável é se deveríamos resolver o jogo no estágio *ex-ante* ou *interim* &amp;mdash; por sorte, tal reflexão é desnecessária, pois dá na mesma 
 
 
 ---
 class: middle
-## Jogo de entrada
 
 &lt;img src="figs/week3-fig1.png" width="45%" style="display: block; margin: auto;" /&gt;
 
-No jogo acima a firma 1 decide se entra no mercado, e a firma 2 decide se briga com ela ou não (se ela decidir entrar) &amp;mdash; um argumento simples de indução para trás nos mostra que o único equilíbrio perfeito em subjogos a firma 1 entra e a firma 2 não briga (e os outros EN, quais são?)
+No clássico jogo de **dissuação estratégica de entrada** a firma 1 decide se entra no mercado, e a firma 2 decide se briga com ela ou não (se ela decidir entrar) &amp;mdash; um argumento simples de indução para trás nos mostra que o único equilíbrio perfeito em subjogos a firma 1 entra e a firma 2 não briga (e os outros EN, quais são?)
 
 ---
 class: middle
-## Agora com doidos
 
 &lt;img src="figs/week3-fig2.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-Imagine agora que há dois **tipos** possíveis de firma 2: com probabilidade `\(p\)` ela é como antes, mas com `\(1-p\)` ela gosta de brigar, tendo *payoff* 2 ao brigar com a entrante &amp;mdash; usando o método de Harsanyi, esse jogo de informação **incompleta** é analisado como o jogo de informação **imperfeita** acima
+Imagine agora que há dois *tipos* possíveis de firma 2: com probabilidade `\(p\)` ela é como antes, mas com `\(1-p\)` ela gosta de brigar, tendo *payoff* 2 ao brigar com a entrante &amp;mdash; usando o método de Harsanyi, transformamos esse jogo de informação *incompleta* em um jogo de informação *imperfeita*
 
 ---
 class: middle
 ## And that's that!
 
-E é isso: acabamos a teoria de jogos de informação incompleta! (E eu estou quase nada brincando.) Discutiremos agora jogos de informação *imperfeita* no qual após um lance da natureza a interação é estática: os **jogos bayesianos**
+E é isso: acabamos a teoria de jogos de informação incompleta (e eu estou só um pouco brincando!) Discutiremos agora jogos de informação *imperfeita* no qual após um lance da natureza a interação é estática: os **jogos bayesianos**
 
-E na próxima semana discutiremos jogos que se alongam na forma extensiva com jogada da natureza não observável no começo: nesse caso, os agentes vão alterando ao longo do jogo as suas crenças sobre o *tipo* dos outros jogadores
+E no fim do curso discutiremos jogos que se alongam na forma extensiva com jogada da natureza não observável no começo: nesse caso, os agentes vão alterando ao longo do jogo as suas crenças sobre o *tipo* dos outros jogadores
 
-Um problema que já existia antes, mas que é ainda mais grave em *jogos bayesianos* é que ser perfeito em subjogos não ajuda: como o 1º movimento do jogo não é observável, *o jogo frequentemente possui apenas 1 subjogo (o trivial)*
+Note que aqui o ENPS não ajuda: como a imperfeição informacional é na definição inicial do estado da natureza, *o jogo geralmente possui apenas 1 subjogo* (o trivial) &amp;mdash; então precisaremos de novos *refinamentos de equilíbrio*!
 
 ---
 class: middle
-## Agora com doidos
+## Jogos bayesianos
 
-&lt;img src="figs/week3-fig2.png" width="50%" style="display: block; margin: auto;" /&gt;
+**Jogos bayesianos**, ou jogos estáticos de informação incompleta, são compostos dos seguintes elementos (e tudo conhecimento comum!):
 
-Considere `\(p=2/3\)`. Quais são os equilíbrios de Nash do jogo acima? Algum é perfeito em subjogos?
+1. Os jogadores
+2. As ações de cada jogador
+3. As preferências de cada *tipo* de jogador para cada perfil de ações resultantes do jogo 
+3. Os possíveis **estados da natureza** `\(T\)`, que são os possíveis perfis de tipos de cada jogador `\(t_i\)`, que contém toda a informação relevante sobre aquele jogador, incluindo o que ele sabe sobre o jogo
+4. *Uma* distribuição de probabilidade sobre os estados da natureza, a dizer um **prior** (comum) dos jogadores sobre as possíveis formas do jogo
+
+---
+class: middle
+
+&lt;img src="figs/week3-fig12.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+Por mais que definamos um jogo bayesiano como um tipo próprio de jogo, é sempre bom lembrar que pela transformação de Harsanyi eles são sempre exatamente equivalentes a um jogo de forma extensiva com informação imperfeita &amp;mdash; acima, um jogo de chicken! com informação incompleta, onde os pais podem ser lenientes (tipo `\(L\)`) ou harsh (tipo `\(H\)`)
+
+---
+class: middle
+
+&lt;img src="figs/week3-fig9.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+Exemplo de um jogo bayesiano: uma variante da batalha dos sexos em que Bernardo pode querer encontrar ou evitar Ana &amp;mdash; Bernardo sabe o seu tipo, mas Ana não sabe
 
 ---
 class: middle
 ## Crenças em jogos bayesianos
 
-Os jogadores possuem *tipos*, que incluem a sua informação sobre o jogo e características do jogador: todo jogador observa no começo do jogo o seu tipo &amp;mdash; e todos os tipos e suas probabilidades é *conhecimento comum*
+Em alguns casos, um jogador tem certeza do *estado da natureza*, enquanto o outro não sabe (um caso extremo de **informação assimétrica**) &amp;mdash; em outros, ambos os jogadores podem ter *sinais* diferentes sobre o estado da natureza
 
-O **estado da natureza** nada mais é que a forma real do mundo que a natureza selecionou (ou, o que é exatamente equivalente, o perfil de tipos selecionados, um para cada jogador)
+Nesse caso, o tipo de `\(i\)` dá informação (um *sinal*) sobre o tipo dos outros jogadores &amp;mdash; e com isso ele vai atualizar a sua *prior* sobre o estado da natureza condicional no seu próprio tipo
 
-*Condicional* no seu tipo, cada jogador *atualiza* a sua *prior* sobre os tipos dos outros jogadores (i.e., o *estado da natureza*) para um *posterior* utilizando a **regra de Bayes**
+Se em um oligopólio a probabilidade da outra firma ter alta produtividade é maior quando a própra firma é produtiva (os tipos são correlacionados), então ela tem que levar isso em conta ao montar sua estratégia, por exemplo
 
 ---
 class: middle
@@ -131,17 +147,6 @@ Onde a *intersecção* entre os eventos `\(A\)` e `\(B\)`, `\(A \cap B\)`, lê-s
 
 ---
 class: middle
-## Regra de Bayes
-
-Pela definição de probabilidade condicional, `\(\Pr (A \cap B) = \Pr (A | B) \Pr (B)\)`, e por simetria, também vale que `\(\Pr (A \cap B) = \Pr (B | A) \Pr (A)\)` &amp;mdash; isso nos dá a fundamental **regra de Bayes**:
-
-`$$\Pr (A | B) = \frac{\Pr (B | A) \Pr (A)}{\Pr (B)} = \frac{\Pr (B | A_i) \Pr (A_i)}{\sum_{k=1}^K \Pr (B | A_k) \Pr(A_k)}$$`
-
-Trocando `\(A\)` por `\(A_i\)`, que é um evento específico dentre `\(K\)` eventos possíveis que sejam excludentes e cuja probabilidades somam `\(1\)` (por exemplo, "ir na ópera" dentre "ir na ópera" e "ir ao futebol" na guerra dos sexos)
-
----
-class: middle
-## Exemplo
 
 &lt;img src="figs/week3-fig3.png" width="45%" style="display: block; margin: auto;" /&gt;
 
@@ -149,30 +154,48 @@ Considere uma situação em que jogador 1 pode ser do tipo `\(a\)` ou `\(b\)` e 
 
 ---
 class: middle
-## Estratégias e equilíbrio
+## Estratégias
 
-Como antes, uma **estratégia (pura)** é uma função que aloca para cada *conjunto informacional* do jogador, uma ação disponível naquele conjunto &amp;mdash; o que aqui é representado pelo *tipo* do jogador (é a mesma coisa!)
+Até aqui uma **estratégia pura** é uma função que aloca para cada *conjunto informacional* do jogador, uma ação disponível naquele conjunto
 
-Notem que se um jogador usa uma estratégia pura que depende do seu tipo escolhido pela natureza, então na perspectiva dos outros jogadores, *é como se ele escolhesse uma estratégia mista*
+Em jogos bayesianos, o conjunto informacional dos jogadores é inteiramente contido no seu tipo, de forma que uma estratégia `\(s_i (\theta_i)\)` é uma função que leva do tipo do jogador `\(i\)`, `\(\theta_i\)`, para uma ação disponível a ele no jogo estático
 
-Chamamos de **equilíbrio bayesiano** o equilíbrio de Nash do jogo em forma extensiva de informação *imperfeita* que representa (na transformação de Harsanyi) o jogo de informação *incompleta* (de novo: é a *mesma coisa* que EN)
+Notem que como cada jogador usa uma estratégia pura que depende do seu tipo escolhido pela natureza, então na perspectiva dos outros jogadores é como se ele escolhesse uma estratégia mista
 
 ---
 class: middle
-## Estratégias mistas e informação incompleta
+## Equilíbrio bayesiano
 
+Chamamos de equilíbrio bayesiano o *equilíbrio de Nash* do jogo em forma extensiva de informação *imperfeita* que representa (na transformação de Harsanyi) o jogo estático de informação *incompleta* 
 
-&lt;img src="figs/week3-fig4.png" width="45%" style="display: block; margin: auto;" /&gt;
+De forma mais direta, um perfil de estratégias `\(s_i (\theta_i)\)` é um **equilíbrio de Nash bayesiano** (ENB) quando para cada tipo `\(\theta_i\)` de cada jogador `\(i\)`, 
 
-O jogo acima possui apenas um EN, que é em estratégias mistas: o que envolve cada jogador aleatorizar entre "par" e "ímpar" *mesmo com o seu payoff não dependendo da sua escolha, puramente para deixar o outro jogador indiferente*
+`$$\sum_{\theta_{-i}} \phi (\theta_{-i} | \theta_i) u_i (s_i^*(\theta_i), s_{-i}^* (\theta_{-i}); \theta_i) \geq \sum_{\theta_{-i}} \phi (\theta_{-i} | \theta_i) u_i (s_i (\theta_i), s_{-i}^* (\theta_{-i}); \theta_i)$$`
 
-O que é evidentemente pouco crível &amp;mdash; Harsanyi deu outra explicação para equilíbrios em estratégias mistas baseado em *informação incompleta*
+para toda outra estratégia `\(s_i\)` &amp;mdash; onde `\(\phi (\theta_{-i} | \theta_i)\)` é a probabilidade condicional do estado da natureza ser `\((\theta_i, \theta_{-i})\)` dado que o tipo de `\(i\)` é `\(\theta_i\)`
+
+---
+class: middle
+
+&lt;img src="figs/week3-fig13.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+Imagine o cenário em que dois jogadores interagem em uma situação que pode ser do tipo jogo 1 ou jogo 2 (os estados da natureza), e que o jogador 1 sabe qual é o jogo certo, mas o jogador 2 não sabe (e crê que são equiprováveis) &amp;mdash; quais são os ENB desse jogo?
+
+---
+class: middle
+## Estratégias mistas e purificação
+
+Já vimos que uma dificuldade (enorme) com EN em estratégias mistas é que ele requer que cada jogador aleatorize entre suas ações de uma forma extremamente particular, *mesmo com o seu payoff não dependendo da sua escolha, puramente para deixar o outro jogador indiferente*
+
+Harsanyi deu outra explicação para equilíbrios em estratégias mistas baseado em *informação incompleta*
+
+A intuição é que alguns jogadores preferem jogar par, outros preferem ímpar, mas isso é desconhecido pelo jogador &amp;mdash; e portanto, é *como se* jogassem estratégias mistas
 
 ---
 class: middle
 ## O Teorema da Purificação de Harsanyi
 
-&lt;img src="figs/week3-fig5.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig4.png" width="45%" /&gt;&lt;img src="figs/week3-fig5.png" width="45%" /&gt;
 
 Harsanyi propôs a seguinte ideia: imagine que há vários tipos de jogadores 1 e 2, alguns preferem (um pouquinho) jogar `\(L\)` ou `\(R\)`, `\(T\)` ou `\(B\)` (ver acima), com `\(\alpha\)` e `\(\beta\)` um valor uniforme entre `\([-1, 1]\)`
 
@@ -180,11 +203,28 @@ Existe `\(\alpha_0\)` e `\(\beta_0\)` tal que jogador 1 joga `\(T\)` se `\(\alph
 
 ---
 class: middle
-## Batalha dos sexos?
 
-&lt;img src="figs/week3-fig9.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig14.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-Apliquemos o que aprendemos até aqui para resolver o jogo bayesiano da figura acima: uma variante da batalha dos Sexos em que Bernardo pode querer encontrar ou evitar Ana
+O problema do chicken! com informação incompleta, com `\(R = 8\)`, `\(H = 16\)` e `\(L = 0\)` &amp;mdash; aqui montamos a forma normal para cada estratégia, lembrando que uma estratégia é uma função `\(s_i (\theta_i)\)`: como aqui `\(\theta \in \{L, H \}\)`, então a estratégia é um par `\(s(L), s(H)\)`: resta portanto que o ENB é apenas o equilíbrio de Nash da forma normal do jogo em forma extensiva
+
+---
+class: middle
+## Seleção adversa
+
+Há 2 formas de informação assimétrica importantes em economia: *ações não observáveis* (risco moral) e *tipos não observáveis* (seleção adversa) &amp;mdash; esse segundo é naturalmente modelado como um jogo bayesiano
+
+Considere que o jogador 1 é dono de uma fazenda, que pode ter valor para ele `\(v_1\)` igual a `\(L\)` (10), `\(M\)` (20) ou `\(H\)` (30), todos equiprováveis, e deseja vender para um produtor de soja &amp;mdash; mas apenas o dono observa o tipo da fazenda
+
+O produtor de soja é mais eficiente que o dono na plantação, dando valor para a terra de `\(v_2 = v_1 + 4\)`: evidentemente o eficiente de mercado é a venda se concretizar &amp;mdash; mas será que isso sempre ocorre?
+ 
+ 
+---
+class: middle
+
+&lt;img src="figs/week3-fig15.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+Como sempre, pelo método de Harsanyi, transformamos aquele jogo de informação *incompleta* (que não sabemos resolver) em um jogo de informação *imperfeita*, como acima, e calculamos os equilíbrios de Nash do jogo em forma extensiva (que são os ENB do jogo bayesiano)
 
 ---
 class: middle, center, inverse
@@ -195,19 +235,26 @@ class: middle, center, inverse
 class: middle
 ## Jogos dinâmicos e crenças
 
-Para analisar jogos bayesianos já utilizamos a probabilidade condicional, mas foi de forma "pedestre": a única informação que os jogadores possuiam sobre o tipo dos outros jogadores era o seu próprio tipo
+Para analisar jogos bayesianos já utilizamos a probabilidade condicional, mas foi de forma "simplória": a única informação que os jogadores possuiam sobre o tipo dos outros jogadores era o seu próprio tipo
 
-**Jogos dinâmicos de informação imperfeita** (já que transformamos por Harsanyi informação *incompleta* em *imperfeita*) trazem um aspecto que os torna muito mais interessantes (mas também bem mais difíceis): a própria *estratégia* dos outros jogadores informa sobre o tipo deles
+**Jogos dinâmicos de informação imperfeita** (já que transformamos por Harsanyi informação *incompleta* em *imperfeita*) trazem um aspecto que os torna muito mais interessantes (mas também bem mais difíceis): a própria *estratégia* dos outros jogadores nos informa sobre o tipo deles
 
-Outro problema é como aplicar a ideia de *racionalidade sequencial* quando o equilíbrio perfeito em subjogos é pouco útil, como já discutido
+Aqui também veremos como aplicar a ideia de *racionalidade sequencial* quando o equilíbrio perfeito em subjogos é pouco útil, como já discutido
+
 
 ---
 class: middle
-## O problema com perfeito em subjogos
+
+&lt;img src="figs/week3-fig2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+Voltemos ao jogo de *dissuação estratégica de entrada* do começo desse tópico, e considere `\(p=2/3\)`: quais são os equilíbrios de Nash do jogo acima? E perfeito em subjogos?
+
+---
+class: middle
 
 &lt;img src="figs/week3-fig6.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-O jogo de entrada com informação imperfeita acima tem dois equilíbrios de Nash em estratégias puras, *ambos* perfeitos em subjogos
+No slide anterior, o conceito de ENPS ainda tem um pouco de "mordida", já que o jogo tem um subjogo não-trivial &amp;mdash; mas se trocarmos a informação assimétrica de lado vemos quão grave é o problema de ENPS em jogos de informação incompleta (com a transformação de Harsanyi): temos dois equilíbrios de Nash em estratégias puras, *ambos* perfeitos em subjogos
 
 ---
 class: middle
@@ -239,6 +286,17 @@ Reunindo tudo, um perfil de estratégias `\(\sigma^*\)` é um **equilíbrio perf
 2. Em todos os conjuntos informacionais **no caminho de equilíbrio** o sistema de crenças é consistente com a *regra de Bayes*
 3. **Fora do caminho de equilíbrio** o sistema de crenças pode ser qualquer coisa
 4. Os jogadores em todos os seus conjuntos informacionais (no caminho de equilíbrio ou fora) jogam *melhor-respostas* para o seu sistema de crenças `\(\mu\)` (**racionalidade sequencial**)
+
+---
+class: middle
+## Regra de Bayes
+
+Pela definição de probabilidade condicional, `\(\Pr (A \cap B) = \Pr (A | B) \Pr (B)\)`, e por simetria, também vale que `\(\Pr (A \cap B) = \Pr (B | A) \Pr (A)\)` &amp;mdash; isso nos dá a fundamental **regra de Bayes**:
+
+`$$\Pr (A | B) = \frac{\Pr (B | A) \Pr (A)}{\Pr (B)} = \frac{\Pr (B | A_i) \Pr (A_i)}{\sum_{k=1}^K \Pr (B | A_k) \Pr(A_k)}$$`
+
+Trocando `\(A\)` por `\(A_i\)`, que é um evento específico dentre `\(K\)` eventos possíveis que sejam excludentes e cuja probabilidades somam `\(1\)` (por exemplo, "ir na ópera" dentre "ir na ópera" e "ir ao futebol" na guerra dos sexos)
+
 
 ---
 class: middle
