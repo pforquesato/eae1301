@@ -330,20 +330,22 @@ Esses perfis de estratégias que permanecem formam o nosso segundo conceito de s
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+```{r, echo=FALSE, out.width = '55%', fig.align='center'}
 knitr::include_graphics("figs/week1-fig12.png")
 ```
 
-No jogo acima (uma versão expandida do dilema dos prisioneiros), a ação Q (cooperar) para o jogador 2 é *racional*? E *racionalizável*?
+Considere agora uma versão do dilema dos prisioneiros em que o jogador 1 pode aceitar a culpa sozinho e livrar o outro jogador (ação $X$) &mdash; nesse caso ele pega 6 anos de prisão e o jogador 2 vai livre se ficou em silêncio, mas pega 1 ano de cadeia caso tenha delatado: a adição de uma estratégia claramente irrazoável torna cooperar *racional*! (mas não *racionalizável*)
 
 
 ---
 class: middle
 ## Eliminação iterada
 
-A *racionabilidade* só mantém no jogo estratégias que para alguma crença *compatível com conhecimento comum de racionalidade* que um jogador tenha, essa estratégia seria uma melhor-resposta para aquela crença
+A **racionabilidade** só mantém no jogo estratégias que para alguma crença *compatível com conhecimento comum de racionalidade* que um jogador tenha, essa estratégia seria uma melhor-resposta para tal crença
 
-Como vimos pela **Afirmação 2**, um jogador racional jamais escolherá uma *estratégia estritamente dominada* &mdash; podemos então fazer o processo espelhado da racionabilidade, e a cada iteraçao eliminar tais estratégias que nenhum jogador racional jamais faria 
+Como vimos pela **Afirmação 2**, um jogador racional jamais escolherá uma *estratégia estritamente dominada* &mdash; podemos então para cada jogador eliminar tais estratégias que um jogador racional jamais faria 
+
+E igualmente, um jogador que *acredite na racionalidade* do outro jogador nunca vai crer que ele jogará estratégias estritamente dominadas, e assim em diante, da mesma forma como fizemos com *racionabilidade*
 
 ---
 class: middle
