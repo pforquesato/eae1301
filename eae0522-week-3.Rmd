@@ -373,6 +373,14 @@ knitr::include_graphics("figs/week3-fig7.png")
 
 No jogo acima, que vimos no começo da seção, todas as *crenças consistentes* dão probabilidade $1/2$ de se estar em cada vértice do conjunto informacional &mdash; ao contrário de crenças no EPB, que podem ser quaisquer
 
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/lista8-ex1b.png")
+```
+
+Exemplo: encontremos os equilíbrios perfeito bayesianos e sequenciais do jogo acima
 
 ---
 class: middle
