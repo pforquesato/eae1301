@@ -752,7 +752,16 @@ class: middle
 knitr::include_graphics("figs/week1-fig15.png")
 ```
 
-De volta à **Batalha dos Sexos**, que possui um equilíbrio em estratégias mistas talvez pouco atrativo &mdash; mas se o casal estiver vendo cada um da sua casa um jogo de futebol da China vs Lituânia e for conhecimento comum que a probabilidade da China ganhar é $1/2$, eles conseguem fazer melhor que isso! 
+De volta à **Batalha dos Sexos**, que possui um equilíbrio em estratégias mistas talvez pouco atrativo &mdash; mas se o casal estiver vendo cada um da sua casa um jogo de futebol da China vs Lituânia e for conhecimento comum que a probabilidade da China ganhar é $1/2$, eles conseguem fazer melhor que isso!
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+knitr::include_graphics("figs/week1-fig19.png")
+```
+
+Outro exemplo é o **jogo do trânsito** acima: em uma intersecção, dois carros podem ambos esperar (o que é ruim para ambos, pois não resolve nada), um esperar e o outro passar, que não é ruim para o primeiro mas melhor para o segundo, ou ambos avançarem, o que é o pior, pois gera um acidente! &mdash; embora o jogo tenha EN, a sociedade avançou para uma solução mais justa com um *mecanismo de aleatorização* (o semáforo)
 
 ---
 class: middle, center, inverse
