@@ -804,7 +804,7 @@ Considere o jogo acima em que apenas mostramos o *payoff* do jogador 1 (para os 
 class: middle
 ## Algoritmos
 
-Encontramos a estratégia maxmin achando a estratégia que dá o mesmo *payoff* para *si mesmo* não importa o que os outros jogarem &mdash; essa é a noção de "garantir" um payoff
+Encontramos a estratégia maxmin achando a estratégia que dá o mesmo *payoff* para *si mesmo* não importa o que os outros jogarem &mdash; essa é a noção de "garantir" um payoff, que chamamos de **nível de segurança**
 
 Percebam a diferença para um equilíbrio de Nash em estratégias mistas, em que em equilíbrio as estratégias que um jogador escolhe devem cumprir a condição de indiferença *para os outros jogadores*!
 
