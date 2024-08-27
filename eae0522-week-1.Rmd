@@ -470,7 +470,7 @@ Um perfil de estratégias puras $(s_1^*, s_2^*, ..., s_N^*)$ é um **equilíbrio
 
 $$u_i (s_i^*, s^*_{-i}) \geq u_i (s_i, s^*_{-i})$$
 
-Outra forma de pensar em equilíbrio de Nash é que ele é *estável a desvios unilaterais*: se por acaso a situação normal (seja lá o que for isso) é jogar um equilíbrio de Nash, então ninguém desejará *sozinho* desviar
+O equilíbrio de Nash é um conceito de **estabilidade** &mdash; o perfil de EN é *estável a desvios unilaterais*: se por acaso a situação normal (seja lá o que for isso) é jogar um equilíbrio de Nash, então ninguém desejará *sozinho* desviar
 
 ---
 class: middle
