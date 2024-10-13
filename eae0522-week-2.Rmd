@@ -363,7 +363,7 @@ Forma extensiva de um modelo de barganha (aqui em dois períodos): no 1º perío
 class: middle
 ## Barganha finita
 
-O primeiro resultado é que em modelos de barganha o conceito de EN, e portanto também racionabilidade, são pouco informativos &mdash; *todas* as divisões podem ser divisões de equilíbrio *desde que* com acordo no primeiro período  
+O primeiro resultado é que em modelos de barganha o conceito de EN, e portanto também racionabilidade, são pouco informativos &mdash; para *qualquer* divisão $(x,1-x)$ e período $t$, existe um EN que é aceito $(x, 1-x)$ em $t$
 
 Já equilíbrio perfeito em subjogos nos dá uma resposta *bem* mais refinada: pelo *Teorema de Zermello*, usando o argumento de *indução para trás*, sabemos que todo modelo de barganha (de informação perfeita) possui um *único* ENPS
 
