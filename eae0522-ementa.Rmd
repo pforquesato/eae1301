@@ -1,7 +1,7 @@
 ---
 title: 'EAE-1301: TEORIA DOS JOGOS'
 author: Pedro Forquesato<br/>Departamento de Economia<br/>Faculdade de Economia, Administração, Contabilidade e Atuária<br/>Universidade de São Paulo
-date: "2024/2"
+date: "2025/2"
 output:
   prettydoc::html_pretty:
     toc: yes
@@ -30,12 +30,12 @@ Teoria dos jogos é um ramo do conhecimento focado em modelar matematicamente in
 
 ### Avaliação de Aprendizagem
 
-1. **Duas provas:**, a primeira cobrindo as partes 1 e 2 do curso; a segunda cobrindo o curso inteiro (40% e 60% da nota, respectivamente).
-2. **Oito workshops** de resolução **em sala** de exercícios. Para cada workshop *com participação satisfatória*, é adicionado (**crédito extra**) 0,25 na média (2 pontos no total).
+1. **Duas provas:**, a primeira cobrindo as partes 1 e 2 do curso; a segunda cobrindo o curso inteiro (50% da nota cada).
+2. **Seis workshops (doze aulas)** de resolução *em sala* de exercícios. Para cada aula com participação (satisfatória), é adicionado (**crédito extra**) 0,15 na média (1,8 pontos no total).
 
-Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo  por meio de uma autoavaliação (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*. 
+<!--Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo  por meio de uma autoavaliação (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*. 
 
-3. **Autoavaliação:** caso o aluno escolha (e possa escolher) esse método de avaliação, deve entregar um "portfolio" no fim do semestre de 1-3 páginas descrevendo o seu progresso, realizações e fazendo uma autoavaliação culminando na sua nota para o curso. Essa nota de autoavaliação será baseada em: (i) quantidade e dificuldade dos exercícios resolvidos nos workshops; (ii) participação em aula e nos workshops (por exemplo, ajudando os colegas); (iii) autoavaliação de seu progresso, conhecimento e dedicação na disciplina e em teoria dos jogos em geral. 
+3. **Autoavaliação:** caso o aluno escolha (e possa escolher) esse método de avaliação, deve entregar um "portfolio" no fim do semestre de 1-3 páginas descrevendo o seu progresso, realizações e fazendo uma autoavaliação culminando na sua nota para o curso. Essa nota de autoavaliação será baseada em: (i) quantidade e dificuldade dos exercícios resolvidos nos workshops; (ii) participação em aula e nos workshops (por exemplo, ajudando os colegas); (iii) autoavaliação de seu progresso, conhecimento e dedicação na disciplina e em teoria dos jogos em geral. -->
 
 Todas as médias serão arredondadas para cima (em relação à nota final no Moodle) a uma casa decimal (**e apenas isso**). Caso seja necessário para algum aluno, haverá uma prova de reavaliação, sendo a média final a média da primeira e segunda avaliações.
 
@@ -48,7 +48,7 @@ Se você estiver passando por dificuldades: 1. se isso atrapalhar de alguma form
 
 ### Docente
 
-Meu nome é Pedro Forquesato, sou professor doutor do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2024, leciono Economia do Setor Público na graduação, Estatística e Econometria I na pós-graduação, além de Teoria dos Jogos (este curso).
+Meu nome é Pedro Forquesato, sou professor associado do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2025, leciono Princípios de Micro e Economia do Setor Público na graduação, além de Teoria dos Jogos (este curso).
 
 ### Contato
 
@@ -58,11 +58,11 @@ Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados
 
 ### Monitoria
 
-O monitor da matéria será o [Dimitri Maturano](mailto:dimitricecanm@usp.br). O funcionamento das monitorias será explicado em aula.
+Torçamos.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são terças-feiras das 19h30 às 21h10 e quintas-feiras das 21h20 às 23h00 (turma 2024221) na sala **G-02** do FEA 1.
+**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quintas-feiras das 19h30 às 21h10 (turma 2025221) na sala **XX** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
@@ -82,42 +82,37 @@ Note que essas punições ocorrerão sem prejuízo de eventual instauração de 
 
 ### Conteúdo programático, cronograma e bibliografia do curso
 
-O curso está dividido em três partes. Cada parte consiste em uma série de aulas teóricas explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por semanas de workshops onde os conceitos são aplicados na resolução de uma lista de jogos.
+O curso está dividido em três partes. Cada parte consiste em três semanas de aulas teóricas explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por duas semanas de workshops onde os conceitos são aplicados na resolução de uma lista de jogos.
 
 Todas as datas abaixos são **estimativas** e **sujeitas a alteração** dependendo do andamento do semestre.
 
 #### Parte 1: Jogos estáticos de informação completa
 
-3 semanas de aulas [06/08 a 22/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html)
+3 semanas de aulas [04/08, 06/08, 11/08, 13/08, 18/08 e 20/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html) <br> **Bibliografia:** Tadelis, caps. 3, 4, 5 e 6. Osborne, cap. 11.
 
-1. **Workshop 1:** Soluções baseadas (apenas) na racionalidade [Semana do dia 27/08]. <br> *Bibliografia:* Tadelis, caps. 3 e 4. [[Lista 1]](https://www.pedroforquesato.com/files/eae1301_lista1.pdf)
-
-[Semana da pátria]
-
-2. **Workshop 2:** Equilíbrio de Nash (em estratégias puras e mistas)  [Semana do dia 10/09]. <br> *Bibliografia:* Tadelis, caps. 5 e 6. [[Lista 2]](https://www.pedroforquesato.com/files/eae1301_lista2.pdf)
-3. **Workshop 3:** Jogos estritamente competitivos (aka jogos de soma-zero) [Semana do dia 17/08]. <br> *Bibliografia:* Osborne, capítulo 11. [[Lista 3]](https://www.pedroforquesato.com/files/eae1301_lista3.pdf)
+1. **Workshop 1:** Jogos em forma normal [25/08 e 27/08]. [[Lista 1]](https://www.pedroforquesato.com/files/eae1301-workshop1-2025.pdf)
+2. **Workshop 2:** Outros jogos estáticos de informação completa [08/09 e 10/09]. [[Lista 2]](https://www.pedroforquesato.com/files/eae1301-workshop2-2025.pdf)
 
 #### Parte 2: Jogos dinâmicos de informação completa
 
-2 semanas de aulas [24/09 a 03/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html)
+3 semanas de aulas [15/09, 17/09, 22/09, 24/09, 29/09 e 01/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html) <br> **Bibliografia:** Tadelis, caps. 7, 8, 9, 10 e 11.
 
-4. **Workshop 4:** Jogos dinâmicos de informação perfeita [Semana do dia 08/10]. <br> *Bibliografia:* Tadelis, caps. 7, 8 e 11. [[Lista 4]](https://www.pedroforquesato.com/files/eae1301_lista4.pdf)
+3. **Workshop 3:** Jogos dinâmicos de informação perfeita [06/10 e 08/10]. [[Lista 3]](https://www.pedroforquesato.com/files/eae1301-workshop3-2025.pdf)
 
-Prova de meio-termo: **15/10** (workshops 1 a 4).
+Prova de meio-termo: **13/10**.
 
-5. **Workshop 5:** Jogos dinâmicos de informação imperfeita [Semana do dia 22/10]. <br> *Bibliografia:* Osborne, cap. 7. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301_lista5.pdf)
-6. **Workshop 6:** Jogos multi-estágios e repetidos [Semana do dia 29/10]. <br> *Bibliografia:* Tadelis, caps. 9 e 10. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301_lista6.pdf)
+4. **Workshop 4:** Jogos dinâmicos de informação imperfeita [20/10 e 22/10]. [[Lista 4]](https://www.pedroforquesato.com/files/eae1301-workshop4-2025.pdf)
 
 #### Parte 3: Jogos de informação incompleta
 
-2 semanas de aulas [05/11 a 14/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html)
+3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15 e 16.
 
-7. **Workshop 7:** Jogos de informação incompleta [Semana do dia 19/11]. <br> *Bibliografia:* Tadelis, cap. 12. [[Lista 7]](https://www.pedroforquesato.com/files/eae1301_lista7.pdf)
-8. **Workshop 8:** Refinamentos de equilíbrio [Semana do dia 26/11]. <br> *Bibliografia:* Tadelis, caps. 15 e 16. [[Lista 8]](https://www.pedroforquesato.com/files/eae1301_lista8.pdf)
+5. **Workshop 5:** Jogos bayesianos [17/11 e 19/11]. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301-workshop5-2025.pdf)
+6. **Workshop 6:** Refinamentos de equilíbrio [24/11 e 26/11]. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301-workshop6-2025.pdf)
 
-Prova final: **03/12** (toda a matéria).
+Prova final: **03/12**.
 
-Reavaliação: **12/12**.
+Reavaliação: **Jan/2026**.
 
 ### Referências
 
@@ -138,6 +133,8 @@ Fudenberg, D., & Tirole, J. (1991). Game theory. MIT press. (\*)
 
 Livros com (\*) são livros de pós-graduação. (Mas não precisamos ter medo de livros de pós-graduação!)
 
-Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***completamente opcionais***, recomendo o curso do Matthew Jackson e outros professores em https://www.game-theory-class.org/ (os vídeos podem ser acessados diretamente por https://www.youtube.com/@gametheoryonline).
+Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***completamente opcionais***, recomendo o curso do [Matthew Jackson e outros professores](https://www.game-theory-class.org/) (os vídeos podem ser acessados diretamente [aqui](https://www.youtube.com/@gametheoryonline)).
+
+Outros vídeos no YouTube sugerido por alunos são o curso do [William Spaniel](https://www.youtube.com/playlist?list=PLKI1h_nAkaQoDzI4xDIXzx6U2ergFmedo) e [Selcuk Ozyurt](https://www.youtube.com/@selcukozyurt).
 
 
