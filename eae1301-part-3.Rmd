@@ -2,7 +2,7 @@
 title: "EAE-1301: Teoria dos Jogos"
 author: "Pedro Forquesato<br/>http://www.pedroforquesato.com<br/>Sala 217/FEA2 - pforquesato@usp.br"
 institute: "Departamento de Economia<br/>Universidade de São Paulo"
-date: "2024/2 - Tópico 3: Jogos de informação incompleta"
+date: "2025/2 - Tópico 3: Jogos de informação incompleta"
 output:
   xaringan::moon_reader:
     lib_dir: libs

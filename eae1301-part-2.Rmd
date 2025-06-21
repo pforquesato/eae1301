@@ -163,7 +163,27 @@ Luce e Raiffa (1957) faz a seguinte analogia: se uma estratégia pura é um manu
 
 Já uma *estratégia comportamental* é um manual apenas, mas que em algumas páginas propõe jogar um dado para escolher o que fazer &mdash; bem mais simples!
 
-Em **jogos de *perfect recall***, jogos em que nenhum jogador esquece qualquer informação que ele já soube (basicamente todos do curso, mas ver questão 14 do workshop 5), estratégias mistas e comportamentais são equivalentes
+Em **jogos de memória perfeita**, jogos em que nenhum jogador esquece qualquer informação que ele já soube, estratégias mistas e comportamentais são equivalentes
+
+---
+class: middle
+## O paradoxo do motorista distraído
+
+Nesse problema de Piccione e Rubinstein (1997), um motorista está voltando para casa e precisa virar à esquerda na segunda saída: se ele sair na primeira, entra em um bairro ruim e é assaltado, tendo um payoff de zero
+
+Entrar na segunda saída é o melhor, e chega logo em casa (payoff 4), mas continuar sempre em frente também chega em casa, apesar de ser um caminho muito mais longo, dando payoff de 1
+
+O problema é que o motorista é distraído! Ao se deparar com uma saída, ele não consegue se lembrar se já passou por qualquer saída antes (isto é, se essa saída que ele vê é a primeira ou a segunda saída)
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '30%', fig.align='center'}
+knitr::include_graphics("figs/lista5-ex13.png")
+```
+
+Essa é a representação em forma extensiva do jogo &mdash; quantas estratégias puras o nosso pobre motorista tem? Qual é melhor? E se empregarmos estratégias mistas, qual é a dificuldade?
 
 ---
 class: middle
@@ -247,7 +267,6 @@ Quando jogadores empregam estratégias sequencialmente racionais eles escolhem r
 
 Como o que é racional no começo depende dos *payoffs* que vêm depois, nós começamos do final, e resolvemos "de trás para frente" o jogo: é esse procedimento que chamamos de **indução para trás**, ou *backwards induction*
 
-
 ---
 class: middle
 
@@ -265,6 +284,16 @@ knitr::include_graphics("figs/week2-fig13.png")
 ```
 
 Quantos equilíbrios de Nash o **jogo de coordenação** em forma extensiva acima tem? Quais deles são racionalmente sequencionais?
+
+---
+class: middle
+## O enigma do chapéu do rei
+
+Dez sábios ("perfeitamente racionais") estão sentados em um círculo com chapéus que podem  ser brancos ou pretos &mdash; cada um pode ver o chapéu dos outros nove, mas não o seu próprio
+
+Um anunciador diz: "Vocês estão usando chapéus que podem ser brancos ou pretos, e pelo menos um é branco. Eu vou contar até 100. Sempre que eu falar um número vocês podem levantar a mão, mas apenas se souberem a cor do seu chapéu." 
+
+Após quantos números alguém levantará a mão?
 
 ---
 class: middle
