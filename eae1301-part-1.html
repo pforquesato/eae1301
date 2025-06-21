@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>EAE-1301: Teoria dos Jogos</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
+    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# EAE-1301: Teoria dos Jogos
+]
+.author[
+### Pedro Forquesato<br/><a href="http://www.pedroforquesato.com" class="uri">http://www.pedroforquesato.com</a><br/>Sala 217/FEA2 - <a href="mailto:pforquesato@usp.br" class="email">pforquesato@usp.br</a>
+]
+.institute[
+### Departamento de Economia<br/>Universidade de São Paulo
+]
+.date[
+### 2025/2 - Tópico 1: Jogos estáticos de informação completa
+]
+
+---
+
+class: inverse, middle, center
+
+
+
+# Preliminares (Tadelis, cap. 3)
+
+
+---
+class: middle
+## Jogos
+
+O que é um jogo? Podemos voltar ao primeiro artigo acadêmico de teoria dos jogos, Von Neumann (1928). "On the theory of games of strategy":
+
+&gt; Hence we must first endeavor to find a clear formulation of the question. What, exactly, is a game of strategy? A great many different things come under this heading, anything from roulette to chess,  from baccarat to bridge.  And after all, any event - given the external conditions and the participants in the situation (provided the latter are acting of their own free will) - may be regarded as a game of strategy if one looks at the effect it has on the participants. (Footnote: This is the principal problem of classical economics: how is the absolutely selfish 'homo economicus" going to act under given external circumstances?)  [Von28]
+
+---
+class: middle
+## Teoria dos Jogos
+
+A teoria dos jogos estuda modelos lógico-matemáticos de como **agentes racionais** tomariam decisões em situações em que o resultado dessas decisões dependem das ações de outros agentes
+
+A teoria dos jogos **não** estuda o comportamento de humanos reais em tais interações, mas entendendo o que um agente puramente lógico faria, isso nos dá claridade sobre conceitos importantes como *estratégia*, *reputação*, *poder de barganha*, *credibilidade*, *comunicação*, *cooperação*,  *incentivos*, etc
+
+Por isso, a teoria dos jogos tem aplicações em economia, ciência política, relações internacionais, estratégia, além de mais recentemente se tornar importante em engenharia e ciência da computação 
+
+---
+class: middle
+## Teoria dos Jogos
+
+Quando há motivo para crer que seres humanos agiriam de forma parecida com a predição lógica dos modelos, a teoria dos jogos tem valor **positivo** como predição do que vai acontecer no mundo real (p. ex. teoria de leilões)
+
+Como todo resultado de ciência positiva, se os jogos realmente descrevem o comportamento das pessoas é *testável empiricamente* (na teoria dos jogos comportamental ou experimental, ou mesmo estimando empiricamente jogos)
+
+Em algumas situações (mas nem sempre!), mesmo que as pessoas reais não ajam como na teoria dos jogos, ela pode ter valor **normativo** como a forma pela qual as pessoas *deveriam* se comportar (e.g., xadrez)
+
+---
+class: middle
+## Esse curso
+
+Cobriremos os principais temas de teoria dos jogos *não-cooperativos*: jogos estáticos de informação completa (parte 1), jogos dinâmicos de informação perfeita e imperfeita (parte 2) e jogos de informação incompleta (parte 3)
+
+As aulas expositivas focarão principalmente na teoria, e vamos discutir aplicações e jogos importantes nos workshops de exercícios, para vocês refletirem por si mesmos sobre esses problemas
+
+O que *não* vamos cobrir nesse curso: teoria dos jogos cooperativa, jogos de matching e implementação e desenho de mecanismo
+
+---
+class: middle
+## Jogos
+
+Um jogo é representado por:
+
+1. Um conjunto de **jogadores**
+2. Uma **ordem de jogo**, elencando a cada momento que jogadores são *chamados a jogar*
+3. Um conjunto (potencialmente diferente) de **ações** para cada jogador e para cada momento em que ele é chamado a jogar
+4. Uma descrição do que cada jogador sabe (sua **informação**) a cada momento em que é chamado a jogar
+5. **Preferências** de cada jogador entre os diferentes *perfis* de ações que podem ser resultantes do jogo 
+
+Chamamos um jogo de **jogo finito** se o número de jogadores e o número de ações disponíveis aos jogadores são ambos finitos
+
+---
+class: middle
+## Jogos estáticos de informação completa
+
+Começamos com a análise de jogos onde os jogadores escolhem as suas ações simultaneamente (ou sem observar as ações dos outros) e uma única vez
+
+Ademais, vamos supor nas primeiras 2 partes do curso que todos os jogadores conhecem todos os elementos do jogo (descritos no slide anterior)
+
+Chamamos esse tipo de interações estratégicas em que o aspecto temporal não é relevante de *jogos estáticos* &amp;mdash; e supondo também *conhecimento comum* de todos os aspectos do jogo, temos **jogos estáticos de informação completa**, o tema dessa 1a parte do curso
+
+---
+class: middle
+## O dilema dos prisioneiros
+
+Sem dúvidas o mais importante e famoso jogo na teoria dos jogos é o **dilema dos prisioneiros** (e voltaremos a ele diversas vezes ao longo desse curso)
+
+Nele, Ana e Bernardo estão na prisão esperando indiciamento. A evidência é suficiente para condenar ambos por caixa 2 (com tempo de prisão de 2 anos), mas se um dos dois fazer delação premiada, ele fica apenas 1 e o outro é preso por corrupção passiva (pena de 5 anos) &amp;mdash; se ambos confessarem, os dois são presos pelo crime mais grave, mas com atenuante (pena de 4 anos)
+
+Frequentemente estudaremos situações estilizadas como acima, mas elas guardam em si lições importantes sobre o mundo real
+
+---
+class: middle
+## O dilema dos prisioneiros
+
+Como representamos esta situação na forma de um *jogo*? Cada jogo tem os cinco componentes que citamos anteriormente &amp;mdash; no caso do nosso dilema dos prisioneiros, são:
+
+1. **Jogadores:** Ana e Bernardo
+2. **Ordem de jogo:** Os dois escolhem suas ações simultaneamente e uma única vez (*estático*)
+3. **Ações:** No único momento que são chamados a jogar, ambos podem confessar ou cooperar
+4. **Informação:** Ambos sabem tudo sobre o jogo (os pontos 1-5 aqui), i.e. *informação completa*, mas não sabem o que o outro jogador escolheu
+3. **Preferências:** para ambos Ana e Bernardo, (confessar, cooperar) é melhor que (cooperar, cooperar), que é melhor que (confessar, confessar); e o pior é (cooperar, confessar)
+
+---
+class: middle
+## Preferências
+
+Para alguns propósitos, tudo o que precisamos são das preferências **ordinais** dos jogadores (o que é melhor que o quê) &amp;mdash; mas quando chegarmos em *estratégias mistas*, isto é, probabilidades sobre estratégias, isso não será mais suficiente: precisaremos de preferências **cardinais**
+
+Então por consistência vamos desde o começo darmos valores numéricos para o 
+*payoff* de cada jogador com cada perfil de ações: a **utilidade** `\(v_i (a_i, a_{-i})\)`
+
+E vamos daqui em diante *supor* que se um agente ganha *payoff* de `\(5\)` com probabilidade `\(1/2\)` e `\(7\)` com probabilidade `\(1/2\)`, então a sua utilidade é `$$\frac{1}{2}5 + \frac{1}{2}7 = 6$$`
+
+---
+class: middle
+## Informação completa
+
+Mas há mais uma classe de suposições que estão "escondidas" por trás desse jogo em forma normal: que os jogadores sabem (i) quem são os outros jogadores, (ii) quais ações cada jogador tem, e (iii) os *payoffs* de todos os jogadores para cada perfil de ações
+
+Na verdade, precisamos de *muito* mais do que isso: precisamos que cada jogador saiba que os outros jogadores sabem que ele sabe que eles sabem que ele sabe... &amp;mdash; chamamos essa iteração de **conhecimento comum**
+
+Quando supomos que todos os componentes do jogo são de *conhecimento comum* dizemos que temos um **jogo de informação completa**
+
+---
+class: middle
+## O paradoxo bizantino
+
+Um exemplo nos ajuda a entender por que o conhecimento comum é necessário: dois generais bizantinos estavam em morros próximos cercando um inimigo no vale &amp;mdash; dada a sua vantagem estratégica, eles certamente venceriam os inimigos, *desde que* atacassem ao mesmo tempo
+
+O primeiro general então manda um mensageiro para avisar o segundo do horário do ataque... Algum tempo depois, o mensageiro volta dizendo que a mensagem foi passada com sucesso &amp;mdash; ainda assim, chegada a hora da batalha nenhum dos generais avança
+
+Por que?
+
+---
+class: middle
+## Estratégias
+
+Resta um conceito para definirmos antes de começarmos a resolver os jogos: as *estratégias* dos agentes, isto é, o que eles planejam jogar
+
+Uma **estratégia pura** `\(s_i\)` elenca para cada situação discernível pelo agente em que ele é chamado a jogar uma *ação*: nos jogos mais simples que analisamos nessa 1a parte do curso, uma estratégia pura é equivalente a uma ação (por exemplo, cooperar ou confessar) &amp;mdash; mas mais frente no curso não será não!
+
+Uma **estratégia mista** `\(\sigma_i\)` é uma distribuição de probabilidade *sobre as estratégias puras*: por exemplo, cooperar com probabilidade `\(\sigma_i(coop) = 1/3\)` e confessar com probabilidade `\(\sigma_i(conf) = 2/3\)` &amp;mdash; como probabilidade pode ser 1 e 0, estratégias puras são triviamente mistas
+
+---
+class: middle
+## Jogos em forma normal
+
+Pensando em termos de estratégias, podemos representar os jogos na **forma normal**
+
+Um jogo na forma normal `\(\Gamma =\left&lt; N, \{S_1, ..., S_N\}, \{v_1, ..., v_N\} \right&gt;\)` é:
+
+1. Um conjunto `\(N = \{1, 2, ..., N\}\)` de jogadores;
+2. O conjunto de possíveis estratégias `\(S_i\)` de cada jogador; e
+3. Um conjunto de **payoffs** `\(v_i(s_i, s_{-i})\)` para cada jogador, onde `\(s_i\)` é a estratégia dele e `\(s_{-i} = (s_1, ..., s_{i-1}, s_{i+1},..., s_N)\)` é o *perfil* de estratégias dos outros jogadores 
+
+
+---
+class: middle
+## Jogos em forma normal
+
+Há infinitas matrizes de *payoffs* que representam o dilema dos prisioneiros: 
+
+&lt;img src="figs/week-1-fig-1b.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+Geralmente representamos o jogo na forma normal na *forma de bimatriz*, em que as linhas são as estratégias do jogador 1 (Ana) e as colunas as ações do jogador 2 (Bernardo) com os payoffs de cada perfil dentro das células (o 1o número é payoff do jogador 1, o 2o do jogador 2)
+
+---
+class: middle
+## A guerra dos sexos
+
+Outro jogo famoso que veremos várias vezes ao longo do curso é a **guerra dos sexos**, do livro "Games and Decisions" (1957) de Luce e Raiffa
+
+&lt;img src="figs/week-1-fig-0.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+Ao contrário do dilema dos prisioneiros, a guerra dos sexos é uma forma de **jogo de cooperação**: Ana e Bernardo querem sempre ir ao mesmo evento, por mais que Ana goste mais de ópera e Bernardo goste mais de futebol
+
+---
+class: middle
+## Conceitos de solução
+
+Agora só falta *resolver* os jogos! Para isso precisamos definir um **conceito de solução**: uma regra formal que dita como um jogo será/deveria ser jogado
+
+Cada conceito de solução representa uma diferente *suposição sobre como os jogadores tomam decisões*: portanto, diferentes conceitos podem ser mais ou menos razoáveis em diferentes aplicações
+
+Frequentemente, um conceito de solução não gera respostas precisas (idealmente únicas) sobre qual será o resultado do jogo: para restringir essas previsões, boa parte do desenvolvimento da teoria dos jogos envolveu criar conceitos mais restritos de equilíbrio, os **refinamentos**
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig18.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+Alguns **conceitos de solução** (não todos) que vamos cobrir no curso (e um que não vamos), e a relação entre eles: uma seta entre um conceito e outro indica que o conjunto de soluções do primeiro está contido no segundo, isto é, ele é um **refinamento** do segundo conceito
+
+---
+class: middle, center, inverse
+
+# Racionalidade e dominância (Tadelis, cap. 4)
+
+---
+class: middle
+## Racionalidade
+
+Até aqui não fizemos nenhuma *suposição comportamental*: a princípio, jogadores poderiam escolher as suas estratégias por qualquer motivo ("o nome tem mais letras", "eu gosto de escolher sempre a primeira opção", etc)
+
+A suposição mais plausível que poderíamos fazer (pelo menos na maioria dos casos) é que os agentes são **racionais** &amp;mdash; intuitivamente, isso quer dizer que eles buscam no jogo, dado o que acreditam que os outros jogadores vão fazer, obter resultados que eles preferem
+
+Mas como veremos, em muitas situações ser "mais racional" pode levar a *payoffs* bem menores do que agentes "menos racionais"
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-0.png" width="33%" style="display: block; margin: auto;" /&gt;
+
+Voltemos agora à **guerra dos sexos**: o que podemos dizer sobre quais estratégias que jogadores *racionais* irão escolher?
+
+---
+class: middle
+## Racionalidade
+
+A resposta é *nada*! Se Ana acredita que Bernardo vai ao futebol, ela quererá ir ao futebol; se ela acredita que Bernardo vai à ópera, ela quererá ir à ópera: sem saber quais são as *crenças* de Ana, não podemos saber o que ela vai jogar
+
+Mesmo Ana e Bernardo sendo completamente racionais, não há por que esperar que não aconteça de Ana ir ao futebol e Bernardo vá à ópera, ambos não se encontrando e tendo *payoff* zero
+
+A ideia desse primeiro tópico é tentar definir quais resultados dos jogos podem acontecer se assumirmos apenas que os agentes são racionais: na guerra dos sexos, tudo pode acontecer!
+
+---
+class: middle
+## Dominância
+
+A restrição mais óbvia sobre racionalidade é que um jogador racional não deveria nunca jogar uma ação que é *sempre* pior que alguma outra, e deveria sempre jogar alguma ação que é *sempre* melhor que *todas* as outras
+
+**Afirmação 1:** Se uma opção é estritamente melhor que todas as outras *não importa a estratégia do(s) oponente(s)*, então um jogador racional sempre vai escolher ela &amp;mdash; chamamos esse tipo de estratégia de **estritamente dominante**
+
+**Afirmação 2:** Um jogador racional nunca irá escolher uma estratégia que é sempre estritamente pior que alguma outra *não importa a estratégia do(s) oponente(s)* &amp;mdash; chamamos esse tipo de estratégia de **estritamente dominada** 
+
+
+---
+class: middle
+## Dominância
+
+Formalmente, uma estratégia pura `\(\bar{s}_i\)` é **estritamente dominante** quando `\(v_i(\bar{s}_i, s_{-i}) &gt; v_i(s_i, s_{-i})\)` para todas as suas outras estratégias `\(s_i\)` e para todos os perfis de estratégias dos oponentes `\(s_{-i}\)`
+
+Já chamamos um estratégia `\(\underline{s}_i\)` de **estritamente dominada** quando existe outra estratégia (potencialmente mista) `\(\sigma_i\)` tal que `\(v_i(\sigma_i, s_{-i}) &gt; v_i(\underline{s}_i, s_{-i})\)` para todos os perfis de estratégia `\(s_{-i}\)` dos oponentes
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-1b.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+Se a Ana escolhe cooperar (M), ela recebe -2 caso Bernardo coopere (M) e -5 caso ele confesse (F); se Ana escolhe confessar (F), ela recebe -1 caso Bernardo coopere (M) e -4 caso ele confesse (F) &amp;mdash; ou seja, *confessar é estritamente dominante*
+
+Se Ana é racional, ela deve sempre confessar! Como o jogo é *simétrico*, o mesmo vale para Bernardo: se ele for racional, deve sempre confessar!
+
+---
+class: middle
+## Equilíbrio em estratégias dominantes
+
+Esse raciocínio nos leva ao nosso primeiro *conceito de solução* do curso: o **equilíbrio em estratégias dominantes** (EED): um perfil de estratégias `\((\bar{s}_i)_{i\in N}\)` é um EED se para todo `\(i\)`, `\(\bar{s}_i\)` é uma estratégia dominante
+
+O EED é o conceito de solução mais forte em teoria dos jogos: *se* ele existir, ele sempre vai ser *único*, e é o que depende de menos suposições sobre os jogadores para ser crível &amp;mdash; tudo o que precisamos é que sejam racionais!
+
+A sua aplicabilidade é rara, entretanto: poucos jogos são como o dilema dos prisioneiros em que todos os jogadores têm estratégias dominantes &amp;mdash; em geral precisaremos de mais suposições para resolver um jogo
+
+---
+class: middle
+## Equilíbrio em estratégias dominantes
+
+Parece à primeira vista que como em um EED todos os jogadores estão jogando cada um uma estratégia que é *sempre* melhor que as outras, então os jogadores estariam garantindo o seu melhor *payoff* possível no jogo
+
+Isto é, que a alocação seja **eficiente de Pareto**: não há outra alocação (resultado) possível do jogo que seja fracamente melhor para todos os jogadores (e estritamente melhor para pelo menos um)
+
+O apelo do dilema dos prisioneiros é mostrar da forma mais simples possível que essa intuição está errada! O EED do jogo **não** é eficiente de Pareto: o perfil `\((M, M)\)`, com *payoff* `\((-2,-2)\)` é estritamente melhor para ambos!
+
+---
+class: middle
+## O dilema dos prisioneiros
+
+&gt; The idea that groups tend to act in support of their group interests is supposed to follow logically from this widely accepted premise of rational, self-interested behavior. In other words, if the members of some group have a common interest or object, and if they would all be better off if that objective were achieved, it has been thought to follow logically that the individuals in that group would, if they were rational and self-interested, act to achieve that objective. Olson (1965) apud 
+
+Historicamente, o *dilema dos prisioneiros* foi importante para se contrapor à visão acima, comum no começo do século XX, de que agentes racionais sempre deveriam se coordenar para evitar situações ruins para todos
+
+---
+class: middle
+## Crenças e melhor-resposta
+
+Para irmos além, precisamos de alguns conceitos: primeiro, uma **crença** `\(\beta_i (s_{-i})\)` de um jogador `\(i\)` é probabilidade (subjetiva) que `\(i\)` atribui de que o perfil de estratégias dos outros jogadores seja `\(s_{-i}\)`
+
+Estratégia `\(s_i\)` é uma **melhor-resposta** `\(s_i \in BR_i(s_{-i})\)` a uma crença determinística dos outros jogadores `\(s_{-i}\)` se não há outra estratégia `\(\tilde{s}_i\)` que dê payoff *estritamente* maior contra esse perfil de estratégias que `\(s_i\)`
+
+A ideia de melhor-resposta nos dá outra afirmação sobre o comportamento de agentes racionais, e a nossa definição (formal) de racionalidade
+
+---
+class: middle
+## Racionalidade
+
+**Afirmação 3 (Racionalidade):** Um jogador é dito "racional" se sempre que ele acredite que os outros jogadores escolherão um perfil de estratégias `\(s_{-i}\)`, ele jogará uma melhor-resposta `\(s_i \in BR_i(s_{-i})\)` para `\(s_{-i}\)`
+
+Se essa é a nossa definição de *racionalidade*, então é importante que ela implique afirmações 1 e 2: e de fato é fácil mostrar que uma estratégia estritamente dominada nunca é uma melhor-resposta a qualquer crença
+
+Indo um passo a frente: dizemos que um jogador `\(i\)` **acredita na racionalidade** de outro jogador `\(j\)` se as crenças de `\(i\)` sempre colocam probabilidade zero em estratégias de `\(j\)` que não são racionais
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-4.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+Achemos as estratégias **racionais** no jogo acima, isto é, aquelas que são melhor-resposta para alguma crença dos jogadores sobre as estratégias do outro jogador &amp;mdash; e quais crenças **acreditam na racionalidade** do outro jogador?
+
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-3.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Analisemos agora o jogo acima. Podemos dizer algo mais sobre qual será o resultado do jogo entre agentes racionais?
+
+---
+class: middle
+## Crenças de ordem superior
+
+No jogo, C não é melhor resposta para nenhuma crença do jogador 2, então ele sendo racional nunca irá jogá-la &amp;mdash; isso quer dizer que J1 pode desconsiderar R? *Depende!* Apenas se J1 for racional **e** acreditar que o jogador 2 é racional
+
+Se J1 acredita que J2 não jogará C, ele deve jogar U, já que `\(U = BR_1 (R)\)` e `\(U = BR_1 (L)\)` &amp;mdash; mas J2 pode assumir que J1 jogará U apenas se J2 é racional **e** *acredita que J1 é racional* **e** *acredita que J1 acredita que ele é racional*
+
+O primeiro parágrafo representa uma **crença de 1ª ordem na racionalidade**, enquanto o segundo uma *crença de 2ª ordem*, se 1 assumir que 2 tem crença de 2ª ordem na racionalidade dele, então ele está tendo uma *crença de 3ª ordem na racionalidade*, e assim em diante...
+
+---
+class: middle
+## Racionabilidade
+
+Se todos os jogadores são racionais e têm crenças de `\(k\)`-ésima ordem na racionalidade dos outros jogadores, para todo número (natural) `\(k\)`, então dizemos que há **conhecimento comum de racionalidade**
+
+Se há conhecimento comum de racionalidade, então podemos ir retirando iterativamente estratégias que não são melhor-resposta para nenhuma estratégia que se mantém no jogo, até não haver mais estratégias que possam ser removidas
+
+Esses perfis de estratégias que permanecem são as **estratégias racionalizáveis**: aquelas que são melhor-resposta para alguma crença *compatível com conhecimento comum de racionalidade* de algum jogador 
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig12.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Considere agora uma versão do dilema dos prisioneiros em que o jogador 1 pode aceitar a culpa sozinho e livrar o outro jogador (ação `\(X\)`) &amp;mdash; nesse caso ele pega 6 anos de prisão e o jogador 2 vai livre se ficou em silêncio, mas pega 1 ano de cadeia caso tenha delatado: a adição de uma estratégia claramente irrazoável torna cooperar *racional*! (mas não *racionalizável*)
+
+
+---
+class: middle
+## Eliminação de estratégias estritamente dominadas
+
+Há outra forma mais tradicional (e *parcialmente* equivalente) de pôr em prática essa ideia de que deveríamos eliminar do jogo estratégias que "não seriam/deveriam nunca ser jogadas" 
+
+Como vimos pela **Afirmação 2**, um jogador racional jamais escolherá uma *estratégia estritamente dominada* &amp;mdash; podemos então para cada jogador eliminar tais estratégias que um jogador racional jamais faria 
+
+E igualmente, um jogador que *acredite na racionalidade* do outro jogador nunca vai crer que ele jogará estratégias estritamente dominadas, e assim em diante, da mesma forma como fizemos com *racionabilidade*
+
+---
+class: middle
+## Eliminação de estratégias estritamente dominadas
+
+Se um jogador `\(i\)` sabe que `\(j\)` é racional, então ele pode eliminar de consideração as estratégias de `\(j\)` que são estritamente dominadas, e escolher a sua estratégia no jogo reduzido &amp;mdash; se `\(j\)` crê que `\(i\)` crê que ele é racional, então `\(j\)` sabe que `\(i\)` não escolherá estratégias dominadas quando ignorando estratégias que `\(j\)` nunca utilizaria, e assim em diante
+
+Seguindo esse processo "infinitamente", supondo *conhecimento comum de racionalidade*, aplicamos o nosso terceiro conceito de solução do curso: a **eliminação iterada de estratégias estritamente dominadas** (EIEED)
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-3.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+
+Quais estratégias sobrevivem a *eliminação iterada de estratégias estritamente dominadas* no jogo acima?
+
+---
+class: middle
+## Resolvível por dominância
+
+No jogo anterior, há apenas um perfil de estratégias que sobrevive EIEED (e racionabilidade): é possível cravar o resultado do jogo mesmo assumindo apenas *conhecimento comum de racionalidade* (dizemos que um jogo assim é **resolvível por dominância**)
+
+Esse é o nosso 2o conceito de solução do curso &amp;mdash; e ainda que esse requerimento seja (muito!) mais forte que apenas racionalidade (do EED), ainda assim é bem mais leve que quaisquer das outras noções de equilíbrio que veremos adiante no curso
+
+Note que no EIEED ou racionabilidade não faz diferença a ordem em que realizamos a eliminação de estratégias para a obtenção dos perfis sobreviventes
+
+---
+class: middle
+## Dominança fraca
+
+Uma estratégia ser estritamente dominante faz dela bastante convincente, mas é fácil imaginar que esse tipo de situação é bem rara em aplicações &amp;mdash; um tipo muito mais comum de acontecer é a estratégia fracamente dominante
+
+Uma estratégia é fracamente dominante quando para qualquer outra estratégia daquele jogador, ela é sempre tão boa quanto e pelo menos em um caso estritamente melhor
+
+Formalmente, a estratégia `\(\sigma_i\)` é **fracamente dominante** quanto para toda outra estratégia `\(s_i\)` e estratégias dos oponentes `\(s_{-i}\)`, `\(v_i (\sigma_i, s_{-i}) \geq v_i (s_i, s_{-i})\)`, e existe pelo menos um perfil de estratégias dos oponentes `\(\tilde{s}_{-i}\)` tal que `\(v_i(\sigma_i, \tilde{s}_{-i}) &gt; v_i (s_i, \tilde{s}_{-i})\)` (note que `\(\tilde{s}_{-i}\)` pode ser diferente para diferentes `\(s_{i}\)`)
+
+---
+class: middle
+## Estratégias fracamente dominadas
+
+Por outro lado, uma estratégia é dita **fracamente dominada** se existe alguma outra estratégia que é sempre tão boa quanto, e para pelo menos um perifl de estratégias dos outros jogadores, é estritamente melhor
+
+Intuitivamente, um jogador está sendo bastante "imprudente" se ele escolhe uma estratégia fracamente dominada: por mais que não seja irracional (se ele crê que os outros jogadores escolherão um perfil para o qual ela é melhor-resposta), ele não *ganha nada* se estiver certo, mas pode perder muito se estiver errado!
+
+Da mesma forma que com EIEED, podemos pensar em processos de **eliminação iterada de estratégias fracamente dominadas** (EIEFD)
+
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig17.png" width="45%" /&gt;&lt;img src="figs/week1-fig17b.png" width="45%" /&gt;
+
+Dois exemplos de propriedades indesejáveis da EIEFD: (i) a ordem de eliminação de estratégias fracamente dominadas altera os perfis de estratégia sobreviventes (nada bom), e ainda pior: (ii) a EIEFD também remove equilíbrios de Nash do jogo (e equilíbrios diferentes dependendo da ordem!)
+
+---
+class: middle
+## Leilão de segundo preço
+
+Uma das principais aplicações de teoria dos jogos é o estudo de **leilões**: situações em que um leiloeiro possui um bem para a venda, mas por ser único não existe um preço de mercado para o bem &amp;mdash; como saber a disposição a pagar dos compradores?
+
+Uma opção é o **leilão de segundo preço**: cada potencial comprador escreve em um envelope um **bid** `\(b_i\)`, e o bem é alocado para o bid maior, *mas* esse comprador paga o valor do segundo maior bid (portanto de "segundo preço")
+
+O leilão de segundo preço é equivalente ao *leilão ascendente*, ou *leilão inglês* 
+
+---
+class: middle
+## Leilão de segundo preço
+
+Podemos analisar o leilão como um jogo estático, já que os jogadores fazem bids fechados e desconhecidos pelos outros (é como se fossem simultâneos) &amp;mdash; se a **valoração** `\(v_i\)` de cada jogador é conhecimento comum, o leilão é de *informação completa*
+
+Pensemos no leilão de um quadro com três potenciais compradores: o primeiro valora o quadro em R$300, o segundo em R$400 e o último em R$600 (conhecimento comum)
+
+Será que conseguimos resolver para a estratégia ótima (bid ótimo) de cada jogador apenas com o que aprendemos até aqui?
+
+---
+class: middle, center, inverse
+
+# Equilíbrio de Nash em estratégias puras (Tadelis, cap. 5)
+
+---
+class: middle
+## Solução e equilíbrio
+
+Até aqui vimos 2 **conceitos de solução** sobre o resultado de um jogo:
+
+1. O **equilíbrio em estratégias dominantes** é a mais convincente solução na teoria dos jogos: ela depende apenas da racionalidade dos jogadores, e vale independentemente das crenças deles sobre a ação dos oponentes &amp;mdash; infelizmente, raramente ele é aplicável
+2. Quando o jogo é **resolvível por dominância**, o perfil resultante é também uma solução convincente (mas menos, porque demanda *conhecimento comum* de racionalidade) &amp;mdash; mas igualmente, em geral jogos não são resolvíveis por dominância
+
+De resto, a EIEED e racionabilidade apenas pode restringir "o tamanho" do jogo &amp;mdash; não podemos avançar na análise sem suposições mais fortes
+
+---
+class: middle
+## Conceitos de equilíbrio
+
+E talvez poderíamos argumentar (e certamente tem quem argumente) que *não deveríamos* avançar mais do que isso: deveríamos remover as ações estritamente dominadas (ou nunca melhor-resposta) e simplesmente dizer que todos os outros resultados são possíveis ¯\\\_(ツ)_/¯
+
+Mas (compreensivelmente) tal recomendação encontrou pouca aceitação entre os teoristas dos jogos, e especialmente entre os pesquisadores aplicados: para cada jogo, eles queriam uma solução (equilíbrio) que **sempre exista** e nos dê um (e preferencialmente apenas um!) perfil de estratégias resultantes
+
+Para isso precisamos de hipóteses mais heróicas sobre os nossos jogadores
+
+---
+class: middle
+## Equilíbrio de Nash
+
+O conceito (de longe) mais importante em teoria de jogos é o de equilíbrio de Nash &amp;mdash; começaremos com uma definição que (reconhecidamente) não é a mais natural, mas que clarifica o tamanho do salto que estamos dando da seção anterior para cá
+
+Um *perfil* de estratégias `\((s^*_i)_{i\in N}\)` é um **equilíbrio de Nash** quando: 
+1. é conhecimento comum que todos os jogadores são racionais; 
+2. é conhecimento comum que o jogador `\(1\)` acredita que os outros jogadores jogarão `\(s^*_{-1}\)`, o jogador `\(2\)` acredita que os outros jogadores jogarão `\(s^*_{-2}\)`, etc, **e que eles estão certos** &amp;mdash; ou seja, é conhecimento comum que os jogadores *sabem* as estratégias de todos os outros
+
+---
+class: middle
+## Equilíbrio de Nash
+
+Vimos já que um jogador racional sempre irá jogar uma melhor-resposta para a sua crença do que o outro jogador irá jogar &amp;mdash; o equilíbrio de Nash adiciona a condição de que é conhecimento comum que essas crenças *são iguais entre os jogadores* e que elas *estão certas*
+
+Voltemos à guerra dos sexos: quais são os equilíbrios de Nash do jogo?
+
+&lt;img src="figs/week-1-fig-0.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+## A guerra dos sexos
+
+Já vimos que todas as estratégias são racionalizáveis na guerra dos sexos (ou de outra forma nenhuma estratégia é estritamente dominada), o que implica que todos os perfis de estratégia podem ocorrer com jogadores racionais! 
+
+É possível que Ana ache que Bernardo vai ao futebol e vá então ver futebol (sua melhor-resposta à sua crença), enquanto Bernardo ache que Ana vai à ópera e vá ele à ópera (sua melhor-resposta) &amp;mdash; mas daí eles vão se desencontrar!
+
+Mas esse *não* é um equilíbrio de Nash, pois *as suas crenças estão erradas*: os únicos equilíbrios de Nash em estratégias puras são `\((O,O)\)` e `\((F,F)\)`
+
+---
+class: middle
+## Equilíbrio de Nash
+
+A definição anterior, é claro, é equivalente a essa mais usual:
+
+Um perfil de estratégias `\((\sigma_1^*, \sigma_2^*, ..., \sigma_N^*)\)` é um **equilíbrio de Nash** quando para cada jogador `\(i\)`, `\(\sigma_i^*\)` é uma *melhor-resposta* para `\(\sigma^*_{-i}\)`, i.e, para toda outra estratégia `\(s_i\)` do jogador `\(i\)`:
+
+`$$u_i (\sigma_i^*, \sigma^*_{-i}) \geq u_i (s_i, \sigma^*_{-i})$$`
+
+O equilíbrio de Nash é um conceito de **estabilidade** &amp;mdash; o perfil de EN é *estável a desvios unilaterais*: se por acaso a situação normal (seja lá o que for isso) é jogar um equilíbrio de Nash, então ninguém desejará *sozinho* desviar
+
+---
+class: middle
+
+&lt;img src="figs/blackrock.jpg" width="65%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: middle
+## Por que jogar equilíbrios de Nash?
+
+Se jogadores pudessem conversar antes do jogo e *se* eles concordassem em algum perfil de estratégias, então esse perfil teria que ser um EN (mas por que concordariam? E não deveria isso fazer parte da descrição do jogo?)
+
+Se o jogo é repetido com jogadores *ingênuos* atualizando sua estratégia com base nos *payoffs* passados, então essa população tenderá a convergir a algum(ns) ENs (tal estudo é parte da *teoria dos jogos evolucionária*) [Mai98] 
+
+Também **normas e convenções sociais** podem *coordenar* ações em um EN (o que Schelling (1960) chama de **pontos focais**): em uma sociedade patriarcal, pode parecer razoável que Ana e Bernardo ambos esperem se encontrar no futebol (o favorito dele), e se crerem isso nenhum dos dois irá querer desviar
+
+
+---
+class: middle
+## Por que jogar equilíbrios de Nash?
+
+Uma variante das convenções é o *aprendizado de jogo*: se os agentes pudessem aprender sobre o seu oponente em vários *jogos fictícios* antes do jogo "de verdade", é razoável que eles eventualmente convergiriam para um EN
+
+No fim do dia, o máximo que podemos dizer é que **se** há uma "forma óbvia" de se jogar o jogo, ela tem que ser um equilíbrio de Nash &amp;mdash; ele nos dá então uma condição necessária, mas não suficiente, para dizermos o que deve acontecer
+
+Em um jogo de coordenação, todos dirigirem do lado esquerdo da rua ou todos do lado direito ambos vão ser EN &amp;mdash; qual deles se aplica dependerá do contexto e da nossa intuição (problema de **seleção de equilíbrio**)
+
+---
+class: middle
+## Algoritmo para encontrar equilíbrios
+
+Uma terceira forma de ver o equilíbrio de Nash é como um *ponto-fixo* da *correspondência* (porque é "um-para-muitos") de melhor-resposta dos jogadores
+
+Essa perspectiva é útil (além de para provar a existência de equilíbrio, que não faremos aqui) para nos dar o seguinte algoritmo para encontrar EN
+
+Para cada crença sobre a estratégia dos oponentes (na bimatriz, linhas para o J2 e colunas para o J1), marcar a sua melhor-resposta &amp;mdash; quando acharmos um "ponto-fixo" `\(s^*_i \in BR_i(s^*_j)\)` e `\(s^*_j \in BR_j(s^*_i)\)`, temos um EN
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-3.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Usemos o algoritmo do slide anterior para encontrar os equilíbrios de Nash do jogo acima
+
+---
+class: middle
+## Equilíbrios de Nash e dominância
+
+O EN tem as sequintes relações com os conceitos vistos até aqui:
+
+1. Um EN nunca pode dar probabilidade positiva para estratégias estritamente dominadas (mas fracamente dominadas sim!!)
+2. Um EN sempre envolve apenas estratégias racionalizáveis e que nunca desaparecem no processo de EIEED
+3. Um equilíbrio em estratégias dominantes sempre é EN, e o único (por 1.)
+3. Se EIEED ou racionabilidade levam a um único perfil sobrevivente (*resolvível por dominância*), então ele é um EN, e de novo único (por 2.)
+
+Em particular, 2. nos dá uma forma de simplificar a busca por EN em jogos "grandes": começamos eliminando da busca todas as estratégias eliminadas por EIEED 
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-5.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Como encontrar EN é tão importante (a base de tudo que veremos daqui em diante), façamos mais o exemplo acima
+
+---
+class: middle
+## Leilão de primeiro preço
+
+Voltemos ao caso do leiloeiro querendo leiloar um quadro &amp;mdash; talvez uma forma mais natural seja coletando os bids dos interessados e dando o bem para o bid maior, sendo o pagamento o próprio bid (o "primeiro preço")
+
+Esse tipo de leilão de bid fechado é conhecido como **leilão de primeiro preço**: certamente ele deveria ser melhor para o leiloeiro do que cobrar só o segundo bid (que é necessariamente menor), certo?
+
+Não necessariamente, porque as estratégias dos jogadores dependem do formato do leilão! Consideremos o mesmo caso anterior, com valorações (conhecimento comum!) de R$300, R$400 e R$500 &amp;mdash; quais são os EN do jogo?
+
+---
+class: middle, center, inverse
+
+# Estratégias mistas (Tadelis, cap. 6)
+
+---
+class: middle
+## Estratégias mistas
+
+Até aqui restringimos atenção a *estratégias puras* &amp;mdash; mas e se Ana quiser jogar uma moeda para o alto e ir no futebol se der cara e na ópera se der coroa? A princípio não deveríamos excluir **estratégias mistas** desse tipo
+
+Isso pode ser importante, por exemplo, em *jogos de soma-zero*, em que frequentemente os jogadores não querem que o oponente saiba o que eles irão jogar (e lembrem-se que em um EN é conhecimento comum que as crenças estão corretas, ou seja, todos sabem as estratégias de todos!)
+
+Outra importância é mais "prática": acontece que apenas permitindo estratégias mistas podemos *garantir que sempre exista um equilíbrio de Nash*
+
+---
+class: middle
+## Estratégias mistas
+
+Uma forma de um jogador deixar os outros jogadores incertos sobre qual será a sua *ação*, mesmo dado que em equilíbrio as crenças dos outros jogadores sobre a *estratégia* dele estejam corretas, é uma estratégia que aleatorize sobre as suas ações!
+
+Uma **estratégia mista** `\(\sigma_i : S_i \rightarrow [0,1]\)` é uma distribuição de probabilidade sobre o conjunto de *estratégias puras* (não ações!) daquele jogador 
+
+Congruentemente, a partir daqui também permitiremos que os jogadores tenham *crenças probabilísticas* sobre o que as estratégias dos outros jogadores (ou equivalentemente crenças de que eles usarão estratégias mistas)
+
+---
+class: middle
+## Matching pennies
+
+Considere o jogo de *soma-zero* "par ou ímpar" (**matching pennies**): dois jogadores decidem ao mesmo tempo se mostram um número par de dedos ou ímpar, e 1 ganha se a soma der par e 2 se a soma for ímpar
+
+Se o jogador 1 crê que o jogador 2 escolherá *par* (por exemplo), então ele deve escolher *par*, mas se o jogador 2 acredita que o jogador 1 escolherá *par*, ele racionalmente escolherá *ímpar*! Ou um dos jogadores não é racional ou está errado em suas crenças: não pode haver EN em estratégias puras!
+
+Outro jogo também de *soma-zero* é o "pedra, tesoura ou papel" (aka Jokenpô), ele tem equilíbrio de Nash em estratégias puras?
+
+
+---
+class: middle
+## Estratégias mistas
+
+Se um jogador tem como possíveis estratégias puras `\(\{s_{i}^1, s_{i}^2, s_{i}^3\}\)`, então estratégias mistas podem ser escritas da forma `\((p, q, r)\)`, tais que:
+
+`\(p,\ q,\ r \geq 0\text{ e }p + q + r = 1\)` (poderíamos então já trocar `\(r = 1 - p - q\)`)
+
+
+Note que *toda estratégia pura é mista*: uma estratégia pura `\(s_{i}^1\)` nada mais é que uma estratégia mista com `\(p = 1\)` e `\(q = r = 0\)` &amp;mdash; quando é importante deixar clara a diferença, chamamos de **completamente mista** uma estratégia cuja probabilidade de toda estratégia pura é estritamente maior que zero
+
+---
+class: middle
+## Estratégias mistas
+
+Assim, quando falarmos em "estratégias" nos referiremos sempre a estratégias mistas (incluindo puras como parte)
+
+Note que mesmo que o jogo seja finito, como quase todos os jogos que veremos no curso, quando permitimos estratégias mistas agora o conjunto de escolha é um contínuo (um *simplex*, para os interessados)
+
+Estratégias mistas trazem dificuldades quando o conjunto de estatégias possíveis é contínuo: evitaremos esses problemas fazendo como quase todo mundo e consideraremos apenas estratégias puras nesse (raro) caso
+
+---
+class: middle
+## Estratégias e crenças
+
+Do mesmo jeito que estratégias, podemos pensar em crenças probabilísticas: uma **crença** `\(\pi_i : S_i \rightarrow [0,1]\)` é uma probabilidade `\(\pi_i (s_{-i})\)` para cada perfil de estratégias (puras) dos seus oponentes
+
+Assim temos que no *matching pennies*, se o jogador `\(1\)` acredita que o oponente jogará `\(\pi_1 (H) = 1/3\)` e `\(\pi_1 (T) = 2/3\)`, a sua **utilidade esperada** de jogar `\(H\)` é:
+
+`$$u_1 \left(H, \frac{1}{3}\circ H + \frac{2}{3} \circ T\right) = \frac{1}{3} u_1\left(H, H \right) + \frac{2}{3} u_1\left(H, T \right) = \frac{1}{3} 1 + \frac{2}{3} (-1)$$`
+
+`$$= -\frac{1}{3}$$`
+
+---
+class: middle
+## Cálculo probabilístico
+
+O mesmo vale para estratégias mistas (com um pouquinho mais de conta): a utilidade esperada de uma estratégia mista `\(\sigma_i(H) = 3/4\)` e `\(\sigma_i (T) = 1/4\)` com as crenças do slide anterior é
+
+`$$u_1 \left(\frac{3}{4}\circ H + \frac{1}{4}\circ T, \frac{1}{3}\circ H + \frac{2}{3} \circ T\right) = \frac{3}{12} u_1\left(H, H \right) + \frac{1}{12} u_1\left(T, H \right) +$$`
+`$$\frac{6}{12} u_1\left(H, T \right) + \frac{2}{12} u_1\left(T, T \right) = \frac{3}{12} - \frac{1}{12} - \frac{6}{12} + \frac{2}{12} = -\frac{1}{6}$$`
+
+---
+class: middle
+## Racionalidade com estratégias mistas
+
+O conceito de estratégias (e crenças) probabilísticas é muito importante para o que vimos antes: muitas vezes uma estratégia não é estritamente dominada por estratégias puras, mas o é por uma estratégia mista
+
+Analogamente, às vezes uma ação não é racionalizável por crenças em estratégias puras dos outros jogadores, mas é uma *melhor-resposta* para uma crença probabilística sobre as estratégias dos outros jogadores
+
+Embora introduzimos os conceitos de EIEED e racionabilidade usando estratégias puras por razões didáticas, todas as propriedades deles dependem da consideração também de estratégias mistas (ou crenças probabilísticas)
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig7.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+Com essa nova arma sob os nossos braços, resolvamos então o jogo acima por *eliminação iterada de estratégias estritamente dominadas*
+
+---
+class: middle
+## Racionabilidade e EIEED
+
+Dado que a racionabilidade e o EIEED são "dois lados da mesma moeda", uma pergunta natural é se eles são equivalentes, isso é, os perfis de estratégia racionalizáveis são sempre os mesmos que sobrevivem a EIEED, e vice-versa
+
+Deve ser claro que não importa o jogo, uma estratégia estritamente dominada nunca será melhor-resposta, então o conjunto de estratégias que sobrevivem a EIEED contém o conjunto de estratégias racionalizáveis (este 2º é mais forte)
+
+O oposto também é verdade em jogos entre 2 jogadores (Pearce, 1984), mas com 3 ou mais a equivalência só se mantém se permitirmos crenças correlacionadas sobre as estratégias dos outros jogadores (vide L1-Q16)
+
+---
+class: middle
+## Encontrando equilíbrios em estratégias mistas
+
+Encontramos ENs em estratégias mistas usando a **condição de indiferença**: uma estratégia mista só será um EN se o jogador estiver indiferente entre todas as estratégias puras jogadas com probabilidade positiva em equilíbrio
+
+Além disso, todas as estratégias puras jogadas com probabilidade zero têm que dar utilidade àquele jogador no máximo igual às estratégias puras jogadas com probabilidade positiva
+
+Nesse caso, o jogador poderia jogar qualquer coisa (ele está indiferente entre as estratégias com probabilidade positiva), mas o equilíbrio requer que ele escolha algo que satisfaça a condição de indiferença para os outros jogadores
+
+---
+class: middle
+## Matching pennies
+
+Voltemos ao "par ou ímpar". Sabemos que não há equilíbrio em estratégias puras, mas há em estratégias mistas? Chame `\(\sigma_1 (H) = p\)` e `\(\sigma_2(H) = q\)`
+
+Então a *condição de indiferença* requer que J2 escolha `\(q\)` tal que:
+
+`$$u_1\left(H, q \circ H + (1 - q) \circ T \right) = u_1\left(T, q \circ H + (1 - q) \circ T \right)$$`
+$$ = q u_1(H, H) + (1 - q) u_1(H, T) = q u_1(T, H) + (1 - q)u_1(T,T)$$
+
+De onde vem que `\(q - (1-q)= (1-q) - q\)` ou `\(q = 1/2\)` &amp;mdash; por simetria, temos que `\(p=1/2\)` também: o único EN do jogo é `\(\left( (1/2, 1/2), (1/2, 1/2) \right)\)`
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig16.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+Acima desenhamos as **funções de melhor-resposta** (às vezes chamadas de curvas de reação) do *matching pennies* &amp;mdash; o cruzamento das curvas representa o (único) *ponto-fixo* da correspondência de melhor-resposta, e portanto denota o (único) equilíbrio de Nash do jogo
+
+---
+class: middle
+## Existência
+
+Na verdade, que o *matching pennies* tenha equilíbrio de Nash não é uma surpresa, pois como John Nash (Nobel '94) mostrou em sua tese de doutorado, todo jogo finito tem algum equilíbrio de Nash
+
+**Teorema (Nash, 1950):** Todo jogo de `\(N &lt; \infty\)` jogadores em que o conjunto `\(S_i\)` de estratégias puras é finito para todo jogador `\(i\)` tem ao menos um equilíbrio de Nash (em estratégias puras ou mistas) 
+
+Note que em jogos infinitos (seja em número de jogadores ou ações) a existência de equilíbrio de Nash já não é mais necessariamente garantida
+
+---
+class: middle
+## O teorema do índice
+
+Outro teorema que é bastante útil para nossos propósitos é o **Teorema do Índice**, que diz que *genericamente* os jogos finitos em forma normal têm um número **ímpar** (e em particular finito) de equilíbrios de Nash
+
+O *quase todos* aqui é para evitar *payoffs* iguais para perfis de ações diferentes &amp;mdash; nesse caso o jogo pode ter zero ou até mesmo infinitos equilíbrios!
+
+Esse teorema é ótimo para resolver jogos, pois o número de equilíbrios em estratégias puras (fácil de achar) nos dá uma dica de quantos equilíbrios em estratégias mistas o jogo tem &amp;mdash; só tome cuidado com o "geralmente"!
+
+---
+class: middle
+
+
+&lt;img src="figs/week1-fig14.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+Quantos equilíbrios de Nash o jogo acima tem?
+
+---
+class: middle
+## Justificando estratégias mistas
+
+Se a pergunta "Por que as pessoas jogariam equilíbrios de Nash?" já deixa teoristas dos jogos acordados à noite, para equilíbrios envolvendo estratégias mistas o problema é *muito pior*
+
+Pois dado o perfil de estratégias de EN dos outros jogadores, cada jogador está *completamente indiferente* entre as estratégias com probabilidade positiva: e ainda assim, temos que acreditar que ele vai escolher exatamente a aleatorização do EN, ainda que não ganhe absolutamente nada com isso!
+
+Novamente, uma justificativa é evolucionária; outra justificativa que veremos no final do curso é o *Teorema de Purificação de Harsanyi*
+
+---
+class: middle
+## Mecanismos de aleatorização
+
+Um conceito relacionado é a ideia de **mecanismos de aleatorização**: sinais aleatórios que é conhecimento comum que existem e que são observados pelos jogadores &amp;mdash; e assim eles podem condicionar neles as suas estratégias!
+
+Esses mecanismos públicos são importantes porque eles podem gerar *correlações* nas estratégias dos agentes (dependendo da realização do mecanismo): ao contrário de estratégias mistas que precisam ser *independentes* entre diferentes jogadores
+
+Mecanismos de aleatorização são interessantes na teoria dos jogos porque eles expandem as possibilidades de equilíbrio
+
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig15.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+De volta à **Batalha dos Sexos**, que possui um equilíbrio em estratégias mistas talvez pouco atrativo &amp;mdash; mas se o casal estiver vendo cada um da sua casa um jogo de futebol da China vs Lituânia e for conhecimento comum que a probabilidade da China ganhar é `\(1/2\)`, eles conseguem fazer melhor que isso!
+
+---
+class: middle
+## Equilíbrio correlacionado
+
+Embora o mecanismo de aleatorização possa ser qualquer coisa, é mais prático (e equivalente) pensar que algum "observador" está *sugerindo* ações para cada jogador
+
+No exemplo anterior, o observador pode sugerir `\((F,F)\)`, `\((F,C)\)`, `\((C,F)\)` e `\((C,C)\)`
+
+Um **equilíbrio correlacionado** é então um mecanismo de aleatorização e um perfil de estratégias sugeridas condicionadas no mecanismo de aleatorização, tal que jogar a estratégia sugerida pelo mecanismo é sempre pelo menos tão bom quanto qualquer outra estratégia possível, dadas as estratégias dos outros jogadores (também condicionais às mensagens deles)
+
+---
+class: middle
+## Equilíbrio correlacionado
+
+Seja uma distribuição de probabilidade `\(p\)` sobre os perfis de ações recomendados `\((s_1, s_2)\)` (as 4 opções do slide anterior) &amp;mdash; então, essa probabilidade `\(p\)` é um **equilíbrio correlacionado** quando:
+
+`$$\sum_{s_2 \in S_2} p(s_1^*, s_2) u_1 (s_1^*, s_2) \geq \sum_{s_2 \in S_2} p(s_1, s_2) u_1 (s_1, s_2)$$`
+
+Para toda ação `\(s_1^*\)` recomendada por `\(p\)` e qualquer outra estratégia `\(s_1\)` do jogador 1, e vice-versa para o jogador 2
+
+Notem que para cada jogador o observador só revela a sugestão *a ele*, embora cada sugestão pode ser correlacionada entre os jogadores (ou seja, a probabilidade é sobre um perfil de estratégias)
+
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig19.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+Outro exemplo é o **jogo do trânsito** acima: em uma intersecção, dois carros podem ambos esperar (o que é ruim para ambos, pois não resolve nada), um esperar e o outro passar, que não é ruim para o primeiro mas melhor para o segundo, ou ambos avançarem, o que é o pior, pois gera um acidente! &amp;mdash; embora o jogo tenha EN, a sociedade avançou para uma solução mais justa com um *mecanismo de aleatorização* (o semáforo)
+
+---
+class: middle
+## Maximinimização
+
+Imagine que você se encontra em um jogo com um desconhecido sem ter ideia de qual será a estratégia dele: uma atitude conservadora é se proteger ao máximo caso o oponente queira te prejudicar (ou o faça inadvertidamente)
+
+Para cada estratégia sua, você poderia checar qual é o *pior* resultado possível para si (dependendo da estratégia do oponente), e escolher a estratégia cujo *pior resultado* é o *menos pior*: essa é a **estratégia maximin**
+
+`$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2})$$` 
+
+Aqui é como se você escolhesse "primeiro" uma estratégia `\(\sigma_1\)`, e o adversário sabendo `\(\sigma_1\)` iria minimizar o seu *payoff* (i.e., `\(\min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2})\)`) &amp;mdash; e esperando isso, você vai escolher `\(\sigma_1\)` já querendo se precaver
+
+---
+class: middle
+## Maximinimização
+
+Ou seja, a *estratégia maximin* maximiza a utilidade esperada do jogador sob a hipótese (reconhecidamente bastante pessimista) de que o objetivo do outro jogador é prejudicar ele ao máximo
+
+Outra forma de ver a maximinimização é que a **estratégia maximin** é uma "estratégia de defesa", com a qual um jogador busca o máximo que ele pode **garantir** de *payoff* no jogo *não importa o que os outros façam*
+
+Essa a noção de "garantir" um payoff, que chamamos de **nível de segurança**, é importante em teoria dos jogos, pois nos dá o payoff mínimo que qualquer jogador racional jamais receberá menos que isso
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig9.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+N jogo acima mostramos apenas o *payoff* do jogador 1 (para os nossos propósitos o *payoff* de J2 é irrelevante): qual é a estratégia pura de J1 que é maxmin? Existe alguma estratégia mista que garante um *payoff* maior?
+
+---
+class: middle
+## Algoritmos
+
+Em estratégias mistas, encontramos o maxmin achando a estratégia que dá o mesmo payoff para **si mesmo** não importa o que os outros jogarem
+
+Percebam a diferença para um equilíbrio de Nash em estratégias mistas, em que em equilíbrio as estratégias que um jogador escolhe devem cumprir a condição de indiferença *para os outros jogadores*!
+
+Aqui, ao contrário, o jogador quer que *ele próprio* esteja indiferente ao que o oponente jogar, porque sempre que alguma alternativa do oponente for pior para ele, é exatamente essa escolha que ele acredita que vai ser jogada
+
+
+---
+class: middle
+## Jogos de soma-zero
+
+**Jogos de soma-zero** foram historicamente os 1ºs a serem analisados [VM07], e são jogos *de 2 jogadores* em que os jogadores têm *interesse exatamente opostos*: se o jogador 1 ganha `\(1\)`, o jogador 2 perde `\(1\)`: os *payoffs* "somam zero"
+
+Exemplos já vimos o par ou ímpar e o jokenpô, mas também temos xadrez, damas, poker, esconde-esconde, pega-pega &amp;mdash; geralmente "jogos" mesmo, mas também há várias aplicações em engenharia, por exemplo em mísseis
+
+Estratégias *maxmin* fazem mais sentido em jogos de soma-zero, pois se a hipótese de que os outros jogadores buscam sempre te prejudicar é demasiado pessimista na maior parte dos jogos, ela já faz sentido nesse caso
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig11.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+Jogos de soma-zero podem ser representados da forma matricial (direita) com apenas um número por célula, sendo entendido esse como o *payoff* do jogador 1, e o *payoff* do J2 o negativo dele &amp;mdash; achemos as estratégias maxmin em estratégias puras para o jogador 1 no jogo acima
+
+---
+class: middle
+
+&lt;img src="figs/week-1-fig-0.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+E se o jogo não for de soma-zero? Voltemos à tradicional guerra dos sexos: qual é a estratégia *maximin* do jogador 1? Quais são os equilíbrios de Nash do jogo? Como eles se comparam?
+
+---
+class: middle
+
+&lt;img src="figs/week1-fig6.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Vamos terminar essa parte do curso analisando o famoso jokenpô &amp;mdash; agora vocês nunca mais vão perder de crianças de 5 anos jogando esse jogo (espero)!
+
+---
+class: middle
+## Conclusão
+
+E essa foi (uma introdução para) a base fundamental da teoria dos jogos: a teoria de **jogos estáticos de informação completa**!
+
+Esses são jogos que acontecem apenas uma vez e ambos jogadores agindo ao mesmo tempo (*jogo estático*), e que é conhecimento comum para todos os jogadores todos os componentes do jogo (número de jogadores, *payoffs*, estratégias disponíveis, que o jogo é estático, que a *informação é completa*)
+
+O próximo passo é relativizar ambas as suposições no nome: que os jogos são estáticos (parte 2, que olhamos **jogos dinâmicos**) e que a informação é completa (parte 3 do curso, **jogos de informação incompleta**)
+
+---
+class:middle
+# Bibliography
+
+&lt;small&gt;
+[Mai98] G. J. Mailath. "Do people play Nash equilibrium? Lessons from
+evolutionary game theory". In: _Journal of Economic Literature_ 36.3
+(1998), pp. 1347-1374.
+
+[VM07] J. Von Neumann and O. Morgenstern. "Theory of games and economic
+behavior: 60th anniversary commemorative edition". In: _Theory of games
+and economic behavior_. Princeton university press, 2007.
+
+[Von28] J. Von Neumann. "ON THE THEORY OP GAMES OP STRATEGY1". In:
+_Mathematische Annalen_ 100 (1928), pp. 295-320.
+&lt;/small&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle, center, inverse --&gt;
+
+&lt;!-- # Estratégias max-min e jogos de soma-zero (Osborne, cap. 11) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle --&gt;
+&lt;!-- ## Minimaximização --&gt;
+
+&lt;!-- O conceito "inverso" da maximinimização é a **minimaximização**: `$$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$`  --&gt;
+
+&lt;!-- De novo, (heuristicamente) "lemos da esquerda para a direita no tempo": primeiro o oponente escolhe uma estratégia `\(\sigma_2\)` tentando sacanear você, mas você pode responder a `\(\sigma_2\)` escolhendo a sua **melhor-resposta** &amp;mdash; e novamente, prevendo isso o jogador 2 irá escolher `\(\sigma_2\)` tal que a sua melhor-resposta àquela estratégia lhe dê a menor utilidade possível --&gt;
+
+&lt;!-- A estratégia *minimax* é uma "estratégia de ataque", que atinge o valor mínimo que o jogador 2 pode *garantir que o jogador 1 não exceda* --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle --&gt;
+&lt;!-- ## A desigualdade max-min --&gt;
+
+&lt;!-- Um resultado (que aliás vale de forma muito mais geral) de matemática que nos será útil é que sempre será verdade que: `$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$` --&gt;
+
+&lt;!-- Ou seja, o valor máximo que o jogador 1 pode garantir para si sempre é menor ou igual o valor mínimo que o jogador 2 pode garantir que 1 não exceda &amp;mdash; isso vale em geral! Caso o jogo seja de soma-zero, temos também que (como `\(\min f(x) = - \max (-f(x))\)`): --&gt;
+
+&lt;!-- `$$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) =  \min_{\sigma_2} \left( - \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})\right) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle --&gt;
+&lt;!-- ## A desigualdade max-min --&gt;
+
+&lt;!-- Ou seja, em um jogo de soma-zero a estratégia minimax do jogador 1 dá os mesmos *payoffs* que a estratégia maximin do jogador 2! --&gt;
+
+&lt;!-- Juntando os dois resultados, temos que: --&gt;
+
+&lt;!-- `$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$` --&gt;
+
+&lt;!-- (Lembrando que em um jogo de soma-zero os *payoffs* dos jogadores 1 e 2 sempre têm sinais opostos) &amp;mdash; existe situações em que essa desigualdade vale com igualdade? O polímata Von Neumann, uma das maiores mentes da história humana, quando não ocupado criando armas de homicídio em massa, provou em 1928 que sim! --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle --&gt;
+&lt;!-- ## O teorema minimax --&gt;
+
+&lt;!-- Certamente o primeiro grande teorema de teoria dos jogos, e que marca o nascimento da disciplina, é o **teorema minimax**: --&gt;
+
+&lt;!-- **Teorema (Von Neumann, 1928):** Em um jogo finito, para todo jogador `\(i\)`, --&gt;
+
+&lt;!-- `$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$` --&gt;
+&lt;!-- `$$= \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) = u_1(\sigma_1^*, \sigma_{2}^*) = v$$` --&gt;
+&lt;!-- onde `\(\sigma^*\)` é (qualquer) *equilíbrio de Nash* do jogo! Chamamos `\(v\)` do **valor do jogo** &amp;mdash; ou seja, em um jogo de soma-zero um perfil de estratégias é equilíbrio de Nash *se e somente se* cada jogador está jogando sua *estratégia maximin* --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: middle --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width = '35%', fig.align='center'} --&gt;
+&lt;!-- knitr::include_graphics("figs/week1-fig10.png") --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- O jogo acima é um jogo de soma-zero acima (note que os *payoffs* para cada perfil de ações de fato sempre somam zero) &amp;mdash; qual é a estratégia *maximin* para os jogadores 1 e 2?  --&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

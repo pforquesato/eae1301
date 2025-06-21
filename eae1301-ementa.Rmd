@@ -88,14 +88,14 @@ Todas as datas abaixos são **estimativas** e **sujeitas a alteração** depende
 
 #### Parte 1: Jogos estáticos de informação completa
 
-3 semanas de aulas [04/08, 06/08, 11/08, 13/08, 18/08 e 20/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-1.html) <br> **Bibliografia:** Tadelis, caps. 3, 4, 5 e 6. Osborne, cap. 11.
+3 semanas de aulas [04/08, 06/08, 11/08, 13/08, 18/08 e 20/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-1.html) <br> **Bibliografia:** Tadelis, caps. 3, 4, 5 e 6. Osborne, cap. 11.
 
 1. **Workshop 1:** Jogos em forma normal [25/08 e 27/08]. [[Lista 1]](https://www.pedroforquesato.com/files/eae1301-workshop1-2025.pdf)
 2. **Workshop 2:** Outros jogos estáticos de informação completa [08/09 e 10/09]. [[Lista 2]](https://www.pedroforquesato.com/files/eae1301-workshop2-2025.pdf)
 
 #### Parte 2: Jogos dinâmicos de informação completa
 
-3 semanas de aulas [15/09, 17/09, 22/09, 24/09, 29/09 e 01/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-2.html) <br> **Bibliografia:** Tadelis, caps. 7, 8, 9, 10 e 11.
+3 semanas de aulas [15/09, 17/09, 22/09, 24/09, 29/09 e 01/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-2.html) <br> **Bibliografia:** Tadelis, caps. 7, 8, 9, 10 e 11.
 
 3. **Workshop 3:** Jogos dinâmicos de informação perfeita [06/10 e 08/10]. [[Lista 3]](https://www.pedroforquesato.com/files/eae1301-workshop3-2025.pdf)
 
@@ -105,7 +105,7 @@ Prova de meio-termo: **13/10**.
 
 #### Parte 3: Jogos de informação incompleta
 
-3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae0522-week-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15 e 16.
+3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15 e 16.
 
 5. **Workshop 5:** Jogos bayesianos [17/11 e 19/11]. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301-workshop5-2025.pdf)
 6. **Workshop 6:** Refinamentos de equilíbrio [24/11 e 26/11]. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301-workshop6-2025.pdf)
