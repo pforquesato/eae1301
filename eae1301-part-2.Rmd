@@ -433,6 +433,26 @@ Com isso chegamos que o único equilíbrio perfeito em subjogos tem o jogador 1 
 
 ---
 class: middle
+## Duelo!
+
+Pushkin e d'Anthès estão se preparando para um duelo: armado cada um com uma pistola com apenas uma bala, eles andam um em direção ao outro &mdash; a probabilidade de acertar aumenta a cada passo, mas atirar em falso significa a morte (já que o oponente pode atirar à queima-roupa)
+
+Quão próximos eles devem estar para decidirem atirar? Se J1 vencer o duelo ele ganha 1 e J2 ganha -1, e vice-versa caso contrário (é um *jogo de soma zero*) 
+
+Imagine que eles começam a 10 passos um do outro, e a cada período um deles dá um passo à frente e decide se atira ou não &mdash; a probabilidade deles acertarem o tiro é $p(d) = 1 - d/10$
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("figs/week2-fig17.png")
+```
+
+Podemos resolver o jogo por indução reversa como usual &mdash; se quisermos remover o fato de que cada um pode atirar em um momento, é só fazer o tamanho dos passos tender a zero
+
+---
+class: middle
 ## Refinamentos (mais refinados) de equilíbrio
 
 A teoria de ENPS se aplica certamente a jogos dinâmicos de informação imperfeita, como vimos até aqui &mdash; e se a "imperfeição informacional" vier no fim do jogo, então frequentemente a análise até aqui é 100% satisfatória
