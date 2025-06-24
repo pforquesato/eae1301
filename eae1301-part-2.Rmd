@@ -58,6 +58,16 @@ knitr::include_graphics("figs/week2-fig1.png")
 
 Nós representamos tal situação no **grafo** (mais especificamente, uma *árvore*) acima, que representa um **jogo na forma extensiva**
 
+---
+class: middle
+## O enigma do chapéu do rei
+
+Dez sábios ("perfeitamente racionais") estão sentados em um círculo com chapéus que podem  ser brancos ou pretos &mdash; cada um pode ver o chapéu dos outros nove, mas não o seu próprio
+
+Um anunciador diz: "Vocês estão usando chapéus que podem ser brancos ou pretos, e pelo menos um é branco. Eu vou contar até 100. Sempre que eu falar um número vocês podem levantar a mão, mas apenas se souberem a cor do seu chapéu." 
+
+Após quantos números alguém levantará a mão?
+
 
 ---
 class: middle
@@ -287,13 +297,13 @@ Quantos equilíbrios de Nash o **jogo de coordenação** em forma extensiva acim
 
 ---
 class: middle
-## O enigma do chapéu do rei
+## O paradoxo do teste surpresa
 
-Dez sábios ("perfeitamente racionais") estão sentados em um círculo com chapéus que podem  ser brancos ou pretos &mdash; cada um pode ver o chapéu dos outros nove, mas não o seu próprio
+ O paradoxo do teste surpresa foi introduzido por Martin Gardner em 1963 na coluna de "Mathematical Games" da *Scientific American*:
+ 
+Um professor de teoria dos jogos chega na aula na sexta-feira e diz que haverá um teste surpresa em alguma aula da semana seguinte &mdash; aqui, "teste surpresa" não é modo de falar: o professor insiste que só haverá prova naquela data se os alunos admitirem não estar esperando o teste naquele dia!
 
-Um anunciador diz: "Vocês estão usando chapéus que podem ser brancos ou pretos, e pelo menos um é branco. Eu vou contar até 100. Sempre que eu falar um número vocês podem levantar a mão, mas apenas se souberem a cor do seu chapéu." 
-
-Após quantos números alguém levantará a mão?
+Fazendo *indução para trás*, os alunos concluem que não haverá teste, e passam o fim de semana jogando video-game: chega na terça-feira, e para a surpresa de todos, o professor tira da maleta um maço de provas!
 
 ---
 class: middle
