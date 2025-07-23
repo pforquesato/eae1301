@@ -502,7 +502,7 @@ class: middle
 
 No exemplo anterior foi simples pensar em quais desvios deveríamos analisar &amp;mdash; mas se tivermos, por exemplo, `\(T=30\)` períodos, a princípio teríamos que considerar desvios da forma "Em `\(t=2\)` eu jogo `\(F\)` ao inves de `\(M\)`, daí em `\(t=10\)` eu jogo `\(L\)` ao invés de `\(G\)` e `\(t=30\)` troco `\(M\)` por `\(F\)`": uma tarefa hercúlea quando `\(T\)` cresce!
 
-Mas por sorte isso é desnecessário (ufa!), pois o **princípio do desvio único (Blackwell, 1965)** diz que uma estratégia é ótima se e somente se não existe nenhum história tal que um desvio *apenas no jogo de estágio que segue a essa história* (mantendo o resto da *estratégia* constante) gere um ganho de *payoff*
+Mas por sorte isso é desnecessário (ufa!), pois o **princípio do desvio único (Blackwell, 1965)** diz que uma estratégia é ENPS se e somente se não existe nenhum história tal que um desvio *apenas no jogo de estágio que segue a essa história* (mantendo o resto da *estratégia* constante) gere um ganho de *payoff*
 
 ---
 class: middle
@@ -518,10 +518,23 @@ A diferença é que em `\(G^T\)` sempre há a "ameaça do último período" (em 
 class: middle
 ## Taxa de desconto
 
-Para simplificar, em jogos finitos supomos que eles são jogados "em pouco tempo", e não usamos taxas de desconto intertemporal (mas poderíamos usar, é claro) &amp;mdash; mas para jogos infinitos isso nos traria dificuldades pois a soma das utilidades seria infinita!
+Para simplificar, em jogos finitos supomos que eles são jogados "em pouco tempo", e não usamos taxas de desconto intertemporal (mas poderíamos usar) 
 
-Nesse caso normalizamos a utilidade multiplicando tudo por `\((1-\delta)\)`, de forma que a utilidade de um caminho que dê *payoff* `\(3\)` agora e `\(-1\)` no futuro é: `$$(1-\delta)3 + (1-\delta)\delta(-1) + (1-\delta)\delta^2(-1)+(1-\delta)\delta^3(-1)+...$$`
+Já em jogos infinitos isso nos traria dificuldades (mas é certamente possível!) pois a soma das utilidades seria infinita! Nesse caso aplicamos uma taxa de desconto `\(\delta\)` para cada período após o primeiro
+
+Geralmente é útil multiplicar a utilidade por `\((1-\delta)\)`, de forma que a utilidade de um caminho que dê *payoff* `\(3\)` agora e `\(-1\)` no futuro é: 
+
+`$$(1-\delta)U = (1-\delta)\left(3 + \sum_{t=1}^{\infty} \delta^{t}(-1) \right)$$`
 `$$= (1-\delta)3 + (1-\delta)\delta\frac{(-1)}{1-\delta} = (1-\delta)3 + \delta(-1)$$`
+
+
+---
+class: middle
+## Dilema dos prisioneiros finitamente repetido
+
+&lt;img src="figs/lista6-ex0.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+Assim como o próprio dilema dos prisioneiros, a sua versão repetida é o mais estudado dos jogos repetidos: considere o jogo acima repetido dez vezes `\(G^{10}\)`: quantos ENPS o jogo tem? E de Nash? &amp;mdash; Veja como a "ameaça do último período" restringe bastante o que pode acontecer *em equilíbrio*
 
 ---
 class: middle
@@ -533,6 +546,16 @@ Considere que o jogo acaba com uma probabilidade `\(\lambda\)` a cada período (
 
 Essa promessa que sempre existe de que o jogo possa durar pelo menos mais alguns períodos é o que sustenta os incentivos intertemporais até o fim ("surpresa") do jogo no caso infinito, enquanto no caso finito isso é impossível
 
+
+---
+class: middle
+## Dilema dos prisioneiros infinitamente repetido
+
+Ao contrário do dilema finitamente repetido, no caso infinito não há "ameaça do último período", perfis de estratégias que resultem em cooperação são possíveis *se a taxa de desconto for suficientemente alta*
+
+No caso anterior, por exemplo, desviar de um caminho de equilíbrio com cooperação para sempre desviar gera uma mudança de payoff de `\((1-\delta )1 + \delta (-1)\)`, que vai ser negativa sempre que `\(\delta &gt; 1/2\)`
+
+Agora há infinitos ENPS (e ainda mais EN): para caracterizar alguns deles é conveniente utilizar o conceito de *autômatos*
 
 ---
 class: middle
@@ -573,11 +596,19 @@ A ideia é simples: o jogador começa cooperando, e sempre faz a última coisa q
 
 ---
 class: middle
-## Teoremas Folk
+## Racionalidade sequencial no tit-for-tat
 
-*Teoremas folk* (há dezenas deles) estabelecem condições para que (quase) *qualquer* resultado do jogo seja um equilíbrio do jogo repetido &amp;mdash; o nome "teorema folk" vem do fato do 1º deles circular bastante na década de 50 entre os teoristas dos jogos, sendo difícil nomear quem primeiro o inventou
+&lt;img src="figs/lista6-ex0.png" width="30%" style="display: block; margin: auto;" /&gt;
 
-**Teorema de Folk para estratégias puras:** Se o jogo de estágio é finito e entre 2 jogadores, então se `\(\delta\)` for suficientemente próximo de `\(1\)`, temos que para cada perfil de ações puras `\(\widetilde{a}\)` *estritamente racionais* (isto é, que dá *payoff* acima da estratégia minimax), existe um equilíbrio perfeito em subjogos em que `\(\widetilde{a}\)` é jogado em todo período
+O **tit-for-tat** é muito menos robusto que o *grim-trigger*, porque na medida que os jogadores se tornam mais pacientes, eles vão ter menos incentivos de desviar da cooperação... mas eles também têm menos incentivos para punir os desvios dos outros! &amp;mdash; de fato, o único fator de desconto para o qual o perfil de estratégias *tit-for-tat* é ENPS no jogo acima é `\(\delta = 1/2\)` 
+
+---
+class: middle
+## Teoremas de Folk
+
+*Teoremas de Folk* (há dezenas deles) estabelecem condições para que (quase) *qualquer* resultado do jogo seja um equilíbrio do jogo repetido &amp;mdash; o nome Teorema de "Folk" vem do fato do 1º deles circular bastante na década de 50 entre os teoristas dos jogos, sendo difícil nomear quem primeiro o inventou
+
+**Teorema de Folk para estratégias puras:** Se o jogo de estágio é finito e entre 2 jogadores, então se `\(\delta\)` for suficientemente próximo de `\(1\)`, temos que para cada perfil de ações puras `\(\widetilde{a}\)` *estritamente racionais* (isto é, que dá *payoff* acima do seu *nível de segurança* da estratégia minimax), existe um equilíbrio perfeito em subjogos em que `\(\widetilde{a}\)` é jogado em todo período
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

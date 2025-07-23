@@ -16,22 +16,24 @@ institute: Departamento de Economia<br/>Universidade de São Paulo
 bibliography: ./eae0522_bib.bib
 ---
 
-### Objetivo Geral
+### Introdução
 
-Teoria dos jogos é um ramo do conhecimento focado em modelar matematicamente interações estratégicas entre jogadores racionais. O objetivo do curso é que o aluno saia conhecendo os principais jogos debatidos na teoria, além de ter um bom entendimento dos conceitos de solução existentes e como computá-los.
+Teoria dos jogos é o ramo da *matemática aplicada* focado em modelar interações estratégicas entre jogadores racionais. O estudo desses modelos nos ajuda a pensar logicamente e desenvolver melhores estratégias de ação, além de esclarecer vários conceitos abstratos que são importantes na economia e em outras ciências humanas e sociais, como crenças e conhecimento, estratégias, reputação, credibilidade, incentivos e punição, cooperação, poder de barganha, entre outros.
+
+O objetivo é que o aluno termine o curso conhecendo os principais jogos debatidos na teoria dos jogos e qual a sua importância, além de ter um bom entendimento dos conceitos de solução existentes e como computá-los.
+
 
 ### Objetivos de Aprendizagem
 
-
 1. Reconhecer os principais jogos e teoremas da teoria dos jogos, sabendo os seus resultados e a razão de sua importância.
-3. Modelar situações de interações estratégicas entre agentes na forma de um jogo, escrevendo modelos formalizados que nos informem sobre a situação de interesse.
-2. Aplicar os resultados e algoritmos de solução na teoria dos jogos, resolvendo jogos de todos os principais tipos.
-2. Avaliar a aplicabilidade de diferentes modelos da teoria dos jogos, julgando a sua condizência (positiva ou normativa) com o comportamento humano no mundo real.
+2. Aplicar os teoremas e algoritmos de solução da teoria dos jogos, resolvendo jogos de todos os principais tipos.
+3. Avaliar a aplicabilidade de diferentes modelos da teoria dos jogos, julgando a sua condizência (positiva ou normativa) com o comportamento humano no mundo real.
+4. Modelar situações de interações estratégicas entre agentes na forma de um jogo, criando modelos formalizados que nos informem sobre uma situação de interesse.
 
 ### Avaliação de Aprendizagem
 
-1. **Duas provas:**, a primeira cobrindo as partes 1 e 2 do curso; a segunda cobrindo o curso inteiro (50% da nota cada).
-2. **Seis workshops (doze aulas)** de resolução *em sala* de exercícios. Para cada aula com participação (satisfatória), é adicionado (**crédito extra**) 0,15 na média (1,8 pontos no total).
+1. **Duas provas:** 50% da nota cada. (Objetivos de aprendizagem 1 e 2.)
+2. **Seis workshops (doze aulas)** de resolução *em sala* de exercícios. Para cada workshop com participação satisfatória, é adicionado (**crédito extra**) 0,3 na média, ou 0,15 de crédito parcial (1,8 pontos no máximo). (Objetivos de aprendizagem 1 a 4.)
 
 <!--Caso o aluno participe satisfatoriamente de **todos** os workshops, a sua média pode ser escolhida por ele mesmo  por meio de uma autoavaliação (dado, evidentemente, a concordância do docente), *não sendo então necessária a realização das provas*. 
 
@@ -41,14 +43,14 @@ Todas as médias serão arredondadas para cima (em relação à nota final no Mo
 
 ### Qualidade de Vida
 
-Se você estiver passando por dificuldades: 1. se isso atrapalhar de alguma forma a sua capacidade de cursar a disciplina, fale comigo *antes do fim do curso* e acertaremos algo; 2. contate os serviços de apoio da USP:
+Se você estiver passando por dificuldades: (i) se isso atrapalhar de alguma forma a sua capacidade de cursar a disciplina, fale comigo *antes do fim do curso* e acertaremos algo; (ii) contate os serviços de apoio da USP:
 
 1. [Programa ECOS: Serviço de Escuta em Saúde Mental](https://prip.usp.br/programa-ecos/)
 2. [Sistema USP de Acolhimento, Registro e Responsabilização para assédio, violência, discriminações e outras violações de direitos humanos (SUA)](https://prip.usp.br/institucional/sistema-usp-de-acolhimento-sua/), também por telefone: (11) 3091-5001.
 
 ### Docente
 
-Meu nome é Pedro Forquesato, sou professor associado do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com foco de pesquisa em economia do setor público. Em 2025, leciono Princípios de Micro e Economia do Setor Público na graduação, além de Teoria dos Jogos (este curso).
+Meu nome é Pedro Forquesato, sou professor associado do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com ênfase em economia do setor público. Em 2025, leciono Princípios de Micro e Economia do Setor Público, além de Teoria dos Jogos (este curso), todos na graduação.
 
 ### Contato
 
@@ -64,17 +66,17 @@ Torçamos.
 
 **Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quintas-feiras das 19h30 às 21h10 (turma 2025221) na sala **XX** do FEA 1.
 
-**Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo listas, notas, presenças, trabalhos e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
+**Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo notas, presenças e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
 **Faltas.** Pelo regulamento da USP, **participação em 70% das aulas é obrigatória** para aprovação na disciplina. Faltas serão desconsideradas apenas com atestado médico emitido pelo HU/USP ([Portaria GR 3740/2007](http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007)), com permissão especial para eventual Covid. 
 
 O aluno pode faltar **no máximo** uma das duas provas (independentemente de atestado) e substituir a nota pela reaval, *sem precisar de justificativa*. (Naturalmente, a reaval cobre toda a matéria do curso.)
 
-**Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas podem ser feitas em conjunto e/ou com auxílio do monitor, mas *devem ser escritas individualmente*.  Listas copiadas implicarão renúncia de todas as atividades opcionais do curso.
+**Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas (workshops) são realizadas em conjunto e com auxílio do docente e monitor, mas *devem ser escritas individualmente* e *em sala*. Listas copiadas implicarão renúncia de todas as atividades de crédito-extra do curso.
 
 Note que essas punições ocorrerão sem prejuízo de eventual instauração de processo administrativo de acordo com o [Código de Ética da USP](http://leginf.usp.br/?resolucao=resolucao-no-4871-de-22-de-outubro-de-2001-3).
 
-**Revisões.** Junto com a correção das provas, enviarei gabaritos delas. Pedidos de revisão devem vir acompanhados de explicação precisa e especifica de onde a correção não seria coerente com o gabarito entregue e por que razão. Listas e ensaios não terão revisões de correção. Não há pedidos de revisão de média. [[Artigo 81, §§1-2 do RG/USP]](https://leginf.usp.br/?resolucao=consolidada-resolucao-no-3745-de-19-de-outubro-de-1990#t5)
+**Revisões.** Junto com a correção das provas, enviarei gabaritos delas. Pedidos de revisão ([Artigo 81, §§1-2 do RG/USP](https://leginf.usp.br/?resolucao=consolidada-resolucao-no-3745-de-19-de-outubro-de-1990#t5)) devem vir acompanhados de explicação precisa e especifica de onde a correção não seria coerente com o gabarito entregue e por que razão. Não há pedidos de revisão de média. 
 
 **Reavaliação.** Alunos que tiverem mais de 70% de presença e nota entre 3 e 5 ([Portaria CoG 3583/1989](https://leginf.usp.br/?resolucao=resolucao-cog-no-3583-de-29-de-setembro-de1989)) podem fazer uma segunda avaliação (prova reaval), tendo assim a sua média final na disciplina como a média aritmética simples da média do curso e da nota da reaval.
 
@@ -105,7 +107,7 @@ Prova de meio-termo: **13/10**.
 
 #### Parte 3: Jogos de informação incompleta
 
-3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15 e 16.
+3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15, 16, 17 e 18.
 
 5. **Workshop 5:** Jogos bayesianos [17/11 e 19/11]. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301-workshop5-2025.pdf)
 6. **Workshop 6:** Refinamentos de equilíbrio [24/11 e 26/11]. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301-workshop6-2025.pdf)
