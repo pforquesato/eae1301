@@ -86,7 +86,7 @@ Note que essas punições ocorrerão sem prejuízo de eventual instauração de 
 
 O curso está dividido em três partes. Cada parte consiste em três semanas de aulas teóricas explicando a matéria e como se dá a solução dessa classe de jogos, seguidas por duas semanas de workshops onde os conceitos são aplicados na resolução de uma lista de jogos.
 
-Todas as datas abaixos são **estimativas** e **sujeitas a alteração** dependendo do andamento do semestre.
+Todas as datas abaixo são **estimativas** e **sujeitas a alteração** dependendo do andamento do semestre.
 
 #### Parte 1: Jogos estáticos de informação completa
 
@@ -137,6 +137,6 @@ Livros com (\*) são livros de pós-graduação. (Mas não precisamos ter medo d
 
 Caso o aluno queira complementar a leitura dos capítulos e a aula com vídeos ***completamente opcionais***, recomendo o curso do [Matthew Jackson e outros professores](https://www.game-theory-class.org/) (os vídeos podem ser acessados diretamente [aqui](https://www.youtube.com/@gametheoryonline)).
 
-Outros vídeos no YouTube sugerido por alunos são o curso do [William Spaniel](https://www.youtube.com/playlist?list=PLKI1h_nAkaQoDzI4xDIXzx6U2ergFmedo) e [Selcuk Ozyurt](https://www.youtube.com/@selcukozyurt).
+Outros vídeos do YouTube sugeridos por alunos no passado são os cursos do [Professor William Spaniel](https://www.youtube.com/playlist?list=PLKI1h_nAkaQoDzI4xDIXzx6U2ergFmedo) e do [Professor Selcuk Ozyurt](https://www.youtube.com/@selcukozyurt).
 
 
