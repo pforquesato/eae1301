@@ -64,7 +64,7 @@ Torçamos.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quintas-feiras das 19h30 às 21h10 (turma 2025221) na sala **XX** do FEA 1.
+**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quintas-feiras das 19h30 às 21h10 (turma 2025221) na sala **E7** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo notas, presenças e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
