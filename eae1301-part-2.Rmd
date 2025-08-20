@@ -612,11 +612,11 @@ Fazemos isso construindo **autômatos**: algoritmos que implementam as estratég
 class: middle
 ## Autômatos
 
-Um **autômato** é composto de: (i) um conjunto de estados $\mathcal{W}$, (ii) um estado inicial $w_0$, (iii) uma função $f$ que especifica em cada estado o que jogar, e (iv) uma função de transição $\tau$ que muda de estado dependendo da realização do jogo
+Um **autômato** é composto de: (i) um conjunto de estados $\mathcal{W}$, (ii) um estado inicial $w_0$, (iii) uma função $f$ que especifica em cada estado o que jogar, e (iv) uma função de transição $\tau$ que muda de estado dependendo da realização
 
 Checar se um perfil de estratégias é ENPS requer somente ver para cada um dos estados do autômato se existe algum desvio (*único!*) que é vantajoso para algum jogador (mantendo o resto do autômato fixo)
 
-Para vários autômatos importantes, como o **grim trigger** ou o **tit-for-tat** (que veremos aqui), há apenas 2-4 estados, então isso simplifica muito!
+Para vários autômatos importantes, como o **grim trigger** ou o **tit-for-tat** (que veremos aqui), há apenas 2-4 estados, então isso simplifica muito!  [[Vejam esse site interativo sobre autômatos no dilema dos prisioneiros repetido]](https://ncase.me/trust/)
 
 ---
 class: middle
