@@ -193,7 +193,7 @@ class: middle
 knitr::include_graphics("figs/lista5-ex13.png")
 ```
 
-Essa é a representação em forma extensiva do jogo &mdash; quantas estratégias puras o nosso pobre motorista tem? Qual é melhor? E se empregarmos estratégias mistas, qual é a dificuldade?
+Essa é a representação em forma extensiva do jogo &mdash; quantas estratégias puras o nosso pobre motorista tem? Qual é a melhor? E quando ele alcançar uma saída, ele quererá continuar com a sua estratégia ou mudar de ideia?
 
 ---
 class: middle
@@ -358,7 +358,7 @@ class: middle
 knitr::include_graphics("figs/week2-fig7.png")
 ```
 
-Podemos aplicar o **equilíbrio perfeito em subjogos** nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona (pois é de *informação imperfeita*): quais são então os equilíbrios de Nash e perfeitos em subjogos?
+Podemos aplicar o **equilíbrio perfeito em subjogos** nos exemplos vistos até aqui &mdash; na batalha dos sexos voluntária a indução para trás não funciona (pois é de *informação imperfeita*): quais são então os equilíbrios de Nash e perfeitos em subjogos? E se aplicarmos o princípio de *indução para frente*, algum ENPS se torna pouco crível?
 
 ---
 class: middle
