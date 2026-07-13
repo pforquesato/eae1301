@@ -1,7 +1,7 @@
 ---
 title: 'EAE-1301: TEORIA DOS JOGOS'
 author: Pedro Forquesato<br/>Departamento de Economia<br/>Faculdade de Economia, Administração, Contabilidade e Atuária<br/>Universidade de São Paulo
-date: "2025/2"
+date: "2026/2"
 output:
   prettydoc::html_pretty:
     toc: yes
@@ -50,7 +50,7 @@ Se você estiver passando por dificuldades: (i) se isso atrapalhar de alguma for
 
 ### Docente
 
-Meu nome é Pedro Forquesato, sou professor associado do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com ênfase em economia do setor público. Em 2025, leciono Princípios de Micro e Economia do Setor Público, além de Teoria dos Jogos (este curso), todos na graduação.
+Meu nome é Pedro Forquesato, sou professor associado do Departamento de Economia da FEA/USP e pesquisador do [LabPub](https://labpub.fea.usp.br/). Mais informações sobre mim podem ser encontradas no [meu site](https://www.pedroforquesato.com). Minha área de atuação é em microeconomia aplicada, com ênfase em economia do setor público. Em 2026, leciono Princípios de Micro e Economia do Setor Público, além de Teoria dos Jogos (este curso), todos na graduação.
 
 ### Contato
 
@@ -60,17 +60,17 @@ Por favor, sempre mandem e-mails claramente identificados, legíveis, **educados
 
 ### Monitoria
 
-O monitor do curso será o [Fernando Picchetti](mailto:fernando.picchetti@usp.br). Ele nos auxiliará nos workshops, e vocês também podem enviá-lo dúvidas sobre a matéria.
+O monitor do curso será ??. Ele nos auxiliará nos workshops, e vocês também podem enviá-lo dúvidas sobre a matéria.
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quintas-feiras das 19h30 às 21h10 (turma 2025221) na sala **E7** do FEA 1.
+**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quartas-feiras das 19h30 às 21h10 (turma 2026221) na sala **??** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo notas, presenças e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
 **Faltas.** Pelo regulamento da USP, **participação em 70% das aulas é obrigatória** para aprovação na disciplina. Faltas serão desconsideradas apenas com atestado médico emitido pelo HU/USP ([Portaria GR 3740/2007](http://leginf.usp.br/?portaria=portaria-gr-no-3740-de-29-de-marco-de-2007)), com permissão especial para eventual Covid. 
 
-O aluno pode faltar **no máximo** uma das duas provas (independentemente de atestado) e substituir a nota pela reaval, *sem precisar de justificativa*. (Naturalmente, a reaval cobre toda a matéria do curso.)
+O aluno pode faltar **no máximo** uma das duas provas (independentemente de atestado) e substituir a nota pela prova de Recuperação (reaval), *sem precisar de justificativa*. (Naturalmente, a reaval cobre toda a matéria do curso.)
 
 **Ética.** Todas as provas são **individuais e sem consulta**. "Cola" em alguma das provas resultará em reprovação sumária no curso. Listas (workshops) são realizadas em conjunto e com auxílio do docente e monitor, mas *devem ser escritas individualmente* e *em sala*. Listas copiadas implicarão renúncia de todas as atividades de crédito-extra do curso.
 
@@ -78,7 +78,7 @@ Note que essas punições ocorrerão sem prejuízo de eventual instauração de 
 
 **Revisões.** Junto com a correção das provas, enviarei gabaritos delas. Pedidos de revisão ([Artigo 81, §§1-2 do RG/USP](https://leginf.usp.br/?resolucao=consolidada-resolucao-no-3745-de-19-de-outubro-de-1990#t5)) devem vir acompanhados de explicação precisa e especifica de onde a correção não seria coerente com o gabarito entregue e por que razão. Não há pedidos de revisão de média. 
 
-**Reavaliação.** Alunos que tiverem mais de 70% de presença e nota entre 3 e 5 ([Portaria CoG 3583/1989](https://leginf.usp.br/?resolucao=resolucao-cog-no-3583-de-29-de-setembro-de1989)) podem fazer uma segunda avaliação (prova reaval), tendo assim a sua média final na disciplina como a média aritmética simples da média do curso e da nota da reaval.
+**Recuperação.** Alunos que tiverem mais de 70% de presença e nota entre 3 e 5 ([Portaria CoG 3583/1989](https://leginf.usp.br/?resolucao=resolucao-cog-no-3583-de-29-de-setembro-de1989)) podem fazer a prova de Recuperação (reaval), tendo assim a sua média final na disciplina como a média aritmética simples da média do curso e da nota da reaval.
 
 **Outros.** Qualquer conflito com o docente que vocês não consigam (ou não queiram) resolver pessoalmente, recomendo que entrem em contato com a [Ouvidoria da FEA](https://www.fea.usp.br/fea/ouvidoria).
 
@@ -90,29 +90,31 @@ Todas as datas abaixo são **estimativas** e **sujeitas a alteração** dependen
 
 #### Parte 1: Jogos estáticos de informação completa
 
-3 semanas de aulas [04/08, 06/08, 11/08, 13/08, 18/08 e 20/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-1.html) <br> **Bibliografia:** Tadelis, caps. 3, 4, 5 e 6. Osborne, cap. 11.
+3 semanas de aulas [03/08, 05/08, 10/08, 12/08, 17/08 e 19/08]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-1.html) <br> **Bibliografia:** Tadelis, caps. 3, 4, 5 e 6. Osborne, cap. 11.
 
-1. **Workshop 1:** Jogos em forma normal [25/08 e 27/08]. [[Lista 1]](https://www.pedroforquesato.com/files/eae1301-workshop1-2025.pdf)
-2. **Workshop 2:** Outros jogos estáticos de informação completa [08/09 e 10/09]. [[Lista 2]](https://www.pedroforquesato.com/files/eae1301-workshop2-2025.pdf)
+1. **Workshop 1:** Jogos em forma normal [24/08 e 26/08]. [[Lista 1]](https://www.pedroforquesato.com/files/eae1301-workshop1-2026.pdf)
+2. **Workshop 2:** Outros jogos estáticos de informação completa [31/08 e 02/09]. [[Lista 2]](https://www.pedroforquesato.com/files/eae1301-workshop2-2026.pdf)
 
 #### Parte 2: Jogos dinâmicos de informação completa
 
-3 semanas de aulas [15/09, 17/09, 22/09, 24/09, 29/09 e 01/10]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-2.html) <br> **Bibliografia:** Tadelis, caps. 7, 8, 9, 10 e 11.
+**Dia 14/09 não haverá aula.**
 
-3. **Workshop 3:** Jogos dinâmicos de informação perfeita [06/10 e 08/10]. [[Lista 3]](https://www.pedroforquesato.com/files/eae1301-workshop3-2025.pdf)
+2,5 semanas de aulas [16/09, 21/09, 23/09, 28/09 e 30/09]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-2.html) <br> **Bibliografia:** Tadelis, caps. 7, 8, 9, 10 e 11.
 
-Prova de meio-termo: **13/10**.
+3. **Workshop 3:** Jogos dinâmicos de informação perfeita [05/10 e 07/10]. [[Lista 3]](https://www.pedroforquesato.com/files/eae1301-workshop3-2026.pdf)
 
-4. **Workshop 4:** Jogos dinâmicos de informação imperfeita [20/10 e 22/10]. [[Lista 4]](https://www.pedroforquesato.com/files/eae1301-workshop4-2025.pdf)
+Prova de meio-termo: **14/10**.
+
+4. **Workshop 4:** Jogos dinâmicos de informação imperfeita [19/10 e 21/10]. [[Lista 4]](https://www.pedroforquesato.com/files/eae1301-workshop4-2026.pdf)
 
 #### Parte 3: Jogos de informação incompleta
 
-3 semanas de aulas [29/10, 03/11, 05/11, 10/11, 12/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15, 16, 17 e 18.
+3 semanas de aulas [26/10, 04/11, 09/11, 11/11, 16/11 e 18/11]. [[Slides]](https://www.pedroforquesato.com/eae1301/eae1301-part-3.html) <br> **Bibliografia:** Tadelis, cap. 12, 15, 16, 17 e 18.
 
-5. **Workshop 5:** Jogos bayesianos [17/11 e 19/11]. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301-workshop5-2025.pdf)
-6. **Workshop 6:** Refinamentos de equilíbrio [24/11 e 26/11]. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301-workshop6-2025.pdf)
+5. **Workshop 5:** Jogos bayesianos [23/11 e 25/11]. [[Lista 5]](https://www.pedroforquesato.com/files/eae1301-workshop5-2026.pdf)
+6. **Workshop 6:** Refinamentos de equilíbrio [30/11 e 02/12]. [[Lista 6]](https://www.pedroforquesato.com/files/eae1301-workshop6-2026.pdf)
 
-Prova final: **03/12**.
+Prova final: **09/12**.
 
 Reavaliação: **Jan/2026**.
 

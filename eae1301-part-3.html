@@ -4,7 +4,7 @@
     <title>EAE-1301: Teoria dos Jogos</title>
     <meta charset="utf-8" />
     <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
-    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.31/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 ### Departamento de Economia<br/>Universidade de São Paulo
 ]
 .date[
-### 2025/2 - Tópico 3: Jogos de informação incompleta
+### 2026/2 - Tópico 3: Jogos de informação incompleta
 ]
 
 ---
@@ -79,14 +79,14 @@ Uma pergunta razoável é se deveríamos resolver o jogo no estágio *ex-ante* o
 ---
 class: middle
 
-&lt;img src="figs/week3-fig1.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig1.png" alt="" width="45%" style="display: block; margin: auto;" /&gt;
 
 No clássico jogo de **dissuação estratégica de entrada** a firma 1 decide se entra no mercado, e a firma 2 decide se briga com ela ou não (se ela decidir entrar) &amp;mdash; um argumento simples de indução para trás nos mostra que o único equilíbrio perfeito em subjogos a firma 1 entra e a firma 2 não briga (e os outros EN, quais são?)
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig2.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig2.png" alt="" width="50%" style="display: block; margin: auto;" /&gt;
 
 Imagine agora que há dois *tipos* possíveis de firma 2: com probabilidade `\(p\)` ela é como antes, mas com `\(1-p\)` ela gosta de brigar, tendo *payoff* 2 ao brigar com a entrante &amp;mdash; usando o método de Harsanyi, transformamos esse jogo de informação *incompleta* em um jogo de informação *imperfeita*
 
@@ -115,14 +115,14 @@ class: middle
 ---
 class: middle
 
-&lt;img src="figs/week3-fig12.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig12.png" alt="" width="75%" style="display: block; margin: auto;" /&gt;
 
 Por mais que definamos um jogo bayesiano como um tipo próprio de jogo, é sempre bom lembrar que pela transformação de Harsanyi eles são sempre exatamente equivalentes a um jogo de forma extensiva com informação imperfeita &amp;mdash; acima, um jogo de chicken! com informação incompleta, onde os pais podem ser lenientes (tipo `\(L\)`) ou harsh (tipo `\(H\)`)
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig9.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig9.png" alt="" width="70%" style="display: block; margin: auto;" /&gt;
 
 Exemplo de um jogo bayesiano: uma variante da batalha dos sexos em que Bernardo pode querer encontrar ou evitar Ana &amp;mdash; Bernardo sabe o seu tipo, mas Ana não sabe
 
@@ -148,7 +148,7 @@ Onde a *intersecção* entre os eventos `\(A\)` e `\(B\)`, `\(A \cap B\)`, lê-s
 ---
 class: middle
 
-&lt;img src="figs/week3-fig3.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig3.png" alt="" width="45%" style="display: block; margin: auto;" /&gt;
 
 Considere uma situação em que jogador 1 pode ser do tipo `\(a\)` ou `\(b\)` e o jogador 2 do tipo `\(c\)` ou `\(d\)`. Há portanto **4** *estados da natureza*: `\((a,c)\)`, `\((a,d)\)`, `\((b,c)\)` e `\((b,d)\)`. As probabilidades são dadas na matriz acima. Se o jogador 1 souber que é do tipo `\(a\)`, qual a *probabilidade condicional* do jogador tipo 2 ser de cada tipo?
 
@@ -177,7 +177,7 @@ para toda outra estratégia `\(s_i\)` &amp;mdash; onde `\(\phi (\theta_{-i} | \t
 ---
 class: middle
 
-&lt;img src="figs/week3-fig13.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig13.png" alt="" width="65%" style="display: block; margin: auto;" /&gt;
 
 Imagine o cenário em que dois jogadores interagem em uma situação que pode ser do tipo jogo 1 ou jogo 2 (os estados da natureza), e que o jogador 1 sabe qual é o jogo certo, mas o jogador 2 não sabe (e crê que são equiprováveis) &amp;mdash; quais são os ENB desse jogo?
 
@@ -195,7 +195,7 @@ A intuição é que alguns jogadores preferem jogar par, outros preferem ímpar,
 class: middle
 ## O Teorema da Purificação de Harsanyi
 
-&lt;img src="figs/week3-fig4.png" width="45%" /&gt;&lt;img src="figs/week3-fig5.png" width="45%" /&gt;
+&lt;img src="figs/week3-fig4.png" alt="" width="45%" /&gt;&lt;img src="figs/week3-fig5.png" alt="" width="45%" /&gt;
 
 Harsanyi propôs a seguinte ideia: imagine que há vários tipos de jogadores 1 e 2, alguns preferem (um pouquinho) jogar `\(L\)` ou `\(R\)`, `\(T\)` ou `\(B\)` (ver acima), com `\(\alpha\)` e `\(\beta\)` um valor uniforme entre `\([-1, 1]\)`
 
@@ -204,7 +204,7 @@ Existe `\(\alpha_0\)` e `\(\beta_0\)` tal que jogador 1 joga `\(T\)` se `\(\alph
 ---
 class: middle
 
-&lt;img src="figs/week3-fig14.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig14.png" alt="" width="65%" style="display: block; margin: auto;" /&gt;
 
 O problema do chicken! com informação incompleta, com `\(R = 8\)`, `\(H = 16\)` e `\(L = 0\)` &amp;mdash; aqui montamos a forma normal para cada estratégia, lembrando que uma estratégia é uma função `\(s_i (\theta_i)\)`: como aqui `\(\theta \in \{L, H \}\)`, então a estratégia é um par `\(s(L), s(H)\)`: resta portanto que o ENB é apenas o equilíbrio de Nash da forma normal do jogo em forma extensiva
 
@@ -222,7 +222,7 @@ O produtor de soja é mais eficiente que o dono na plantação, dando valor para
 ---
 class: middle
 
-&lt;img src="figs/week3-fig15.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig15.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 
 Como sempre, pelo método de Harsanyi, transformamos aquele jogo de informação *incompleta* (que não sabemos resolver) em um jogo de informação *imperfeita*, como acima, e calculamos os equilíbrios de Nash do jogo em forma extensiva (que são os ENB do jogo bayesiano)
 
@@ -245,14 +245,14 @@ Aqui também veremos como aplicar a ideia de *racionalidade sequencial* quando o
 ---
 class: middle
 
-&lt;img src="figs/week3-fig2.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig2.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 
 Voltemos ao jogo de *dissuação estratégica de entrada* do começo desse tópico, e considere `\(p=2/3\)`: quais são os equilíbrios de Nash do jogo acima? E perfeito em subjogos?
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig6.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig6.png" alt="" width="50%" style="display: block; margin: auto;" /&gt;
 
 No slide anterior, o conceito de ENPS ainda tem um pouco de "mordida", já que o jogo tem um subjogo não-trivial &amp;mdash; mas se trocarmos a informação assimétrica de lado vemos quão grave é o problema de ENPS em jogos de informação incompleta (com a transformação de Harsanyi): temos dois equilíbrios de Nash em estratégias puras, *ambos* perfeitos em subjogos
 
@@ -290,7 +290,7 @@ Trocando `\(A\)` por `\(A_i\)`, que é um evento específico dentre `\(K\)` even
 ---
 class: middle
 
-&lt;img src="figs/week3-fig7.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig7.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 
 Qual é a dimensão do sistema de crenças `\(\mu\)` para o jogo acima? Quais crenças são condizentes com a regra de Bayes? Qual é o problema que surge se 1 jogar `\(U\)` com probabilidade 1?
 
@@ -348,21 +348,21 @@ Então um perfil de estratégias `\(\sigma^*\)` e um sistema de crenças `\(\mu^
 ---
 class: middle
 
-&lt;img src="figs/week3-fig7.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig7.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 
 No jogo acima, que vimos no começo da seção, todas as *crenças consistentes* dão probabilidade `\(1/2\)` de se estar em cada vértice do conjunto informacional &amp;mdash; ao contrário de crenças no EPB, que podem ser quaisquer
 
 ---
 class: middle
 
-&lt;img src="figs/lista8-ex1b.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/lista8-ex1b.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
 
 Exemplo: encontremos os equilíbrios perfeito bayesianos e sequenciais do jogo acima
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig8.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig8.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
 
 Mais um exemplo: quais são os EPB desse jogo estilizado de poker? Conseguimos construir crenças consistentes que os tornem equilíbrios sequenciais?
 
@@ -389,7 +389,7 @@ Já um **equilíbrio separador** é quando cada tipo de *sender* manda uma mensa
 ---
 class: middle
 
-&lt;img src="figs/week3-fig10.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig10.png" alt="" width="65%" style="display: block; margin: auto;" /&gt;
 
 O exemplo canônico de *sinalização* é o modelo de educação de Michael Spence (1973), que lhe proveu o prêmio Nobel em 2001 [Spe02] &amp;mdash; aqui temos o **jogo do MBA**: após descobrir se tem habilidade alta `\(H\)` ou baixa `\(L\)`, o estudante decide se faz um MBA `\(D\)` ou apenas a graduação `\(U\)`, e daí a firma (sem saber o seu tipo) decide se o coloca em management `\(M\)` ou colarinho azul `\(B\)`
 
@@ -429,21 +429,21 @@ Em várias situações, uma probabilidade ínfima do jogador não ser racional �
 ---
 class: middle
 
-&lt;img src="figs/week3-fig16.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig16.png" alt="" width="75%" style="display: block; margin: auto;" /&gt;
 
 Considere o jogo de **ultimato com informação incompleta** acima: o jogador 1 escolhe se oferece uma quantidade alta `\(H\)` ou baixa `\(M\)`, e o jogador 2 escolhe se aceita `\(A\)` ou se rejeita `\(R\)` e ambos ficam com nada &amp;mdash; mas agora 2 pode ser do tipo "racional" ou do tipo "babaca", que prefere ficar com nada do que aceitar uma quantidade baixa &amp;mdash; quais os EPB do jogo?
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig17.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig17.png" alt="" width="70%" style="display: block; margin: auto;" /&gt;
 
 O ultimato era "muito estático" para poder criar reputações, mesmo com informação incompleta: mas e agora no jogo de **barganha com informação incompleta** em 2 estágios? Tem algum EPB que permite 2 criar uma *reputação de tough bargain*?
 
 ---
 class: middle
 
-&lt;img src="figs/week3-fig11.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/week3-fig11.png" alt="" width="75%" style="display: block; margin: auto;" /&gt;
 
 No **jogo centípede de informação incompleta**, mesmo 1% de chance de o jogador 1 ser cooperativo (uma "reputação de ser gente fina") é suficiente para quebrar o equilíbrio que deixa todo o dinheiro na mesa
 
@@ -464,9 +464,9 @@ structure of markets". In: _American economic review_ 92.3 (2002), pp.
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

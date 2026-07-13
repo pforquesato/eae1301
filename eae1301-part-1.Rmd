@@ -2,7 +2,7 @@
 title: "EAE-1301: Teoria dos Jogos"
 author: "Pedro Forquesato<br/>http://www.pedroforquesato.com<br/>Sala 217/FEA2 - pforquesato@usp.br"
 institute: "Departamento de Economia<br/>Universidade de São Paulo"
-date: "2025/2 - Tópico 1: Jogos estáticos de informação completa"
+date: "2026/2 - Tópico 1: Jogos estáticos de informação completa"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -848,6 +848,24 @@ knitr::include_graphics("figs/week1-fig19.png")
 
 Outro exemplo é o **jogo do trânsito** acima: em uma intersecção, dois carros podem ambos esperar (o que é ruim para ambos, pois não resolve nada), um esperar e o outro passar, que não é ruim para o primeiro mas melhor para o segundo, ou ambos avançarem, o que é o pior, pois gera um acidente! &mdash; embora o jogo tenha EN, a sociedade avançou para uma solução mais justa com um *mecanismo de aleatorização* (o semáforo)
 
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '55%', fig.align='center'}
+knitr::include_graphics("figs/week1-fig6.png")
+```
+
+Vamos terminar essa parte do curso analisando o famoso jokenpô &mdash; agora vocês nunca mais vão perder de crianças de 5 anos jogando esse jogo (espero)!
+
+
+
+---
+class: middle, center, inverse
+
+# Estratégias max-min e jogos de soma-zero (Osborne, cap. 11)
+
+
 ---
 class: middle
 ## Maximinimização
@@ -920,12 +938,58 @@ E se o jogo não for de soma-zero? Voltemos à tradicional guerra dos sexos: qua
 
 ---
 class: middle
+## Minimaximização
 
-```{r, echo=FALSE, out.width = '55%', fig.align='center'}
-knitr::include_graphics("figs/week1-fig6.png")
+O conceito "inverso" da maximinimização é a **minimaximização**: $$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$
+
+De novo, (heuristicamente) "lemos da esquerda para a direita no tempo": primeiro o oponente escolhe uma estratégia $\sigma_2$ tentando sacanear você, mas você pode responder a $\sigma_2$ escolhendo a sua **melhor-resposta** &mdash; e novamente, prevendo isso o jogador 2 irá escolher $\sigma_2$ tal que a sua melhor-resposta àquela estratégia lhe dê a menor utilidade possível
+
+A estratégia *minimax* é uma "estratégia de ataque", que atinge o valor mínimo que o jogador 2 pode *garantir que o jogador 1 não exceda*
+
+
+---
+class: middle
+## A desigualdade max-min
+
+Um resultado (que aliás vale de forma muito mais geral) de matemática que nos será útil é que sempre será verdade que: $$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$
+
+Ou seja, o valor máximo que o jogador 1 pode garantir para si sempre é menor ou igual o valor mínimo que o jogador 2 pode garantir que 1 não exceda &mdash; isso vale em geral! Caso o jogo seja de soma-zero, temos também que (como $\min f(x) = - \max (-f(x))$):
+
+$$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) =  \min_{\sigma_2} \left( - \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})\right) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$
+
+---
+class: middle
+## A desigualdade max-min
+
+Ou seja, em um jogo de soma-zero a estratégia minimax do jogador 1 dá os mesmos *payoffs* que a estratégia maximin do jogador 2!
+
+Juntando os dois resultados, temos que:
+
+$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$
+
+(Lembrando que em um jogo de soma-zero os *payoffs* dos jogadores 1 e 2 sempre têm sinais opostos) &mdash; existe situações em que essa desigualdade vale com igualdade? O polímata Von Neumann, uma das maiores mentes da história humana, quando não ocupado criando armas de homicídio em massa, provou em 1928 que sim!
+
+---
+class: middle
+## O teorema minimax
+
+Certamente o primeiro grande teorema de teoria dos jogos, e que marca o nascimento da disciplina, é o **teorema minimax**:
+
+**Teorema (Von Neumann, 1928):** Em um jogo finito, para todo jogador $i$,
+
+$$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$
+$$= \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) = u_1(\sigma_1^*, \sigma_{2}^*) = v$$
+onde $\sigma^*$ é (qualquer) *equilíbrio de Nash* do jogo! Chamamos $v$ do **valor do jogo** &mdash; ou seja, em um jogo de soma-zero um perfil de estratégias é equilíbrio de Nash *se e somente se* cada jogador está jogando sua *estratégia maximin*
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '35%', fig.align='center'}
+knitr::include_graphics("figs/week1-fig10.png")
 ```
 
-Vamos terminar essa parte do curso analisando o famoso jokenpô &mdash; agora vocês nunca mais vão perder de crianças de 5 anos jogando esse jogo (espero)!
+O jogo acima é um jogo de soma-zero acima (note que os *payoffs* para cada perfil de ações de fato sempre somam zero) &mdash; qual é a estratégia *maximin* para os jogadores 1 e 2?
 
 ---
 class: middle
@@ -948,62 +1012,3 @@ PrintBibliography(myBib)
 </small>
 
 
-<!-- --- -->
-<!-- class: middle, center, inverse -->
-
-<!-- # Estratégias max-min e jogos de soma-zero (Osborne, cap. 11) -->
-
-<!-- --- -->
-<!-- class: middle -->
-<!-- ## Minimaximização -->
-
-<!-- O conceito "inverso" da maximinimização é a **minimaximização**: $$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$  -->
-
-<!-- De novo, (heuristicamente) "lemos da esquerda para a direita no tempo": primeiro o oponente escolhe uma estratégia $\sigma_2$ tentando sacanear você, mas você pode responder a $\sigma_2$ escolhendo a sua **melhor-resposta** &mdash; e novamente, prevendo isso o jogador 2 irá escolher $\sigma_2$ tal que a sua melhor-resposta àquela estratégia lhe dê a menor utilidade possível -->
-
-<!-- A estratégia *minimax* é uma "estratégia de ataque", que atinge o valor mínimo que o jogador 2 pode *garantir que o jogador 1 não exceda* -->
-
-
-<!-- --- -->
-<!-- class: middle -->
-<!-- ## A desigualdade max-min -->
-
-<!-- Um resultado (que aliás vale de forma muito mais geral) de matemática que nos será útil é que sempre será verdade que: $$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2})$$ -->
-
-<!-- Ou seja, o valor máximo que o jogador 1 pode garantir para si sempre é menor ou igual o valor mínimo que o jogador 2 pode garantir que 1 não exceda &mdash; isso vale em geral! Caso o jogo seja de soma-zero, temos também que (como $\min f(x) = - \max (-f(x))$): -->
-
-<!-- $$\min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) =  \min_{\sigma_2} \left( - \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})\right) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$ -->
-
-<!-- --- -->
-<!-- class: middle -->
-<!-- ## A desigualdade max-min -->
-
-<!-- Ou seja, em um jogo de soma-zero a estratégia minimax do jogador 1 dá os mesmos *payoffs* que a estratégia maximin do jogador 2! -->
-
-<!-- Juntando os dois resultados, temos que: -->
-
-<!-- $$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) \leq - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$ -->
-
-<!-- (Lembrando que em um jogo de soma-zero os *payoffs* dos jogadores 1 e 2 sempre têm sinais opostos) &mdash; existe situações em que essa desigualdade vale com igualdade? O polímata Von Neumann, uma das maiores mentes da história humana, quando não ocupado criando armas de homicídio em massa, provou em 1928 que sim! -->
-
-<!-- --- -->
-<!-- class: middle -->
-<!-- ## O teorema minimax -->
-
-<!-- Certamente o primeiro grande teorema de teoria dos jogos, e que marca o nascimento da disciplina, é o **teorema minimax**: -->
-
-<!-- **Teorema (Von Neumann, 1928):** Em um jogo finito, para todo jogador $i$, -->
-
-<!-- $$\max_{\sigma_1} \min_{\sigma_{2}} u_1 (\sigma_1, \sigma_{2}) = - \max_{\sigma_2} \min_{\sigma_{1}} u_2 (\sigma_1, \sigma_{2})$$ -->
-<!-- $$= \min_{\sigma_2} \max_{\sigma_{1}} u_1 (\sigma_1, \sigma_{2}) = u_1(\sigma_1^*, \sigma_{2}^*) = v$$ -->
-<!-- onde $\sigma^*$ é (qualquer) *equilíbrio de Nash* do jogo! Chamamos $v$ do **valor do jogo** &mdash; ou seja, em um jogo de soma-zero um perfil de estratégias é equilíbrio de Nash *se e somente se* cada jogador está jogando sua *estratégia maximin* -->
-
-
-<!-- --- -->
-<!-- class: middle -->
-
-<!-- ```{r, echo=FALSE, out.width = '35%', fig.align='center'} -->
-<!-- knitr::include_graphics("figs/week1-fig10.png") -->
-<!-- ``` -->
-
-<!-- O jogo acima é um jogo de soma-zero acima (note que os *payoffs* para cada perfil de ações de fato sempre somam zero) &mdash; qual é a estratégia *maximin* para os jogadores 1 e 2?  -->
