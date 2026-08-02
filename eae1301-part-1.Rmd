@@ -810,11 +810,187 @@ Mecanismos de aleatorização são interessantes na teoria dos jogos porque eles
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '35%', fig.align='center'}
-knitr::include_graphics("figs/week1-fig15.png")
+```{css, echo=FALSE}
+/* Configurações de estilo específicas para este slide */
+.slide-bg {
+  background-color: #c9f0fa; /* Fundo azul claro do slide */
+  height: 100%;
+  padding: 2em;
+  font-family: 'Arial', sans-serif;
+}
+
+.title-ce {
+  text-align: center;
+  color: #385966;
+  font-size: 40px;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.player1 { color: #ff3333; font-weight: bold; }
+.player2 { color: #0077cc; font-weight: bold; }
+
+/* Tabela Principal (Bimatriz) */
+.bimatrix {
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 22px;
+}
+.bimatrix td {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #7cb1c7;
+  position: relative;
+}
+.bimatrix .no-border { border: none; }
+.bimatrix .header-col { border: none; text-align: right; padding-right: 15px; width: 80px;}
+.bimatrix .header-row td { border: none; height: 40px; vertical-align: bottom; padding-bottom: 10px; }
+
+/* Célula dividida (Diagonal) */
+.diag-cell {
+  background: linear-gradient(to bottom right, transparent 49.5%, #7cb1c7 49.5%, #7cb1c7 50.5%, transparent 50.5%);
+  position: relative;
+}
+.diag-p2 { position: absolute; top: 10px; right: 15px; font-size: 20px;}
+.diag-p1 { position: absolute; bottom: 10px; left: 15px; font-size: 20px;}
+
+/* Posições dos Payoffs */
+.pay-p2 { position: absolute; top: 10px; right: 15px; }
+.pay-p1 { position: absolute; bottom: 10px; left: 15px; }
+
+/* Linha divisória */
+.divider {
+  border-left: 2px solid #7cb1c7;
+  height: 250px;
+  margin: 0 10px;
+}
+
+/* Painel Direito (Matrizes de Probabilidade) */
+.right-panel {
+  display: flex;
+  gap: 30px;
+}
+.prob-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prob-table {
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #175066;
+  margin-bottom: 15px;
+}
+.prob-table td {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #7cb1c7;
+}
+
+/* Caixas de Payoff Esperado */
+.pay-box {
+  width: 80px;
+  height: 60px;
+  border: 1px solid #7cb1c7;
+  position: relative;
+}
+.col-label { color: #0077cc; font-weight: bold; font-size: 18px; margin-bottom: 10px; }
+.pay-label { color: #175066; font-weight: bold; font-size: 18px; margin-top: 10px; }
 ```
 
-De volta à **Batalha dos Sexos**, que possui um equilíbrio em estratégias mistas talvez pouco atrativo &mdash; mas se o casal estiver vendo cada um da sua casa um jogo de futebol da China vs Lituânia e for conhecimento comum que a probabilidade da China ganhar é $1/2$, eles conseguem fazer melhor que isso!
+<!-- Matriz do Jogo (Esquerda) -->
+<table class="bimatrix">
+  <tr class="header-row">
+    <td class="diag-cell">
+      <span class="player2 diag-p2">II</span>
+      <span class="player1 diag-p1">I</span>
+    </td>
+    <td class="player2">Left</td>
+    <td class="player2">Right</td>
+  </tr>
+  <tr>
+    <td class="header-col player1">Top</td>
+    <td>
+      <span class="player2 pay-p2">4</span>
+      <span class="player1 pay-p1">4</span>
+    </td>
+    <td>
+      <span class="player2 pay-p2">5</span>
+      <span class="player1 pay-p1">1</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="header-col player1">Bottom</td>
+    <td>
+      <span class="player2 pay-p2">1</span>
+      <span class="player1 pay-p1">5</span>
+    </td>
+    <td>
+      <span class="player2 pay-p2">0</span>
+      <span class="player1 pay-p1">0</span>
+    </td>
+  </tr>
+</table>
+
+<!-- Divisória -->
+<div class="divider">
+
+<!-- Probabilidades (Direita) -->
+<div class="right-panel">
+  <!-- Coluna 1 -->
+  <div class="prob-col">
+    <div class="col-label">mecanismo</div>
+    <table class="prob-table">
+      <tr><td>0</td><td>1/2</td></tr>
+      <tr><td>1/2</td><td>0</td></tr>
+    </table>
+    <div class="pay-box">
+      <span class="player2 pay-p2" style="font-size: 20px;">3</span>
+      <span class="player1 pay-p1" style="font-size: 20px;">3</span>
+    </div>
+    <div class="pay-label">payoffs</div>
+  </div>
+
+  <!-- Coluna 2 -->
+  <div class="prob-col">
+    <div class="col-label">mecanismo</div>
+    <table class="prob-table">
+      <tr><td>1/3</td><td>1/3</td></tr>
+      <tr><td>1/3</td><td>0</td></tr>
+    </table>
+    <div class="pay-box">
+      <span class="player2 pay-p2" style="font-size: 16px;">3 1/3</span>
+      <span class="player1 pay-p1" style="font-size: 16px;">3 1/3</span>
+    </div>
+    <div class="pay-label">payoffs</div>
+  </div>
+
+  <!-- Coluna 3 -->
+  <div class="prob-col">
+    <div class="col-label">mecanismo</div>
+    <table class="prob-table">
+      <tr><td>0</td><td>1/3</td></tr>
+      <tr><td>1/3</td><td>1/3</td></tr>
+    </table>
+    <div class="pay-box">
+      <span class="player2 pay-p2" style="font-size: 20px;">2</span>
+      <span class="player1 pay-p1" style="font-size: 20px;">2</span>
+    </div>
+    <div class="pay-label">payoffs</div>
+  </div>
+</div>
+</div>
+
+(Créditos a Bernhard Von Stengel)
 
 ---
 class: middle

@@ -64,7 +64,7 @@ O monitor do curso será ??. Ele nos auxiliará nos workshops, e vocês também 
 
 ### Políticas e regulamentos
 
-**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 e quartas-feiras das 19h30 às 21h10 (turma 2026221) na sala **??** do FEA 1.
+**Aulas.** As aulas são segundas-feiras das 21h20 às 23h00 na sala **G-07** e quartas-feiras das 19h30 às 21h10 (turma 2026221) na sala **A-08** do FEA 1.
 
 **Comunicação.** Toda a comunicação oficial por minha parte do curso será feita pelo [Moodle](https://edisciplinas.usp.br), incluindo notas, presenças e avisos. O curso assume que o aluno acessa frequentemente a plataforma e checa diariamente os e-mails recebidos.
 
