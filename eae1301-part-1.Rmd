@@ -708,6 +708,15 @@ Embora introduzimos os conceitos de EIEED e racionabilidade usando estratégias 
 ---
 class: middle
 
+```{r, echo=FALSE, out.width = '90%', fig.align='center'}
+knitr::include_graphics("figs/gemini.png")
+```
+
+Quais estratégias são *racionalizáveis* nesse jogo?
+
+---
+class: middle
+
 ```{r, echo=FALSE, out.width = '40%', fig.align='center'}
 knitr::include_graphics("figs/week1-fig7.png")
 ```
