@@ -4,7 +4,7 @@
     <title>EAE-1301: Teoria dos Jogos</title>
     <meta charset="utf-8" />
     <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
-    <script src="libs/header-attrs-2.31/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.32/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -593,6 +593,18 @@ Voltemos ao caso do leiloeiro querendo leiloar um quadro &amp;mdash; talvez uma 
 Esse tipo de leilão de bid fechado é conhecido como **leilão de primeiro preço**: certamente ele deveria ser melhor para o leiloeiro do que cobrar só o segundo bid (que é necessariamente menor), certo?
 
 Não necessariamente, porque as estratégias dos jogadores dependem do formato do leilão! Consideremos o mesmo caso anterior, com valorações (conhecimento comum!) de R$300, R$400 e R$500 &amp;mdash; quais são os EN do jogo?
+
+---
+class: middle
+## A tragédia dos comuns
+
+Uma generalização de certa forma do dilema dos prisioneiros é a tragédia dos comuns, que mostra como o conflito por recursos escassos faz com que indivíduos autointeressados não ajam pelo bem comum (o que seria no seu próprio interesse!)
+
+Considere que há 2 firmas que decidem o quanto de poluição `\(k_i\)` geram, o que consome um total de `\(K\)` unidades de "ar limpo" &amp;mdash; cada firma ganha lucro poluindo (produzindo mais), mas também dá valor ao ar limpo:
+
+`$$v_1(k_1, k_2) = \ln (k_1) + \ln (K - k_1 - k_2)$$`
+
+Qual é o **equilíbrio de Nash** do jogo? E a solução eficiente?
 
 ---
 class: middle, center, inverse
