@@ -4,7 +4,7 @@
     <title>EAE-1301: Teoria dos Jogos</title>
     <meta charset="utf-8" />
     <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
-    <script src="libs/header-attrs-2.31/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.32/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -285,7 +285,8 @@ Pela definição de probabilidade condicional, `\(\Pr (A \cap B) = \Pr (A | B) \
 
 `$$\Pr (A | B) = \frac{\Pr (B | A) \Pr (A)}{\Pr (B)} = \frac{\Pr (B | A_i) \Pr (A_i)}{\sum_{k=1}^K \Pr (B | A_k) \Pr(A_k)}$$`
 
-Trocando `\(A\)` por `\(A_i\)`, que é um evento específico dentre `\(K\)` eventos possíveis que sejam excludentes e cuja probabilidades somam `\(1\)` (por exemplo, "ir na ópera" dentre "ir na ópera" e "ir ao futebol" na guerra dos sexos)
+Trocando `\(A\)` por `\(A_i\)`, que é um evento específico dentre `\(K\)` eventos possíveis que sejam excludentes e cuja probabilidades somam `\(1\)` (por exemplo, "ir na ópera" dentre "ir na ópera" e "ir ao futebol" na guerra dos sexos) &amp;mdash; mas na maioria dos exemplos a 
+probabilidade condicional é suficiente
 
 ---
 class: middle
@@ -402,7 +403,7 @@ No caso do MBA transmitir informação é "fácil" porque fazer um MBA é *mais 
 
 Imagine que um amigo meu vem de fora dar aula na FD: eu quero que ele more perto de mim aqui no Butantã, mas ele tem também o custo do trânsito de ir até lá trabalhar &amp;mdash; como eu moro aqui, eu sei se o trânsito `\(\theta\)` é ruim (1), médio (3) ou bom (5), mas ele não sabe (1/3 de chance cada)
 
-Meu amigo pode escolher entre 5 localidades entre o Butantã e o Largo de São Francisco, com payoff `\(v_2 (a_2, \theta) = - (\theta - a_2)^2\)`, onde `\(a_2 \in \{1,2,3,4,5\}\)`
+Meu amigo pode escolher entre 5 localidades entre o Largo de São Francisco e o Butantã, com payoff `\(v_2 (a_2, \theta) = - (\theta - a_2)^2\)`, onde `\(a_2 \in \{1,2,3,4,5\}\)`
 
 ---
 class: middle
